@@ -1,0 +1,68 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for correct text rendering -->
+  <meta charset="UTF-8" />
+  <!-- Responsive design for different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Author and SEO information -->
+  <meta name="author" content="domisseus" />
+  <meta name="description" content="Interactive city map quiz — choose a region and start playing!" />
+  <meta name="keywords" content="city quiz, map quiz, geography game, interactive quiz" />
+
+  <!-- Page title -->
+  <title>cities.domisses</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main id="regionPicker">
+
+  <div id="header-grid">
+    
+    <div id="otherQuizzes">
+      <div class="quizzes-header">other quizzes:</div>
+      <ul>
+        <li><a href="flags.html">flags</a></li>
+        <li><a href="languages.html">languages</a></li>
+        <li><a href="chess.html">chess</a></li>
+        <li><a href="maths.html">maths</a></li>
+      </ul>
+    </div>
+
+    <div id="center-column">
+      <h1>cities.domisseus</h1>
+
+      <label for="search" style="display: block; font-weight: bold; margin: 10px 0 3px 0;">
+        Choose a region:
+      </label>
+
+      <div id="search-row">
+        <input 
+          type="text" 
+          id="search" 
+          placeholder="start typing to search"
+          style="text-align: center"
+          aria-label="Search regions"
+        />
+      </div>
+    </div>
+
+    <div id="theme-controls">
+      <button id="lightBtn" class="theme-btn active">Light</button>
+      <button id="darkBtn" class="theme-btn">Dark</button>
+    </div>
+  
+  </div>
+  <div id="regionsContainer"></div>
+
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>
