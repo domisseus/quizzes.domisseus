@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="domisseus">
+  <meta name="description" content="City Quiz Feedback Form">
+  <meta name="keywords" content="feedback, form, city quiz">
+
+  <title>City Quiz Feedback</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="formContainer">
+  <h1>City Quiz Feedback Form</h1>
+
+  <form id="feedbackForm" action="https://formspree.io/f/mnnywzok" method="POST" novalidate>
+        
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="age">Age *</label>
+    <input type="number" id="age" name="age" placeholder="Your age" min="5" max="120" required>
+
+    <label for="gender">Gender *</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select...</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="from">Country</label>
+    <input type="text" id="from" name="from" placeholder="Country you're from: e.g. Finland or .fi">
+
+    <label for="improve">How could we improve the quiz?</label>
+    <textarea id="improve" name="improve" placeholder="Your suggestions"></textarea>
+
+    <label for="favorite">Favorite region</label>
+    <input type="text" id="favorite" name="favorite" placeholder="e.g. Italy">
+
+    <label for="rating">Rate the quiz (1-10) *</label>
+    <div class="sliderContainer">
+      <input type="range" id="rating" name="rating" min="1" max="10" value="5" required>
+      <!--<span> element is an inline container in HTML. 
+      It doesn’t create a new line (like <div> does) 
+      and is mainly used to apply styles or manipulate content with JavaScript.-->
+      <span id="ratingValue">5</span>
+    </div>
+
+    <div class="buttonRow">
+      <button type="submit">Submit</button>
+      <button type="button" id="backButton">Back to Quizzes</button>
+    </div>
+
+  </form>
+</div>
+
+<script src="form.js"></script>
+<script src="theme.js"></script>
+
+</body>
+</html>
