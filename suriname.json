@@ -1,0 +1,12 @@
+[
+  {"name": "Paramaribo", "lat": 5.852, "lng": -55.2038},
+  {"name": "Lelydorp", "lat": 5.7, "lng": -55.2167},
+  {"name": "Nieuw Nickerie", "lat": 5.9333, "lng": -56.9833},
+  {"name": "Moengo", "lat": 5.6167, "lng": -54.4},
+  {"name": "Meerzorg", "lat": 5.8167, "lng": -55.15},
+  {"name": "Nieuw Amsterdam", "lat": 5.8833, "lng": -55.0833},
+  {"name": "Marienburg", "lat": 5.8667, "lng": -55.0333},
+  {"name": "Wageningen", "lat": 5.7667, "lng": -56.6833},
+  {"name": "Albina", "lat": 5.5, "lng": -54.05},
+  {"name": "Groningen", "lat": 5.8, "lng": -55.4667}
+]

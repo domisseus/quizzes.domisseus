@@ -1,0 +1,12 @@
+[
+  {"name": "Riyadh", "lat": 24.7136, "lng": 46.6753},
+  {"name": "Jeddah", "lat": 21.5433, "lng": 39.1728},
+  {"name": "Mecca", "lat": 21.3891, "lng": 39.8579},
+  {"name": "Medina", "lat": 24.5247, "lng": 39.5692},
+  {"name": "Dammam", "lat": 26.4207, "lng": 50.0888},
+  {"name": "Taif", "lat": 21.2854, "lng": 40.4245},
+  {"name": "Tabuk", "lat": 28.3835, "lng": 36.5662},
+  {"name": "Buraydah", "lat": 26.326, "lng": 43.975},
+  {"name": "Khamis Mushait", "lat": 18.3, "lng": 42.7333},
+  {"name": "Abha", "lat": 18.2164, "lng": 42.5053}
+]

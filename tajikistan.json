@@ -1,0 +1,12 @@
+[
+  {"name": "Dushanbe", "lat": 38.5598, "lng": 68.787},
+  {"name": "Khujand", "lat": 40.2833, "lng": 69.6167},
+  {"name": "Kulob", "lat": 37.9167, "lng": 69.7833},
+  {"name": "Bokhtar", "lat": 37.8361, "lng": 68.7739},
+  {"name": "Istaravshan", "lat": 39.9142, "lng": 69.0033},
+  {"name": "Vahdat", "lat": 38.55, "lng": 69.0167},
+  {"name": "Tursunzoda", "lat": 38.5131, "lng": 68.2264},
+  {"name": "Konibodom", "lat": 40.2833, "lng": 70.4167},
+  {"name": "Isfara", "lat": 40.1167, "lng": 70.6333},
+  {"name": "Panjakent", "lat": 39.5, "lng": 67.6}
+]

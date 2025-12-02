@@ -1,0 +1,12 @@
+[
+  {"name": "Lusaka", "lat": -15.3875, "lng": 28.3228},
+  {"name": "Kitwe", "lat": -12.8024, "lng": 28.2132},
+  {"name": "Ndola", "lat": -12.9617, "lng": 28.6366},
+  {"name": "Kabwe", "lat": -14.4426, "lng": 28.4468},
+  {"name": "Chingola", "lat": -12.5333, "lng": 27.85},
+  {"name": "Mufulira", "lat": -12.5498, "lng": 28.2407},
+  {"name": "Livingstone", "lat": -17.8419, "lng": 25.8543},
+  {"name": "Luanshya", "lat": -13.1367, "lng": 28.4166},
+  {"name": "Chipata", "lat": -13.6333, "lng": 32.65},
+  {"name": "Kasama", "lat": -10.2129, "lng": 31.1808}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Dubai", "lat": 25.2048, "lng": 55.2708},
+  {"name": "Abu Dhabi", "lat": 24.4539, "lng": 54.3773},
+  {"name": "Sharjah", "lat": 25.3463, "lng": 55.4209},
+  {"name": "Al Ain", "lat": 24.1302, "lng": 55.8023},
+  {"name": "Ajman", "lat": 25.4052, "lng": 55.5136},
+  {"name": "Ras Al Khaimah", "lat": 25.8007, "lng": 55.9762},
+  {"name": "Fujairah", "lat": 25.1288, "lng": 56.3265},
+  {"name": "Umm Al Quwain", "lat": 25.5647, "lng": 55.5552},
+  {"name": "Khor Fakkan", "lat": 25.3313, "lng": 56.342},
+  {"name": "Kalba", "lat": 25.0754, "lng": 56.3557}
+]

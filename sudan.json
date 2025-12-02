@@ -1,0 +1,12 @@
+[
+  {"name": "Khartoum", "lat": 15.5007, "lng": 32.5599},
+  {"name": "Omdurman", "lat": 15.65, "lng": 32.4817},
+  {"name": "Nyala", "lat": 12.05, "lng": 24.8833},
+  {"name": "Port Sudan", "lat": 19.6175, "lng": 37.2164},
+  {"name": "Kassala", "lat": 15.45, "lng": 36.4},
+  {"name": "El Obeid", "lat": 13.1833, "lng": 30.2167},
+  {"name": "Kosti", "lat": 13.1629, "lng": 32.6635},
+  {"name": "Wad Madani", "lat": 14.4012, "lng": 33.5199},
+  {"name": "El Fasher", "lat": 13.6217, "lng": 25.3524},
+  {"name": "Gedaref", "lat": 14.0349, "lng": 35.3855}
+]

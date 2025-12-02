@@ -1,0 +1,12 @@
+[
+  {"name": "Damascus", "lat": 33.5138, "lng": 36.2765},
+  {"name": "Aleppo", "lat": 36.2021, "lng": 37.1343},
+  {"name": "Homs", "lat": 34.7324, "lng": 36.7137},
+  {"name": "Hama", "lat": 35.1318, "lng": 36.7578},
+  {"name": "Latakia", "lat": 35.5317, "lng": 35.7901},
+  {"name": "Tartus", "lat": 34.889, "lng": 35.8866},
+  {"name": "Raqqa", "lat": 35.95, "lng": 39.0167},
+  {"name": "Deir ez-Zor", "lat": 35.3359, "lng": 40.1409},
+  {"name": "Al-Hasakah", "lat": 36.502, "lng": 40.738},
+  {"name": "Qamishli", "lat": 37.05, "lng": 41.2167}
+]

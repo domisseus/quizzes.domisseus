@@ -1,0 +1,12 @@
+[
+  {"name": "Ho Chi Minh City", "lat": 10.8231, "lng": 106.6297},
+  {"name": "Hanoi", "lat": 21.0285, "lng": 105.8542},
+  {"name": "Da Nang", "lat": 16.0544, "lng": 108.2022},
+  {"name": "Hai Phong", "lat": 20.8449, "lng": 106.6881},
+  {"name": "Can Tho", "lat": 10.0452, "lng": 105.7469},
+  {"name": "Bien Hoa", "lat": 10.9574, "lng": 106.8427},
+  {"name": "Nha Trang", "lat": 12.2388, "lng": 109.1967},
+  {"name": "Hue", "lat": 16.4637, "lng": 107.5909},
+  {"name": "Buon Ma Thuot", "lat": 12.6667, "lng": 108.05},
+  {"name": "Vung Tau", "lat": 10.346, "lng": 107.0843}
+]

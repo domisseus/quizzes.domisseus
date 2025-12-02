@@ -1,0 +1,89 @@
+[
+  {"name": "Vatican City", "lat": 41.9029, "lng": 12.4534},
+  
+  {"name": "Valletta", "lat": 35.8989, "lng": 14.5146},
+  {"name": "Victoria", "lat": 36.0444, "lng": 14.2397},
+
+  {"name": "Monaco City", "lat": 43.7308, "lng": 7.4226},
+
+  {"name": "San Marino", "lat": 43.931, "lng": 12.4463},
+  {"name": "Serravalle", "lat": 43.9692, "lng": 12.4795},
+  {"name": "Domagnano", "lat": 43.9486, "lng": 12.4678},
+  {"name": "Dogana", "lat": 43.9813, "lng": 12.4839},
+
+  {"name": "Manama", "lat": 26.2277, "lng": 50.589},
+  {"name": "Riffa", "lat": 26.13, "lng": 50.555},
+
+  {"name": "Bandar Seri Begawan", "lat": 4.9031, "lng": 114.9398},
+
+  {"name": "Malé", "lat": 4.1755, "lng": 73.5093},
+  {"name": "Addu City", "lat": -0.6413, "lng": 73.1586},
+
+  {"name": "Singapore", "lat": 1.3521, "lng": 103.8198},
+
+  {"name": "Dili", "lat": -8.5568, "lng": 125.5603},
+
+  {"name": "Moroni", "lat": -11.7172, "lng": 43.2473},
+  {"name": "Mutsamudu", "lat": -12.1686, "lng": 44.3967},
+  {"name": "Fomboni", "lat": -12.28, "lng": 43.7425},
+
+  {"name": "Djibouti", "lat": 11.5721, "lng": 43.1456},
+  
+  {"name": "Malabo", "lat": 3.7504, "lng": 8.7371},
+  {"name": "Bata", "lat": 1.8639, "lng": 9.7658},
+
+  {"name": "Banjul", "lat": 13.4549, "lng": -16.579},
+  {"name": "Serekunda", "lat": 13.4383, "lng": -16.6781},
+
+  {"name": "Bissau", "lat": 11.8632, "lng": -15.5843},
+
+  {"name": "Port Louis", "lat": -20.1609, "lng": 57.5012},
+
+  {"name": "São Tomé", "lat": 0.3302, "lng": 6.7275},
+  {"name": "Santo António", "lat": 1.6394, "lng": 7.4195},
+
+  {"name": "Victoria", "lat": -4.6191, "lng": 55.4513},
+
+  {"name": "St. John's", "lat": 17.1274, "lng": -61.8468},
+
+  {"name": "Nassau", "lat": 25.0443, "lng": -77.3504},
+
+  {"name": "Bridgetown", "lat": 13.1132, "lng": -59.5988},
+
+  {"name": "Roseau", "lat": 15.3092, "lng": -61.3794},
+
+  {"name": "St. George's", "lat": 12.0561, "lng": -61.7488},
+
+  {"name": "Basseterre", "lat": 17.3026, "lng": -62.7177},
+
+  {"name": "Castries", "lat": 14.0101, "lng": -60.987},
+
+  {"name": "Kingstown", "lat": 13.16, "lng": -61.2248},
+
+  {"name": "Tarawa", "lat": 1.417, "lng": 172.9836},
+
+  {"name": "Majuro", "lat": 7.1, "lng": 171.3833},
+
+  {"name": "Palikir", "lat": 6.9248, "lng": 158.1611},
+
+  {"name": "Yaren", "lat": -0.5477, "lng": 166.9208},
+
+  {"name": "Ngerulmud", "lat": 7.5004, "lng": 134.6242},
+
+  {"name": "Apia", "lat": -13.8333, "lng": -171.7667},
+
+  {"name": "Honiara", "lat": -9.4456, "lng": 159.9729},
+
+  {"name": "Nuku'alofa", "lat": -21.1393, "lng": -175.2049},
+
+  {"name": "Funafuti", "lat": -8.5201, "lng": 179.199},
+
+  {"name": "Port Vila", "lat": -17.7333, "lng": 168.3273},
+ 
+  {"name": "Port Moresby", "lat": -9.4438, "lng": 147.1803},
+  {"name": "Lae", "lat": -6.7292, "lng": 146.9911},
+  {"name": "Rabaul", "lat": -4.2001, "lng": 152.1641},
+
+  {"name": "Suva", "lat": -18.1416, "lng": 178.4419}
+
+]

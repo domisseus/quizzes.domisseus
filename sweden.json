@@ -1,0 +1,12 @@
+[
+  {"name": "Stockholm", "lat": 59.3293, "lng": 18.0686},
+  {"name": "Gothenburg", "lat": 57.7089, "lng": 11.9746},
+  {"name": "Malmö", "lat": 55.605, "lng": 13.0038},
+  {"name": "Uppsala", "lat": 59.8586, "lng": 17.6389},
+  {"name": "Västerås", "lat": 59.6104, "lng": 16.5448},
+  {"name": "Örebro", "lat": 59.2753, "lng": 15.2134},
+  {"name": "Linköping", "lat": 58.4108, "lng": 15.6214},
+  {"name": "Helsingborg", "lat": 56.0465, "lng": 12.6945},
+  {"name": "Jönköping", "lat": 57.7826, "lng": 14.1618},
+  {"name": "Norrköping", "lat": 58.5877, "lng": 16.1924}
+]

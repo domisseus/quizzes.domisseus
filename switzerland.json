@@ -1,0 +1,12 @@
+[
+  {"name": "Zurich", "lat": 47.3769, "lng": 8.5417},
+  {"name": "Geneva", "lat": 46.2044, "lng": 6.1432},
+  {"name": "Basel", "lat": 47.5596, "lng": 7.5886},
+  {"name": "Lausanne", "lat": 46.5197, "lng": 6.6323},
+  {"name": "Bern", "lat": 46.948, "lng": 7.4474},
+  {"name": "Winterthur", "lat": 47.4988, "lng": 8.7237},
+  {"name": "Lucerne", "lat": 47.0502, "lng": 8.3093},
+  {"name": "St. Gallen", "lat": 47.4245, "lng": 9.3767},
+  {"name": "Lugano", "lat": 46.0037, "lng": 8.9511},
+  {"name": "Biel/Bienne", "lat": 47.1415, "lng": 7.2467}
+]

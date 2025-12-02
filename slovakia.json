@@ -1,0 +1,12 @@
+[
+  {"name": "Bratislava", "lat": 48.1486, "lng": 17.1077},
+  {"name": "Kosice", "lat": 48.7164, "lng": 21.2611},
+  {"name": "Presov", "lat": 48.9984, "lng": 21.2339},
+  {"name": "Zilina", "lat": 49.2231, "lng": 18.7394},
+  {"name": "Banska Bystrica", "lat": 48.7363, "lng": 19.1462},
+  {"name": "Nitra", "lat": 48.3061, "lng": 18.0764},
+  {"name": "Trnava", "lat": 48.3774, "lng": 17.5883},
+  {"name": "Trencin", "lat": 48.8945, "lng": 18.0444},
+  {"name": "Martin", "lat": 49.0648, "lng": 18.9226},
+  {"name": "Poprad", "lat": 49.0561, "lng": 20.3003}
+]

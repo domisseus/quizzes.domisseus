@@ -1,0 +1,12 @@
+[
+  {"name": "Tunis", "lat": 36.8065, "lng": 10.1815},
+  {"name": "Sfax", "lat": 34.7478, "lng": 10.7662},
+  {"name": "Sousse", "lat": 35.8256, "lng": 10.6084},
+  {"name": "Ettadhamen", "lat": 36.8458, "lng": 10.1221},
+  {"name": "Kairouan", "lat": 35.6781, "lng": 10.0963},
+  {"name": "Gabès", "lat": 33.8815, "lng": 10.0982},
+  {"name": "Bizerte", "lat": 37.2744, "lng": 9.8739},
+  {"name": "Ariana", "lat": 36.8625, "lng": 10.1956},
+  {"name": "Gafsa", "lat": 34.425, "lng": 8.7842},
+  {"name": "Monastir", "lat": 35.778, "lng": 10.8262}
+]

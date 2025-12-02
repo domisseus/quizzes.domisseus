@@ -1,0 +1,12 @@
+[
+  {"name": "Freetown", "lat": 8.4844, "lng": -13.2299},
+  {"name": "Bo", "lat": 7.9647, "lng": -11.7383},
+  {"name": "Kenema", "lat": 7.8767, "lng": -11.1875},
+  {"name": "Makeni", "lat": 8.8897, "lng": -12.0439},
+  {"name": "Koidu", "lat": 8.6433, "lng": -10.9719},
+  {"name": "Lunsar", "lat": 8.6833, "lng": -12.5333},
+  {"name": "Port Loko", "lat": 8.7667, "lng": -12.7833},
+  {"name": "Pandebu", "lat": 7.7167, "lng": -11.0833},
+  {"name": "Magburaka", "lat": 8.7167, "lng": -11.95},
+  {"name": "Waterloo", "lat": 8.3333, "lng": -13.0667}
+]

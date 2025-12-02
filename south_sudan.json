@@ -1,0 +1,12 @@
+[
+  {"name": "Juba", "lat": 4.8594, "lng": 31.5713},
+  {"name": "Malakal", "lat": 9.5334, "lng": 31.6605},
+  {"name": "Wau", "lat": 7.7011, "lng": 27.9953},
+  {"name": "Yambio", "lat": 4.5721, "lng": 28.3955},
+  {"name": "Yei", "lat": 4.095, "lng": 30.6779},
+  {"name": "Aweil", "lat": 8.7674, "lng": 27.4018},
+  {"name": "Gogrial", "lat": 8.5333, "lng": 28.1},
+  {"name": "Rumbek", "lat": 6.8115, "lng": 29.6912},
+  {"name": "Bor", "lat": 6.2092, "lng": 31.5589},
+  {"name": "Torit", "lat": 4.4136, "lng": 32.5678}
+]

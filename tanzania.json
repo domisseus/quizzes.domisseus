@@ -1,0 +1,12 @@
+[
+  {"name": "Dar es Salaam", "lat": -6.7924, "lng": 39.2083},
+  {"name": "Mwanza", "lat": -2.5167, "lng": 32.8967},
+  {"name": "Arusha", "lat": -3.3869, "lng": 36.683},
+  {"name": "Dodoma", "lat": -6.163, "lng": 35.7516},
+  {"name": "Mbeya", "lat": -8.9, "lng": 33.45},
+  {"name": "Morogoro", "lat": -6.8278, "lng": 37.6619},
+  {"name": "Tanga", "lat": -5.0667, "lng": 39.0983},
+  {"name": "Kahama", "lat": -3.8333, "lng": 32.6},
+  {"name": "Tabora", "lat": -5.0167, "lng": 32.8},
+  {"name": "Zanzibar City", "lat": -6.1659, "lng": 39.2026}
+]

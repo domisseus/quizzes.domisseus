@@ -1,0 +1,12 @@
+[
+  {"name": "Dakar", "lat": 14.7167, "lng": -17.4677},
+  {"name": "Touba", "lat": 14.85, "lng": -15.8833},
+  {"name": "Thiès", "lat": 14.791, "lng": -16.9359},
+  {"name": "Rufisque", "lat": 14.7167, "lng": -17.2667},
+  {"name": "Kaolack", "lat": 14.1481, "lng": -16.0765},
+  {"name": "M'Bour", "lat": 14.4167, "lng": -16.9667},
+  {"name": "Ziguinchor", "lat": 12.5833, "lng": -16.2667},
+  {"name": "Saint-Louis", "lat": 16.0333, "lng": -16.5},
+  {"name": "Diourbel", "lat": 14.65, "lng": -16.2333},
+  {"name": "Louga", "lat": 15.6187, "lng": -16.2244}
+]

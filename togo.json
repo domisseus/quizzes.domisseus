@@ -1,0 +1,12 @@
+[
+  {"name": "Lomé", "lat": 6.1375, "lng": 1.2123},
+  {"name": "Sokodé", "lat": 8.9833, "lng": 1.1333},
+  {"name": "Kara", "lat": 9.5511, "lng": 1.1861},
+  {"name": "Kpalimé", "lat": 6.9067, "lng": 0.6314},
+  {"name": "Atakpamé", "lat": 7.53, "lng": 1.13},
+  {"name": "Bassar", "lat": 9.25, "lng": 0.7833},
+  {"name": "Tsévié", "lat": 6.4261, "lng": 1.2131},
+  {"name": "Aného", "lat": 6.2328, "lng": 1.6111},
+  {"name": "Mango", "lat": 10.3592, "lng": 0.4708},
+  {"name": "Dapaong", "lat": 10.8639, "lng": 0.205}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Sana'a", "lat": 15.3694, "lng": 44.191},
+  {"name": "Aden", "lat": 12.7794, "lng": 45.0367},
+  {"name": "Taiz", "lat": 13.5795, "lng": 44.0209},
+  {"name": "Al Hudaydah", "lat": 14.7978, "lng": 42.9545},
+  {"name": "Mukalla", "lat": 14.5425, "lng": 49.1242},
+  {"name": "Ibb", "lat": 13.9667, "lng": 44.1833},
+  {"name": "Dhamar", "lat": 14.5428, "lng": 44.4031},
+  {"name": "Sayyan", "lat": 15.1717, "lng": 44.3244},
+  {"name": "Zabid", "lat": 14.1953, "lng": 43.315},
+  {"name": "Amran", "lat": 15.6594, "lng": 43.9397}
+]

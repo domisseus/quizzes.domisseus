@@ -1,0 +1,12 @@
+[
+  {"name": "Mogadishu", "lat": 2.0469, "lng": 45.3182},
+  {"name": "Hargeisa", "lat": 9.56, "lng": 44.065},
+  {"name": "Bosaso", "lat": 11.2842, "lng": 49.1816},
+  {"name": "Kismayo", "lat": -0.3582, "lng": 42.5454},
+  {"name": "Berbera", "lat": 10.4396, "lng": 45.0143},
+  {"name": "Merca", "lat": 1.7139, "lng": 44.7725},
+  {"name": "Baidoa", "lat": 3.1191, "lng": 43.6495},
+  {"name": "Burao", "lat": 9.5221, "lng": 45.5336},
+  {"name": "Beledweyne", "lat": 4.7358, "lng": 45.2036},
+  {"name": "Garowe", "lat": 8.4021, "lng": 48.4828}
+]

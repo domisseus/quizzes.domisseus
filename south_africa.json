@@ -1,0 +1,12 @@
+[
+  {"name": "Johannesburg", "lat": -26.2041, "lng": 28.0473},
+  {"name": "Cape Town", "lat": -33.9249, "lng": 18.4241},
+  {"name": "Durban", "lat": -29.8587, "lng": 31.0218},
+  {"name": "Pretoria", "lat": -25.7479, "lng": 28.2293},
+  {"name": "Port Elizabeth", "lat": -33.9608, "lng": 25.6022},
+  {"name": "Soweto", "lat": -26.2661, "lng": 27.8659},
+  {"name": "Bloemfontein", "lat": -29.0852, "lng": 26.1596},
+  {"name": "Pietermaritzburg", "lat": -29.6168, "lng": 30.3928},
+  {"name": "East London", "lat": -33.0153, "lng": 27.9116},
+  {"name": "Vereeniging", "lat": -26.6731, "lng": 27.9262}
+]

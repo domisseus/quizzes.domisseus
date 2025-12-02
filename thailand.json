@@ -1,0 +1,12 @@
+[
+  {"name": "Bangkok", "lat": 13.7563, "lng": 100.5018},
+  {"name": "Nonthaburi", "lat": 13.8591, "lng": 100.5217},
+  {"name": "Nakhon Ratchasima", "lat": 14.9799, "lng": 102.0978},
+  {"name": "Chiang Mai", "lat": 18.7883, "lng": 98.9853},
+  {"name": "Hat Yai", "lat": 7.0084, "lng": 100.4767},
+  {"name": "Udon Thani", "lat": 17.4156, "lng": 102.7872},
+  {"name": "Pak Kret", "lat": 13.913, "lng": 100.4988},
+  {"name": "Khon Kaen", "lat": 16.4322, "lng": 102.8236},
+  {"name": "Chaophraya Surasak", "lat": 13.1167, "lng": 101.0333},
+  {"name": "Ubon Ratchathani", "lat": 15.2286, "lng": 104.8594}
+]

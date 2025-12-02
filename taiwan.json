@@ -1,0 +1,14 @@
+[ 
+  {"name": "Taipei", "lat": 25.033, "lng": 121.5654},
+  {"name": "Taichung", "lat": 24.1477, "lng": 120.6736},
+  {"name": "Kaohsiung", "lat": 22.6273, "lng": 120.3014},
+  {"name": "New Taipei", "lat": 25.0117, "lng": 121.459},
+  {"name": "Taoyuan", "lat": 24.9937, "lng": 121.301},
+  {"name": "Tainan", "lat": 22.9997, "lng": 120.227},
+  {"name": "Hsinchu", "lat": 24.8138, "lng": 120.9675},
+  {"name": "Keelung", "lat": 25.1276, "lng": 121.7392},
+  {"name": "Chiayi", "lat": 23.4801, "lng": 120.4491},
+  {"name": "Changhua", "lat": 24.0518, "lng": 120.5161},
+  {"name": "Hualien", "lat": 23.9872, "lng": 121.6011},
+  {"name": "Taitung", "lat": 22.7583, "lng": 121.1444}
+]

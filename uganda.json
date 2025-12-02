@@ -1,0 +1,12 @@
+[
+  {"name": "Kampala", "lat": 0.3476, "lng": 32.5825},
+  {"name": "Gulu", "lat": 2.7717, "lng": 32.2996},
+  {"name": "Lira", "lat": 2.2472, "lng": 32.9},
+  {"name": "Mbarara", "lat": -0.6072, "lng": 30.6545},
+  {"name": "Jinja", "lat": 0.439, "lng": 33.2026},
+  {"name": "Bwizibwera", "lat": -0.4217, "lng": 30.6125},
+  {"name": "Mbale", "lat": 1.082, "lng": 34.175},
+  {"name": "Mukono", "lat": 0.3533, "lng": 32.7553},
+  {"name": "Kasese", "lat": 0.1714, "lng": 30.0825},
+  {"name": "Masaka", "lat": -0.3349, "lng": 31.7381}
+]

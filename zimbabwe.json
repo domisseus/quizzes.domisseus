@@ -1,0 +1,12 @@
+[
+  {"name": "Harare", "lat": -17.8216, "lng": 31.0492},
+  {"name": "Bulawayo", "lat": -20.15, "lng": 28.5833},
+  {"name": "Chitungwiza", "lat": -18.0127, "lng": 31.0756},
+  {"name": "Mutare", "lat": -18.9707, "lng": 32.6709},
+  {"name": "Epworth", "lat": -17.89, "lng": 31.1475},
+  {"name": "Gweru", "lat": -19.45, "lng": 29.8167},
+  {"name": "Kwekwe", "lat": -18.9201, "lng": 29.8236},
+  {"name": "Kadoma", "lat": -18.3333, "lng": 29.9167},
+  {"name": "Masvingo", "lat": -20.0637, "lng": 30.8277},
+  {"name": "Chinhoyi", "lat": -17.3667, "lng": 30.2}
+]
