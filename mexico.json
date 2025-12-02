@@ -1,0 +1,12 @@
+[
+  {"name": "Mexico City", "lat": 19.4326, "lng": -99.1332},
+  {"name": "Tijuana", "lat": 32.5149, "lng": -117.0382},
+  {"name": "Iztapalapa", "lat": 19.3553, "lng": -99.0622},
+  {"name": "León", "lat": 21.1221, "lng": -101.6826},
+  {"name": "Puebla", "lat": 19.0414, "lng": -98.2063},
+  {"name": "Ecatepec", "lat": 19.6018, "lng": -99.0507},
+  {"name": "Juárez", "lat": 31.7302, "lng": -106.4577},
+  {"name": "Zapopan", "lat": 20.7166, "lng": -103.4102},
+  {"name": "Guadalajara", "lat": 20.6597, "lng": -103.3496},
+  {"name": "Monterrey", "lat": 25.6866, "lng": -100.3161}
+]

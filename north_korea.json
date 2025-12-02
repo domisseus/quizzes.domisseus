@@ -1,0 +1,12 @@
+[
+  {"name": "Pyongyang", "lat": 39.0392, "lng": 125.7625},
+  {"name": "Hamhung", "lat": 39.9167, "lng": 127.5333},
+  {"name": "Chongjin", "lat": 41.7833, "lng": 129.7667},
+  {"name": "Nampo", "lat": 38.7375, "lng": 125.4053},
+  {"name": "Wonsan", "lat": 39.1528, "lng": 127.4436},
+  {"name": "Sinuiju", "lat": 40.1006, "lng": 124.3981},
+  {"name": "Tanchon", "lat": 40.4578, "lng": 128.9058},
+  {"name": "Kaechon", "lat": 39.6997, "lng": 125.9044},
+  {"name": "Kaesong", "lat": 37.9697, "lng": 126.5506},
+  {"name": "Sariwon", "lat": 38.5078, "lng": 125.7544}
+]

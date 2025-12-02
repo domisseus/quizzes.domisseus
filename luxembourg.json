@@ -1,0 +1,12 @@
+[
+  {"name": "Luxembourg City", "lat": 49.6116, "lng": 6.1319},
+  {"name": "Esch-sur-Alzette", "lat": 49.4972, "lng": 5.9822},
+  {"name": "Differdange", "lat": 49.5244, "lng": 5.8906},
+  {"name": "Dudelange", "lat": 49.4833, "lng": 6.0833},
+  {"name": "Ettelbruck", "lat": 49.8475, "lng": 6.1042},
+  {"name": "Diekirch", "lat": 49.8694, "lng": 6.1594},
+  {"name": "Wiltz", "lat": 49.9689, "lng": 5.9325},
+  {"name": "Echternach", "lat": 49.8117, "lng": 6.4217},
+  {"name": "Rumelange", "lat": 49.4603, "lng": 6.0306},
+  {"name": "Grevenmacher", "lat": 49.6792, "lng": 6.4411}
+]

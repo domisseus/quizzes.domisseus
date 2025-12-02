@@ -1,0 +1,12 @@
+[
+  {"name": "Kigali", "lat": -1.9706, "lng": 30.1044},
+  {"name": "Butare", "lat": -2.5967, "lng": 29.7394},
+  {"name": "Gitarama", "lat": -2.0744, "lng": 29.7567},
+  {"name": "Ruhengeri", "lat": -1.5, "lng": 29.6333},
+  {"name": "Gisenyi", "lat": -1.7028, "lng": 29.2564},
+  {"name": "Byumba", "lat": -1.5764, "lng": 30.0675},
+  {"name": "Cyangugu", "lat": -2.4846, "lng": 28.8986},
+  {"name": "Kibuye", "lat": -2.0603, "lng": 29.3478},
+  {"name": "Rwamagana", "lat": -1.9487, "lng": 30.4347},
+  {"name": "Kibungo", "lat": -2.1597, "lng": 30.5422}
+]

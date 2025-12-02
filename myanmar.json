@@ -1,0 +1,12 @@
+[
+  {"name": "Yangon", "lat": 16.8409, "lng": 96.1735},
+  {"name": "Mandalay", "lat": 21.9588, "lng": 96.0891},
+  {"name": "Naypyidaw", "lat": 19.7633, "lng": 96.0785},
+  {"name": "Mawlamyine", "lat": 16.4897, "lng": 97.6256},
+  {"name": "Bago", "lat": 17.3364, "lng": 96.4813},
+  {"name": "Pathein", "lat": 16.7833, "lng": 94.7333},
+  {"name": "Monywa", "lat": 22.1167, "lng": 95.1333},
+  {"name": "Sittwe", "lat": 20.15, "lng": 92.9},
+  {"name": "Meiktila", "lat": 20.8833, "lng": 95.8833},
+  {"name": "Taunggyi", "lat": 20.7833, "lng": 97.0333}
+]

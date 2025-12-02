@@ -1,0 +1,12 @@
+[
+  {"name": "Chisinau", "lat": 47.0105, "lng": 28.8638},
+  {"name": "Balti", "lat": 47.7617, "lng": 27.9261},
+  {"name": "Tiraspol", "lat": 46.8406, "lng": 29.6425},
+  {"name": "Bender", "lat": 46.8294, "lng": 29.4797},
+  {"name": "Ribnita", "lat": 47.7681, "lng": 29.01},
+  {"name": "Cahul", "lat": 45.9031, "lng": 28.1822},
+  {"name": "Ungheni", "lat": 47.2081, "lng": 27.7961},
+  {"name": "Soroca", "lat": 48.1566, "lng": 28.2849},
+  {"name": "Orhei", "lat": 47.3831, "lng": 28.8231},
+  {"name": "Comrat", "lat": 46.3006, "lng": 28.6572}
+]

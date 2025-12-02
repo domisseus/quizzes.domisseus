@@ -1,0 +1,12 @@
+[
+  {"name": "Managua", "lat": 12.115, "lng": -86.2361},
+  {"name": "León", "lat": 12.4379, "lng": -86.878},
+  {"name": "Masaya", "lat": 11.9744, "lng": -86.0942},
+  {"name": "Matagalpa", "lat": 12.9256, "lng": -85.9175},
+  {"name": "Tipitapa", "lat": 12.2, "lng": -86.1},
+  {"name": "Chinandega", "lat": 12.6294, "lng": -87.1317},
+  {"name": "Granada", "lat": 11.9299, "lng": -85.956},
+  {"name": "Estelí", "lat": 13.0919, "lng": -86.3539},
+  {"name": "Puerto Cabezas", "lat": 14.0333, "lng": -83.3833},
+  {"name": "Bluefields", "lat": 12.0137, "lng": -83.7635}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Asunción", "lat": -25.2637, "lng": -57.5759},
+  {"name": "Ciudad del Este", "lat": -25.5097, "lng": -54.6111},
+  {"name": "San Lorenzo", "lat": -25.3414, "lng": -57.5144},
+  {"name": "Luque", "lat": -25.2667, "lng": -57.4833},
+  {"name": "Capiatá", "lat": -25.35, "lng": -57.45},
+  {"name": "Lambaré", "lat": -25.3333, "lng": -57.6167},
+  {"name": "Fernando de la Mora", "lat": -25.3167, "lng": -57.5333},
+  {"name": "Limpio", "lat": -25.1764, "lng": -57.4789},
+  {"name": "Nemby", "lat": -25.3906, "lng": -57.5361},
+  {"name": "Encarnación", "lat": -27.3306, "lng": -55.8667}
+]

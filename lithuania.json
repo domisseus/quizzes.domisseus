@@ -1,0 +1,12 @@
+[
+  {"name": "Vilnius", "lat": 54.6872, "lng": 25.2797},
+  {"name": "Kaunas", "lat": 54.8985, "lng": 23.9036},
+  {"name": "Klaipeda", "lat": 55.7033, "lng": 21.1443},
+  {"name": "Siauliai", "lat": 55.9349, "lng": 23.3137},
+  {"name": "Panevezys", "lat": 55.7333, "lng": 24.35},
+  {"name": "Alytus", "lat": 54.3963, "lng": 24.0459},
+  {"name": "Marijampole", "lat": 54.555, "lng": 23.35},
+  {"name": "Mazeikiai", "lat": 56.3167, "lng": 22.3333},
+  {"name": "Jonava", "lat": 55.0722, "lng": 24.2806},
+  {"name": "Utena", "lat": 55.5, "lng": 25.6}
+]

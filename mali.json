@@ -1,0 +1,12 @@
+[
+  {"name": "Bamako", "lat": 12.6392, "lng": -8.0029},
+  {"name": "Sikasso", "lat": 11.3175, "lng": -5.6665},
+  {"name": "Mopti", "lat": 14.4843, "lng": -4.1829},
+  {"name": "Koutiala", "lat": 12.3917, "lng": -5.4642},
+  {"name": "Kayes", "lat": 14.4469, "lng": -11.4445},
+  {"name": "Ségou", "lat": 13.4317, "lng": -6.2157},
+  {"name": "Gao", "lat": 16.2717, "lng": -0.0447},
+  {"name": "Kati", "lat": 12.7441, "lng": -8.0726},
+  {"name": "Timbuktu", "lat": 16.7735, "lng": -3.0074},
+  {"name": "Bougouni", "lat": 11.4177, "lng": -7.4832}
+]

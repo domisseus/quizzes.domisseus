@@ -1,0 +1,12 @@
+[
+  {"name": "Casablanca", "lat": 33.5731, "lng": -7.5898},
+  {"name": "Fes", "lat": 34.0181, "lng": -5.0078},
+  {"name": "Tangier", "lat": 35.7595, "lng": -5.834},
+  {"name": "Marrakesh", "lat": 31.6295, "lng": -7.9811},
+  {"name": "Salé", "lat": 34.0333, "lng": -6.8167},
+  {"name": "Meknes", "lat": 33.8935, "lng": -5.5473},
+  {"name": "Rabat", "lat": 34.0209, "lng": -6.8416},
+  {"name": "Oujda", "lat": 34.6805, "lng": -1.9076},
+  {"name": "Kenitra", "lat": 34.25, "lng": -6.5833},
+  {"name": "Agadir", "lat": 30.4278, "lng": -9.5981}
+]

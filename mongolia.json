@@ -1,0 +1,12 @@
+[
+  {"name": "Ulaanbaatar", "lat": 47.9077, "lng": 106.9205},
+  {"name": "Erdenet", "lat": 49.0333, "lng": 104.0833},
+  {"name": "Darkhan", "lat": 49.4867, "lng": 105.9228},
+  {"name": "Choibalsan", "lat": 48.0667, "lng": 114.5333},
+  {"name": "Mörön", "lat": 49.6333, "lng": 100.1667},
+  {"name": "Nalaikh", "lat": 47.7833, "lng": 107.2833},
+  {"name": "Bayankhongor", "lat": 46.1667, "lng": 100.7167},
+  {"name": "Ölgii", "lat": 48.9667, "lng": 89.9667},
+  {"name": "Khovd", "lat": 48.0056, "lng": 91.6417},
+  {"name": "Arvaikheer", "lat": 46.2667, "lng": 102.7833}
+]

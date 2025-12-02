@@ -1,0 +1,12 @@
+[
+  {"name": "Moscow", "lat": 55.7558, "lng": 37.6173},
+  {"name": "Saint Petersburg", "lat": 59.9343, "lng": 30.3351},
+  {"name": "Novosibirsk", "lat": 55.0084, "lng": 82.9357},
+  {"name": "Yekaterinburg", "lat": 56.8389, "lng": 60.6057},
+  {"name": "Kazan", "lat": 55.7963, "lng": 49.1088},
+  {"name": "Nizhny Novgorod", "lat": 56.3269, "lng": 44.0059},
+  {"name": "Chelyabinsk", "lat": 55.1644, "lng": 61.4368},
+  {"name": "Samara", "lat": 53.2415, "lng": 50.2212},
+  {"name": "Omsk", "lat": 54.9885, "lng": 73.3242},
+  {"name": "Rostov-on-Don", "lat": 47.2357, "lng": 39.7015}
+]

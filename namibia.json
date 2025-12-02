@@ -1,0 +1,12 @@
+[
+  {"name": "Windhoek", "lat": -22.5609, "lng": 17.0658},
+  {"name": "Walvis Bay", "lat": -22.9575, "lng": 14.5053},
+  {"name": "Swakopmund", "lat": -22.6833, "lng": 14.5333},
+  {"name": "Rundu", "lat": -17.9333, "lng": 19.7667},
+  {"name": "Oshakati", "lat": -17.7833, "lng": 15.7},
+  {"name": "Rehoboth", "lat": -23.3167, "lng": 17.0833},
+  {"name": "Katima Mulilo", "lat": -17.5, "lng": 24.2667},
+  {"name": "Otjiwarongo", "lat": -20.4633, "lng": 16.6477},
+  {"name": "Okahandja", "lat": -21.9833, "lng": 16.9167},
+  {"name": "Gobabis", "lat": -22.45, "lng": 18.9667}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Kuwait City", "lat": 29.3759, "lng": 47.9774},
+  {"name": "Al Ahmadi", "lat": 29.0769, "lng": 48.0839},
+  {"name": "Hawalli", "lat": 29.3328, "lng": 48.0289},
+  {"name": "Salmiya", "lat": 29.3336, "lng": 48.0714},
+  {"name": "Sabah Al Salem", "lat": 29.2731, "lng": 48.0725},
+  {"name": "Al Farwaniyah", "lat": 29.2742, "lng": 47.9575},
+  {"name": "Fahaheel", "lat": 29.0861, "lng": 48.125},
+  {"name": "Jahra", "lat": 29.3375, "lng": 47.6581},
+  {"name": "Mangaf", "lat": 29.0833, "lng": 48.1333},
+  {"name": "Mahboula", "lat": 29.1367, "lng": 48.1389}
+]

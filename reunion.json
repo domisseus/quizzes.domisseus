@@ -1,0 +1,16 @@
+[
+  {"name": "Saint-Denis", "lat": -20.8828, "lng": 55.4518},
+  {"name": "Saint-Paul", "lat": -21.0090, "lng": 55.2750},
+  {"name": "Saint-Pierre", "lat": -21.3400, "lng": 55.4800},
+  {"name": "Le Tampon", "lat": -21.2820, "lng": 55.5120},
+  {"name": "Saint-André", "lat": -20.9600, "lng": 55.6500},
+  {"name": "Saint-Louis", "lat": -21.2130, "lng": 55.4160},
+  {"name": "Saint-Benoît", "lat": -21.0370, "lng": 55.7110},
+  {"name": "La Possession", "lat": -20.9380, "lng": 55.3340},
+  {"name": "Sainte-Marie", "lat": -20.8900, "lng": 55.5300},
+  {"name": "Petite-Île", "lat": -21.3650, "lng": 55.5720},
+  {"name": "Salazie", "lat": -21.0333, "lng": 55.5167},
+  {"name": "Saint-Leu", "lat": -21.1600, "lng": 55.2890},
+  {"name": "Le Port", "lat": -20.9380, "lng": 55.2930},
+  {"name": "Saint-Joseph", "lat": -21.3667, "lng": 55.6167}
+]

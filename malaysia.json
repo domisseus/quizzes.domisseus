@@ -1,0 +1,12 @@
+[
+  {"name": "Kuala Lumpur", "lat": 3.139, "lng": 101.6869},
+  {"name": "George Town", "lat": 5.4141, "lng": 100.3288},
+  {"name": "Johor Bahru", "lat": 1.4927, "lng": 103.7414},
+  {"name": "Ipoh", "lat": 4.5975, "lng": 101.0901},
+  {"name": "Shah Alam", "lat": 3.0738, "lng": 101.5183},
+  {"name": "Petaling Jaya", "lat": 3.1073, "lng": 101.6067},
+  {"name": "Kota Kinabalu", "lat": 5.9804, "lng": 116.0735},
+  {"name": "Malacca City", "lat": 2.1896, "lng": 102.2501},
+  {"name": "Alor Setar", "lat": 6.121, "lng": 100.3601},
+  {"name": "Kuala Terengganu", "lat": 5.3302, "lng": 103.1408}
+]

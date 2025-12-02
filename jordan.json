@@ -1,0 +1,12 @@
+[
+  {"name": "Amman", "lat": 31.9454, "lng": 35.9284},
+  {"name": "Zarqa", "lat": 32.0728, "lng": 36.0878},
+  {"name": "Irbid", "lat": 32.5568, "lng": 35.8469},
+  {"name": "Russeifa", "lat": 32.0178, "lng": 36.0464},
+  {"name": "Aqaba", "lat": 29.5319, "lng": 35.0061},
+  {"name": "Madaba", "lat": 31.7167, "lng": 35.7833},
+  {"name": "Salt", "lat": 32.0392, "lng": 35.7272},
+  {"name": "Ramtha", "lat": 32.5606, "lng": 36.0097},
+  {"name": "Mafraq", "lat": 32.35, "lng": 36.2},
+  {"name": "Karak", "lat": 31.1833, "lng": 35.7}
+]

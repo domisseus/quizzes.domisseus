@@ -1,0 +1,12 @@
+[
+  {"name": "Almaty", "lat": 43.222, "lng": 76.8512},
+  {"name": "Astana", "lat": 51.1694, "lng": 71.4491},
+  {"name": "Shymkent", "lat": 42.3417, "lng": 69.5901},
+  {"name": "Karaganda", "lat": 49.802, "lng": 73.1021},
+  {"name": "Aktobe", "lat": 50.2839, "lng": 57.167},
+  {"name": "Taraz", "lat": 42.9, "lng": 71.3667},
+  {"name": "Pavlodar", "lat": 52.3, "lng": 76.95},
+  {"name": "Ust-Kamenogorsk", "lat": 49.97, "lng": 82.607},
+  {"name": "Semey", "lat": 50.4111, "lng": 80.2275},
+  {"name": "Atyrau", "lat": 47.1167, "lng": 51.8833}
+]

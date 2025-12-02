@@ -1,0 +1,12 @@
+[
+  {"name": "Vientiane", "lat": 17.9757, "lng": 102.6331},
+  {"name": "Pakse", "lat": 15.1206, "lng": 105.7861},
+  {"name": "Savannakhet", "lat": 16.5566, "lng": 104.7521},
+  {"name": "Luang Prabang", "lat": 19.885, "lng": 102.1347},
+  {"name": "Xam Neua", "lat": 20.4167, "lng": 104.05},
+  {"name": "Phonsavan", "lat": 19.45, "lng": 103.2167},
+  {"name": "Thakhek", "lat": 17.4, "lng": 104.8333},
+  {"name": "Muang Xay", "lat": 20.7, "lng": 101.9833},
+  {"name": "Vang Vieng", "lat": 18.9167, "lng": 102.45},
+  {"name": "Attapeu", "lat": 14.8167, "lng": 106.8333}
+]

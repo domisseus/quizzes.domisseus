@@ -1,0 +1,12 @@
+[
+  {"name": "Karachi", "lat": 24.8607, "lng": 67.0011},
+  {"name": "Lahore", "lat": 31.5204, "lng": 74.3587},
+  {"name": "Faisalabad", "lat": 31.4504, "lng": 73.135},
+  {"name": "Rawalpindi", "lat": 33.5651, "lng": 73.0169},
+  {"name": "Gujranwala", "lat": 32.1877, "lng": 74.1945},
+  {"name": "Peshawar", "lat": 34.0151, "lng": 71.5249},
+  {"name": "Multan", "lat": 30.1575, "lng": 71.5249},
+  {"name": "Hyderabad", "lat": 25.396, "lng": 68.3578},
+  {"name": "Islamabad", "lat": 33.6844, "lng": 73.0479},
+  {"name": "Quetta", "lat": 30.1798, "lng": 66.975}
+]

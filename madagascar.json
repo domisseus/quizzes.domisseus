@@ -1,0 +1,12 @@
+[
+  {"name": "Antananarivo", "lat": -18.8792, "lng": 47.5079},
+  {"name": "Toamasina", "lat": -18.1492, "lng": 49.4023},
+  {"name": "Antsirabe", "lat": -19.8659, "lng": 47.0333},
+  {"name": "Fianarantsoa", "lat": -21.4343, "lng": 47.0857},
+  {"name": "Mahajanga", "lat": -15.7167, "lng": 46.3167},
+  {"name": "Toliara", "lat": -23.35, "lng": 43.6667},
+  {"name": "Antsiranana", "lat": -12.2833, "lng": 49.2833},
+  {"name": "Ambovombe", "lat": -25.1767, "lng": 46.0883},
+  {"name": "Manakara", "lat": -22.1333, "lng": 48.0167},
+  {"name": "Tolagnaro", "lat": -25.03, "lng": 46.99}
+]

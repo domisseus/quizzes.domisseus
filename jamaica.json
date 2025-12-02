@@ -1,0 +1,12 @@
+[
+  {"name": "Kingston", "lat": 17.9714, "lng": -76.7936},
+  {"name": "New Kingston", "lat": 18.01, "lng": -76.77},
+  {"name": "Spanish Town", "lat": 17.995, "lng": -76.95},
+  {"name": "Portmore", "lat": 17.9692, "lng": -76.8778},
+  {"name": "Montego Bay", "lat": 18.4714, "lng": -77.9229},
+  {"name": "Mandeville", "lat": 18.0362, "lng": -77.5065},
+  {"name": "May Pen", "lat": 17.9645, "lng": -77.2435},
+  {"name": "Old Harbour", "lat": 17.9414, "lng": -77.1065},
+  {"name": "Linstead", "lat": 18.1347, "lng": -77.0306},
+  {"name": "Savanna-la-Mar", "lat": 18.2189, "lng": -78.136}
+]

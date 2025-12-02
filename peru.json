@@ -1,0 +1,12 @@
+[
+  {"name": "Lima", "lat": -12.0464, "lng": -77.0428},
+  {"name": "Arequipa", "lat": -16.409, "lng": -71.5375},
+  {"name": "Trujillo", "lat": -8.1091, "lng": -79.0215},
+  {"name": "Chiclayo", "lat": -6.7714, "lng": -79.8442},
+  {"name": "Piura", "lat": -5.1945, "lng": -80.6328},
+  {"name": "Cusco", "lat": -13.532, "lng": -71.9675},
+  {"name": "Iquitos", "lat": -3.7456, "lng": -73.2544},
+  {"name": "Huancayo", "lat": -12.0651, "lng": -75.2049},
+  {"name": "Pucallpa", "lat": -8.3929, "lng": -74.5826},
+  {"name": "Tacna", "lat": -18.0146, "lng": -70.2536}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Podgorica", "lat": 42.4304, "lng": 19.2594},
+  {"name": "Niksic", "lat": 42.7731, "lng": 18.9445},
+  {"name": "Pljevlja", "lat": 43.3567, "lng": 19.3567},
+  {"name": "Herceg Novi", "lat": 42.4531, "lng": 18.5375},
+  {"name": "Bar", "lat": 42.1, "lng": 19.1},
+  {"name": "Budva", "lat": 42.2881, "lng": 18.8425},
+  {"name": "Cetinje", "lat": 42.3931, "lng": 18.9131},
+  {"name": "Berane", "lat": 42.8425, "lng": 19.8733},
+  {"name": "Ulcinj", "lat": 41.9294, "lng": 19.2244},
+  {"name": "Tivat", "lat": 42.4364, "lng": 18.6961}
+]

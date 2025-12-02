@@ -1,0 +1,12 @@
+[
+  {"name": "Maputo", "lat": -25.9653, "lng": 32.5892},
+  {"name": "Matola", "lat": -25.9631, "lng": 32.4589},
+  {"name": "Nampula", "lat": -15.1165, "lng": 39.2666},
+  {"name": "Beira", "lat": -19.8436, "lng": 34.8389},
+  {"name": "Chimoio", "lat": -19.1164, "lng": 33.4833},
+  {"name": "Nacala", "lat": -14.56, "lng": 40.6747},
+  {"name": "Quelimane", "lat": -17.8786, "lng": 36.8883},
+  {"name": "Tete", "lat": -16.1564, "lng": 33.5867},
+  {"name": "Xai-Xai", "lat": -25.045, "lng": 33.6403},
+  {"name": "Maxixe", "lat": -23.8597, "lng": 35.3472}
+]

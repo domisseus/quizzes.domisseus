@@ -1,0 +1,12 @@
+[
+  {"name": "Muscat", "lat": 23.588, "lng": 58.4091},
+  {"name": "Seeb", "lat": 23.6703, "lng": 58.1891},
+  {"name": "Salalah", "lat": 17.0151, "lng": 54.0924},
+  {"name": "Bawshar", "lat": 23.55, "lng": 58.4167},
+  {"name": "Sohar", "lat": 24.3644, "lng": 56.7461},
+  {"name": "Suwayq", "lat": 23.85, "lng": 57.4333},
+  {"name": "Ibri", "lat": 23.2333, "lng": 56.5167},
+  {"name": "Saham", "lat": 24.1667, "lng": 56.8833},
+  {"name": "Barka", "lat": 23.6667, "lng": 57.8833},
+  {"name": "Rustaq", "lat": 23.3833, "lng": 57.4333}
+]

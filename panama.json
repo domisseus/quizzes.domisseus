@@ -1,0 +1,12 @@
+[
+  {"name": "Panama City", "lat": 8.9824, "lng": -79.5199},
+  {"name": "San Miguelito", "lat": 9.0333, "lng": -79.5},
+  {"name": "Tocumen", "lat": 9.0833, "lng": -79.3833},
+  {"name": "David", "lat": 8.4273, "lng": -82.4309},
+  {"name": "Arraiján", "lat": 8.95, "lng": -79.65},
+  {"name": "Colón", "lat": 9.3598, "lng": -79.901},
+  {"name": "Las Cumbres", "lat": 9.0833, "lng": -79.5333},
+  {"name": "La Chorrera", "lat": 8.8803, "lng": -79.7833},
+  {"name": "Pacora", "lat": 9.0833, "lng": -79.2833},
+  {"name": "Santiago", "lat": 8.1, "lng": -80.9833}
+]

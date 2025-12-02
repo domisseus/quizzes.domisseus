@@ -1,0 +1,12 @@
+[
+  {"name": "Tokyo", "lat": 35.6762, "lng": 139.6503},
+  {"name": "Yokohama", "lat": 35.4437, "lng": 139.638},
+  {"name": "Osaka", "lat": 34.6937, "lng": 135.5023},
+  {"name": "Nagoya", "lat": 35.1815, "lng": 136.9066},
+  {"name": "Sapporo", "lat": 43.0618, "lng": 141.3545},
+  {"name": "Fukuoka", "lat": 33.5902, "lng": 130.4017},
+  {"name": "Kobe", "lat": 34.6901, "lng": 135.1955},
+  {"name": "Kyoto", "lat": 35.0116, "lng": 135.7681},
+  {"name": "Kawasaki", "lat": 35.5306, "lng": 139.7},
+  {"name": "Saitama", "lat": 35.8616, "lng": 139.6455}
+]

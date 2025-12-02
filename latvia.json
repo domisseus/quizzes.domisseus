@@ -1,0 +1,12 @@
+[
+  {"name": "Riga", "lat": 56.9496, "lng": 24.1052},
+  {"name": "Daugavpils", "lat": 55.8747, "lng": 26.5356},
+  {"name": "Liepaja", "lat": 56.5167, "lng": 21.0167},
+  {"name": "Jelgava", "lat": 56.65, "lng": 23.7128},
+  {"name": "Jurmala", "lat": 56.968, "lng": 23.7704},
+  {"name": "Ventspils", "lat": 57.3894, "lng": 21.5606},
+  {"name": "Rezekne", "lat": 56.5075, "lng": 27.3306},
+  {"name": "Valmiera", "lat": 57.5411, "lng": 25.4275},
+  {"name": "Jekabpils", "lat": 56.4975, "lng": 25.8653},
+  {"name": "Ogre", "lat": 56.8167, "lng": 24.6167}
+]

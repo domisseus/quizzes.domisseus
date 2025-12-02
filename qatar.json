@@ -1,0 +1,12 @@
+[
+  {"name": "Doha", "lat": 25.2867, "lng": 51.5333},
+  {"name": "Al Rayyan", "lat": 25.2919, "lng": 51.4244},
+  {"name": "Al Wakrah", "lat": 25.1768, "lng": 51.6034},
+  {"name": "Al Khor", "lat": 25.6839, "lng": 51.5058},
+  {"name": "Umm Salal", "lat": 25.4167, "lng": 51.4167},
+  {"name": "Al Daayen", "lat": 25.5667, "lng": 51.4667},
+  {"name": "Madinat ash Shamal", "lat": 26.1167, "lng": 51.2167},
+  {"name": "Dukhan", "lat": 25.4286, "lng": 50.7875},
+  {"name": "Mesaieed", "lat": 24.9903, "lng": 51.5492},
+  {"name": "Lusail", "lat": 25.4167, "lng": 51.5167}
+]

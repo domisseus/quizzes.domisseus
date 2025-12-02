@@ -1,0 +1,12 @@
+[
+  {"name": "Gaza City", "lat": 31.5017, "lng": 34.4668},
+  {"name": "East Jerusalem", "lat": 31.7683, "lng": 35.2137},
+  {"name": "Ramallah", "lat": 31.9038, "lng": 35.2034},
+  {"name": "Hebron", "lat": 31.5326, "lng": 35.0998},
+  {"name": "Nablus", "lat": 32.2211, "lng": 35.2544},
+  {"name": "Jenin", "lat": 32.4606, "lng": 35.2969},
+  {"name": "Bethlehem", "lat": 31.7058, "lng": 35.2027},
+  {"name": "Rafah", "lat": 31.2969, "lng": 34.2435},
+  {"name": "Khan Yunis", "lat": 31.3462, "lng": 34.3063},
+  {"name": "Jericho", "lat": 31.8611, "lng": 35.4617}
+]

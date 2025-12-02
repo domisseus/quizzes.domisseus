@@ -1,0 +1,12 @@
+[
+  {"name": "Oslo", "lat": 59.9139, "lng": 10.7522},
+  {"name": "Bergen", "lat": 60.3913, "lng": 5.3221},
+  {"name": "Trondheim", "lat": 63.4305, "lng": 10.3951},
+  {"name": "Stavanger", "lat": 58.969, "lng": 5.7331},
+  {"name": "Drammen", "lat": 59.7441, "lng": 10.2045},
+  {"name": "Fredrikstad", "lat": 59.2205, "lng": 10.9347},
+  {"name": "Kristiansand", "lat": 58.1599, "lng": 8.0182},
+  {"name": "Sandnes", "lat": 58.8524, "lng": 5.7352},
+  {"name": "Tromso", "lat": 69.6492, "lng": 18.9553},
+  {"name": "Sarpsborg", "lat": 59.284, "lng": 11.1094}
+]

@@ -1,0 +1,17 @@
+[
+  {"name": "San Juan", "lat": 18.4660, "lng": -66.1060},
+  {"name": "Ponce", "lat": 18.0100, "lng": -66.6240},
+  {"name": "Mayagüez", "lat": 18.2010, "lng": -67.1400},
+  {"name": "Bayamón", "lat": 18.3990, "lng": -66.1560},
+  {"name": "Carolina", "lat": 18.3810, "lng": -65.9570},
+  {"name": "Guaynabo", "lat": 18.3570, "lng": -66.1110},
+  {"name": "Trujillo Alto", "lat": 18.3550, "lng": -66.0070},
+  {"name": "Caguas", "lat": 18.2340, "lng": -66.0480},
+  {"name": "Arecibo", "lat": 18.4720, "lng": -66.7160},
+  {"name": "Fajardo", "lat": 18.3260, "lng": -65.6520},
+  {"name": "Aguadilla", "lat": 18.4230, "lng": -67.1540},
+  {"name": "Cabo Rojo", "lat": 18.0830, "lng": -67.1440},
+  {"name": "Yauco", "lat": 18.0500, "lng": -66.8500},
+  {"name": "Guayama", "lat": 17.9860, "lng": -66.1150},
+  {"name": "Cayey", "lat": 18.1060, "lng": -66.1640}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Nairobi", "lat": -1.2921, "lng": 36.8219},
+  {"name": "Mombasa", "lat": -4.0435, "lng": 39.6682},
+  {"name": "Kisumu", "lat": -0.0917, "lng": 34.768},
+  {"name": "Nakuru", "lat": -0.3031, "lng": 36.08},
+  {"name": "Eldoret", "lat": 0.5143, "lng": 35.2698},
+  {"name": "Kehancha", "lat": -1.1667, "lng": 34.6667},
+  {"name": "Ruiru", "lat": -1.15, "lng": 36.9667},
+  {"name": "Kikuyu", "lat": -1.25, "lng": 36.6667},
+  {"name": "Malindi", "lat": -3.2175, "lng": 40.1191},
+  {"name": "Naivasha", "lat": -0.7167, "lng": 36.4333}
+]

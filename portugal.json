@@ -1,0 +1,12 @@
+[
+  {"name": "Lisbon", "lat": 38.7223, "lng": -9.1393},
+  {"name": "Porto", "lat": 41.1579, "lng": -8.6291},
+  {"name": "Vila Nova de Gaia", "lat": 41.1239, "lng": -8.6118},
+  {"name": "Amadora", "lat": 38.7596, "lng": -9.2237},
+  {"name": "Braga", "lat": 41.5454, "lng": -8.4265},
+  {"name": "Funchal", "lat": 32.6603, "lng": -16.9248},
+  {"name": "Coimbra", "lat": 40.2033, "lng": -8.4103},
+  {"name": "Setubal", "lat": 38.5244, "lng": -8.8882},
+  {"name": "Almada", "lat": 38.679, "lng": -9.1569},
+  {"name": "Faro", "lat": 37.0179, "lng": -7.9308}
+]

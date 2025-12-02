@@ -1,0 +1,12 @@
+[
+  {"name": "Beirut", "lat": 33.8886, "lng": 35.4955},
+  {"name": "Tripoli", "lat": 34.4367, "lng": 35.8497},
+  {"name": "Sidon", "lat": 33.5631, "lng": 35.3689},
+  {"name": "Tyre", "lat": 33.2733, "lng": 35.1939},
+  {"name": "Nabatieh", "lat": 33.3833, "lng": 35.4833},
+  {"name": "Zahle", "lat": 33.8463, "lng": 35.902},
+  {"name": "Jounieh", "lat": 33.9833, "lng": 35.6167},
+  {"name": "Batroun", "lat": 34.25, "lng": 35.6667},
+  {"name": "Baalbek", "lat": 34.0058, "lng": 36.2181},
+  {"name": "Byblos", "lat": 34.1214, "lng": 35.6475}
+]

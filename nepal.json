@@ -1,0 +1,12 @@
+[
+  {"name": "Kathmandu", "lat": 27.7172, "lng": 85.324},
+  {"name": "Pokhara", "lat": 28.2096, "lng": 83.9856},
+  {"name": "Lalitpur", "lat": 27.6667, "lng": 85.3333},
+  {"name": "Bharatpur", "lat": 27.6833, "lng": 84.4333},
+  {"name": "Biratnagar", "lat": 26.4833, "lng": 87.2833},
+  {"name": "Birgunj", "lat": 27.0167, "lng": 84.8833},
+  {"name": "Dharan", "lat": 26.8125, "lng": 87.2833},
+  {"name": "Janakpur", "lat": 26.7167, "lng": 85.9167},
+  {"name": "Hetauda", "lat": 27.4167, "lng": 85.0333},
+  {"name": "Butwal", "lat": 27.7, "lng": 83.45}
+]

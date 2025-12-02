@@ -1,0 +1,12 @@
+[
+  {"name": "Bucharest", "lat": 44.4268, "lng": 26.1025},
+  {"name": "Cluj-Napoca", "lat": 46.7712, "lng": 23.6236},
+  {"name": "Timisoara", "lat": 45.7489, "lng": 21.2087},
+  {"name": "Iasi", "lat": 47.1585, "lng": 27.6014},
+  {"name": "Constanta", "lat": 44.1598, "lng": 28.6348},
+  {"name": "Craiova", "lat": 44.3302, "lng": 23.7949},
+  {"name": "Brasov", "lat": 45.6427, "lng": 25.5887},
+  {"name": "Galati", "lat": 45.4353, "lng": 28.008},
+  {"name": "Ploiesti", "lat": 44.9367, "lng": 26.0129},
+  {"name": "Oradea", "lat": 47.0465, "lng": 21.9189}
+]
