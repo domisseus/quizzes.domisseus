@@ -1,0 +1,12 @@
+[
+  {"name": "N'Djamena", "lat": 12.1348, "lng": 15.0557},
+  {"name": "Moundou", "lat": 8.5667, "lng": 16.0833},
+  {"name": "Sarh", "lat": 9.1429, "lng": 18.3888},
+  {"name": "Abéché", "lat": 13.8292, "lng": 20.8324},
+  {"name": "Kélo", "lat": 9.3086, "lng": 15.8066},
+  {"name": "Koumra", "lat": 8.9126, "lng": 17.5539},
+  {"name": "Pala", "lat": 9.3642, "lng": 14.9046},
+  {"name": "Am Timan", "lat": 11.0297, "lng": 20.2827},
+  {"name": "Bongor", "lat": 10.2806, "lng": 15.3722},
+  {"name": "Mongo", "lat": 12.1844, "lng": 18.693}
+]

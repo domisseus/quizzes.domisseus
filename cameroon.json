@@ -1,0 +1,12 @@
+[
+  {"name": "Douala", "lat": 4.0511, "lng": 9.7679},
+  {"name": "Yaoundé", "lat": 3.848, "lng": 11.5021},
+  {"name": "Bamenda", "lat": 5.9631, "lng": 10.1591},
+  {"name": "Bafoussam", "lat": 5.4778, "lng": 10.4176},
+  {"name": "Garoua", "lat": 9.3, "lng": 13.4},
+  {"name": "Maroua", "lat": 10.5917, "lng": 14.315},
+  {"name": "Ngaoundéré", "lat": 7.3167, "lng": 13.5833},
+  {"name": "Kumba", "lat": 4.6367, "lng": 9.4469},
+  {"name": "Buéa", "lat": 4.155, "lng": 9.2314},
+  {"name": "Nkongsamba", "lat": 4.9533, "lng": 9.9414}
+]

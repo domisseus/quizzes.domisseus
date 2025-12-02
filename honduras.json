@@ -1,0 +1,12 @@
+[
+  {"name": "Tegucigalpa", "lat": 14.0723, "lng": -87.1921},
+  {"name": "San Pedro Sula", "lat": 15.5042, "lng": -88.025},
+  {"name": "Choloma", "lat": 15.6167, "lng": -87.9667},
+  {"name": "La Ceiba", "lat": 15.7833, "lng": -86.7667},
+  {"name": "El Progreso", "lat": 15.4, "lng": -87.8},
+  {"name": "Choluteca", "lat": 13.3, "lng": -87.1833},
+  {"name": "Comayagua", "lat": 14.45, "lng": -87.6333},
+  {"name": "Puerto Cortés", "lat": 15.8333, "lng": -87.9333},
+  {"name": "La Lima", "lat": 15.4333, "lng": -87.9167},
+  {"name": "Danlí", "lat": 14.0333, "lng": -86.5833}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Brazzaville", "lat": -4.2634, "lng": 15.2429},
+  {"name": "Pointe-Noire", "lat": -4.7692, "lng": 11.8691},
+  {"name": "Dolisie", "lat": -4.195, "lng": 12.6828},
+  {"name": "Nkayi", "lat": -4.1803, "lng": 13.2925},
+  {"name": "Ouesso", "lat": 1.6136, "lng": 16.0517},
+  {"name": "Impfondo", "lat": 1.6264, "lng": 18.0628},
+  {"name": "Madingou", "lat": -4.1528, "lng": 13.5483},
+  {"name": "Owando", "lat": -0.4819, "lng": 15.8978},
+  {"name": "Sibiti", "lat": -3.6819, "lng": 13.3499},
+  {"name": "Loutété", "lat": -4.2889, "lng": 13.8592}
+]

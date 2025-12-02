@@ -1,0 +1,12 @@
+[
+  {"name": "Kabul", "lat": 34.5553, "lng": 69.2075},
+  {"name": "Kandahar", "lat": 31.6289, "lng": 65.7372},
+  {"name": "Herat", "lat": 34.3529, "lng": 62.204},
+  {"name": "Mazar-i-Sharif", "lat": 36.7167, "lng": 67.1167},
+  {"name": "Jalalabad", "lat": 34.4265, "lng": 70.4515},
+  {"name": "Kunduz", "lat": 36.729, "lng": 68.867},
+  {"name": "Ghazni", "lat": 33.5451, "lng": 68.4167},
+  {"name": "Balkh", "lat": 36.7581, "lng": 66.8989},
+  {"name": "Baghlan", "lat": 36.1333, "lng": 68.7},
+  {"name": "Gardez", "lat": 33.6, "lng": 69.2167}
+]

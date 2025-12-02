@@ -1,0 +1,12 @@
+[
+  {"name": "Santiago", "lat": -33.4489, "lng": -70.6693},
+  {"name": "Valparaíso", "lat": -33.0472, "lng": -71.6127},
+  {"name": "Concepción", "lat": -36.8201, "lng": -73.0444},
+  {"name": "La Serena", "lat": -29.9027, "lng": -71.252},
+  {"name": "Antofagasta", "lat": -23.6509, "lng": -70.3975},
+  {"name": "Temuco", "lat": -38.7359, "lng": -72.5904},
+  {"name": "Rancagua", "lat": -34.1708, "lng": -70.7444},
+  {"name": "Talca", "lat": -35.4264, "lng": -71.6554},
+  {"name": "Arica", "lat": -18.4783, "lng": -70.3126},
+  {"name": "Chillán", "lat": -36.6063, "lng": -72.1023}
+]

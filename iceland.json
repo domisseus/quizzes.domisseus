@@ -1,0 +1,12 @@
+[
+  {"name": "Reykjavík", "lat": 64.1265, "lng": -21.8174},
+  {"name": "Kópavogur", "lat": 64.1123, "lng": -21.913},
+  {"name": "Hafnarfjörður", "lat": 64.0678, "lng": -21.9547},
+  {"name": "Akureyri", "lat": 65.6885, "lng": -18.1262},
+  {"name": "Keflavík", "lat": 64.0049, "lng": -22.5624},
+  {"name": "Garðabær", "lat": 64.0883, "lng": -21.9167},
+  {"name": "Mosfellsbær", "lat": 64.1683, "lng": -21.6961},
+  {"name": "Akranes", "lat": 64.3167, "lng": -22.0667},
+  {"name": "Selfoss", "lat": 63.9331, "lng": -20.999},
+  {"name": "Egilsstaðir", "lat": 65.2667, "lng": -14.4}
+]

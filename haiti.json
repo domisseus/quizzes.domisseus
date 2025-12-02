@@ -1,0 +1,12 @@
+[
+  {"name": "Port-au-Prince", "lat": 18.5933, "lng": -72.3015},
+  {"name": "Carrefour", "lat": 18.5333, "lng": -72.4},
+  {"name": "Delmas", "lat": 18.55, "lng": -72.3},
+  {"name": "Pétion-Ville", "lat": 18.5167, "lng": -72.2833},
+  {"name": "Cité Soleil", "lat": 18.5833, "lng": -72.3333},
+  {"name": "Gonaïves", "lat": 19.45, "lng": -72.6833},
+  {"name": "Cap-Haïtien", "lat": 19.75, "lng": -72.2},
+  {"name": "Saint-Marc", "lat": 19.1167, "lng": -72.7},
+  {"name": "Port-de-Paix", "lat": 19.9333, "lng": -72.8333},
+  {"name": "Tabarre", "lat": 18.5833, "lng": -72.2667}
+]

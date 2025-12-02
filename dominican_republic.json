@@ -1,0 +1,12 @@
+[
+  {"name": "Santo Domingo", "lat": 18.4861, "lng": -69.9312},
+  {"name": "Santiago", "lat": 19.4517, "lng": -70.697},
+  {"name": "Santo Domingo Oeste", "lat": 18.5, "lng": -70.0},
+  {"name": "San Pedro de Macorís", "lat": 18.45, "lng": -69.3},
+  {"name": "La Romana", "lat": 18.4273, "lng": -68.9728},
+  {"name": "San Cristóbal", "lat": 18.4167, "lng": -70.1},
+  {"name": "Puerto Plata", "lat": 19.7934, "lng": -70.6884},
+  {"name": "San Francisco de Macorís", "lat": 19.3, "lng": -70.25},
+  {"name": "Salvaleón de Higüey", "lat": 18.6167, "lng": -68.7},
+  {"name": "Concepción de la Vega", "lat": 19.22, "lng": -70.53}
+]

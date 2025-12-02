@@ -1,0 +1,12 @@
+[
+  {"name": "Addis Ababa", "lat": 9.0331, "lng": 38.7444},
+  {"name": "Dire Dawa", "lat": 9.5931, "lng": 41.8661},
+  {"name": "Mek'ele", "lat": 13.4967, "lng": 39.4767},
+  {"name": "Gondar", "lat": 12.6, "lng": 37.4667},
+  {"name": "Bahir Dar", "lat": 11.5936, "lng": 37.3908},
+  {"name": "Awassa", "lat": 7.0621, "lng": 38.4763},
+  {"name": "Dessie", "lat": 11.1167, "lng": 39.6333},
+  {"name": "Jimma", "lat": 7.6667, "lng": 36.8333},
+  {"name": "Jijiga", "lat": 9.35, "lng": 42.8},
+  {"name": "Shashamane", "lat": 7.2, "lng": 38.6}
+]

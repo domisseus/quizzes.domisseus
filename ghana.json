@@ -1,0 +1,12 @@
+[
+  {"name": "Accra", "lat": 5.6037, "lng": -0.187},
+  {"name": "Kumasi", "lat": 6.6885, "lng": -1.6244},
+  {"name": "Tamale", "lat": 9.4008, "lng": -0.8393},
+  {"name": "Takoradi", "lat": 4.8845, "lng": -1.7554},
+  {"name": "Ashaiman", "lat": 5.7, "lng": -0.0333},
+  {"name": "Cape Coast", "lat": 5.1063, "lng": -1.2466},
+  {"name": "Obuasi", "lat": 6.2, "lng": -1.6833},
+  {"name": "Teshie", "lat": 5.5833, "lng": -0.1},
+  {"name": "Tema", "lat": 5.6667, "lng": 0.0},
+  {"name": "Koforidua", "lat": 6.0941, "lng": -0.2609}
+]

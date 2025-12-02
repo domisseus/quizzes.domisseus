@@ -1,0 +1,12 @@
+[
+  {"name": "Buenos Aires", "lat": -34.6116, "lng": -58.41},
+  {"name": "Córdoba", "lat": -31.4201, "lng": -64.1888},
+  {"name": "Rosario", "lat": -32.9442, "lng": -60.6505},
+  {"name": "Mendoza", "lat": -32.8895, "lng": -68.8458},
+  {"name": "Tucumán", "lat": -26.8083, "lng": -65.2176},
+  {"name": "La Plata", "lat": -34.9205, "lng": -57.9536},
+  {"name": "Mar del Plata", "lat": -38.0055, "lng": -57.5426},
+  {"name": "Salta", "lat": -24.7821, "lng": -65.4232},
+  {"name": "Santa Fe", "lat": -31.6333, "lng": -60.7},
+  {"name": "San Juan", "lat": -31.5375, "lng": -68.5364}
+]

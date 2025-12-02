@@ -1,0 +1,12 @@
+[
+  {"name": "Baku", "lat": 40.4093, "lng": 49.8671},
+  {"name": "Sumqayit", "lat": 40.5897, "lng": 49.6686},
+  {"name": "Ganja", "lat": 40.6828, "lng": 46.3606},
+  {"name": "Mingachevir", "lat": 40.7639, "lng": 47.0594},
+  {"name": "Shirvan", "lat": 39.9509, "lng": 48.9192},
+  {"name": "Nakhchivan", "lat": 39.2089, "lng": 45.4122},
+  {"name": "Lankaran", "lat": 38.7522, "lng": 48.8475},
+  {"name": "Shaki", "lat": 41.1975, "lng": 47.157},
+  {"name": "Yevlakh", "lat": 40.6186, "lng": 47.15},
+  {"name": "Khachmaz", "lat": 41.4636, "lng": 48.8061}
+]

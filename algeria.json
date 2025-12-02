@@ -1,0 +1,12 @@
+[
+  {"name": "Algiers", "lat": 36.7529, "lng": 3.042},
+  {"name": "Oran", "lat": 35.6911, "lng": -0.6417},
+  {"name": "Constantine", "lat": 36.365, "lng": 6.6147},
+  {"name": "Annaba", "lat": 36.9, "lng": 7.7667},
+  {"name": "Blida", "lat": 36.47, "lng": 2.8292},
+  {"name": "Batna", "lat": 35.556, "lng": 6.1741},
+  {"name": "Djelfa", "lat": 34.6667, "lng": 3.25},
+  {"name": "Sétif", "lat": 36.1911, "lng": 5.4137},
+  {"name": "Sidi Bel Abbès", "lat": 35.1911, "lng": -0.6308},
+  {"name": "Biskra", "lat": 34.8517, "lng": 5.7281}
+]

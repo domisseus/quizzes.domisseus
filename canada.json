@@ -1,0 +1,12 @@
+[
+  {"name": "Toronto", "lat": 43.6532, "lng": -79.3832},
+  {"name": "Montreal", "lat": 45.5017, "lng": -73.5673},
+  {"name": "Calgary", "lat": 51.0447, "lng": -114.0719},
+  {"name": "Ottawa", "lat": 45.4215, "lng": -75.6972},
+  {"name": "Edmonton", "lat": 53.5461, "lng": -113.4938},
+  {"name": "Mississauga", "lat": 43.589, "lng": -79.6441},
+  {"name": "Winnipeg", "lat": 49.8951, "lng": -97.1384},
+  {"name": "Vancouver", "lat": 49.2827, "lng": -123.1207},
+  {"name": "Brampton", "lat": 43.7315, "lng": -79.7624},
+  {"name": "Hamilton", "lat": 43.2557, "lng": -79.8711}
+]

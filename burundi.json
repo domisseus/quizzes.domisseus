@@ -1,0 +1,12 @@
+[
+  {"name": "Bujumbura", "lat": -3.3614, "lng": 29.3599},
+  {"name": "Gitega", "lat": -3.4272, "lng": 29.9246},
+  {"name": "Muyinga", "lat": -2.8451, "lng": 30.3414},
+  {"name": "Ngozi", "lat": -2.9075, "lng": 29.8306},
+  {"name": "Ruyigi", "lat": -3.4764, "lng": 30.2486},
+  {"name": "Kayanza", "lat": -2.9214, "lng": 29.6294},
+  {"name": "Bururi", "lat": -3.9489, "lng": 29.6244},
+  {"name": "Rutana", "lat": -3.9278, "lng": 29.9922},
+  {"name": "Muramvya", "lat": -3.2681, "lng": 29.6075},
+  {"name": "Makamba", "lat": -4.1347, "lng": 29.8042}
+]

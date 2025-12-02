@@ -1,0 +1,12 @@
+[
+  {"name": "San Salvador", "lat": 13.6929, "lng": -89.2182},
+  {"name": "Soyapango", "lat": 13.7167, "lng": -89.15},
+  {"name": "Santa Ana", "lat": 13.9778, "lng": -89.5639},
+  {"name": "San Miguel", "lat": 13.4833, "lng": -88.1833},
+  {"name": "Mejicanos", "lat": 13.7333, "lng": -89.2167},
+  {"name": "Apopa", "lat": 13.8, "lng": -89.1667},
+  {"name": "Delgado", "lat": 13.7333, "lng": -89.1667},
+  {"name": "Ilopango", "lat": 13.7, "lng": -89.1},
+  {"name": "Colón", "lat": 13.7167, "lng": -89.3667},
+  {"name": "Tonacatepeque", "lat": 13.7833, "lng": -89.1167}
+]

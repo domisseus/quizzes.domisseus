@@ -1,0 +1,12 @@
+[
+  {"name": "Dhaka", "lat": 23.8103, "lng": 90.4125},
+  {"name": "Chittagong", "lat": 22.3569, "lng": 91.7832},
+  {"name": "Khulna", "lat": 22.8456, "lng": 89.5403},
+  {"name": "Rajshahi", "lat": 24.3636, "lng": 88.6241},
+  {"name": "Sylhet", "lat": 24.8949, "lng": 91.8687},
+  {"name": "Gazipur", "lat": 23.9999, "lng": 90.4203},
+  {"name": "Narayanganj", "lat": 23.6238, "lng": 90.5},
+  {"name": "Rangpur", "lat": 25.7439, "lng": 89.2752},
+  {"name": "Comilla", "lat": 23.4607, "lng": 91.1809},
+  {"name": "Barisal", "lat": 22.701, "lng": 90.3535}
+]

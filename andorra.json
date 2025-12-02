@@ -1,0 +1,12 @@
+[
+    {"name": "Andorra la Vella", "lat": 42.5063, "lng": 1.5218},
+    {"name": "Escaldes-Engordany", "lat": 42.5096, "lng": 1.5378},
+    {"name": "Encamp", "lat": 42.5347, "lng": 1.5801},
+    {"name": "Sant Julià de Lòria", "lat": 42.4637, "lng": 1.4917},
+    {"name": "La Massana", "lat": 42.5449, "lng": 1.5148},
+    {"name": "Canillo", "lat": 42.5676, "lng": 1.5976},
+    {"name": "Ordino", "lat": 42.5562, "lng": 1.5332},
+    {"name": "Pas de la Casa", "lat": 42.5427, "lng": 1.7338},
+    {"name": "Arinsal", "lat": 42.5720, "lng": 1.4845},
+    {"name": "El Tarter", "lat": 42.5795, "lng": 1.6536}
+]

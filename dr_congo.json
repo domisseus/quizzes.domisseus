@@ -1,0 +1,12 @@
+[
+  {"name": "Kinshasa", "lat": -4.4419, "lng": 15.2663},
+  {"name": "Lubumbashi", "lat": -11.6609, "lng": 27.4794},
+  {"name": "Mbuji-Mayi", "lat": -6.15, "lng": 23.6},
+  {"name": "Kananga", "lat": -5.8903, "lng": 22.4167},
+  {"name": "Kisangani", "lat": 0.5153, "lng": 25.191},
+  {"name": "Bukavu", "lat": -2.5083, "lng": 28.8608},
+  {"name": "Tshikapa", "lat": -6.4167, "lng": 20.8},
+  {"name": "Kolwezi", "lat": -10.7148, "lng": 25.4667},
+  {"name": "Likasi", "lat": -10.9814, "lng": 26.7333},
+  {"name": "Goma", "lat": -1.6585, "lng": 29.2205}
+]

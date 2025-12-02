@@ -1,0 +1,16 @@
+[
+  {"name": "Vienna", "lat": 48.2082, "lng": 16.3738},
+  {"name": "Graz", "lat": 47.0707, "lng": 15.4395},
+  {"name": "Linz", "lat": 48.3069, "lng": 14.2858},
+  {"name": "Salzburg", "lat": 47.8095, "lng": 13.055},
+  {"name": "Innsbruck", "lat": 47.2692, "lng": 11.4041},
+  {"name": "Klagenfurt am Wörthersee", "lat": 46.6365, "lng": 14.3122},
+  {"name": "Villach", "lat": 46.6111, "lng": 13.8558},
+  {"name": "Wels", "lat": 48.1575, "lng": 14.0289},
+  {"name": "St Pölten", "lat": 48.2047, "lng": 15.6267},
+  {"name": "Dornbirn", "lat": 47.4143, "lng": 9.7419},
+  {"name": "Bregenz", "lat": 47.5056, "lng": 9.7497},
+  {"name": "Lienz", "lat": 46.8286, "lng": 12.7725},
+  {"name": "Steyr", "lat": 48.0408, "lng": 14.4172},
+  {"name": "Wiener Neustadt", "lat": 47.8167, "lng": 16.2500}
+]

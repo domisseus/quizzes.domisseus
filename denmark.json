@@ -1,0 +1,12 @@
+[
+  {"name": "Copenhagen", "lat": 55.6761, "lng": 12.5683},
+  {"name": "Aarhus", "lat": 56.1629, "lng": 10.2039},
+  {"name": "Odense", "lat": 55.4038, "lng": 10.4024},
+  {"name": "Aalborg", "lat": 57.0488, "lng": 9.9217},
+  {"name": "Esbjerg", "lat": 55.4765, "lng": 8.4594},
+  {"name": "Randers", "lat": 56.4607, "lng": 10.0363},
+  {"name": "Kolding", "lat": 55.4958, "lng": 9.4746},
+  {"name": "Horsens", "lat": 55.8582, "lng": 9.8475},
+  {"name": "Vejle", "lat": 55.7093, "lng": 9.5357},
+  {"name": "Roskilde", "lat": 55.6415, "lng": 12.0804}
+]

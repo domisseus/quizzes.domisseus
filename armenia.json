@@ -1,0 +1,12 @@
+[
+  {"name": "Yerevan", "lat": 40.1872, "lng": 44.5152},
+  {"name": "Gyumri", "lat": 40.7929, "lng": 43.8465},
+  {"name": "Vanadzor", "lat": 40.8074, "lng": 44.497},
+  {"name": "Vagharshapat", "lat": 40.1633, "lng": 44.2936},
+  {"name": "Abovyan", "lat": 40.2667, "lng": 44.6333},
+  {"name": "Kapan", "lat": 39.2075, "lng": 46.4058},
+  {"name": "Hrazdan", "lat": 40.5, "lng": 44.7667},
+  {"name": "Armavir", "lat": 40.1545, "lng": 44.0382},
+  {"name": "Masis", "lat": 40.0667, "lng": 44.4333},
+  {"name": "Charentsavan", "lat": 40.4, "lng": 44.65}
+]

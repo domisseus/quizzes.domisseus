@@ -1,0 +1,12 @@
+[
+  {"name": "Conakry", "lat": 9.6412, "lng": -13.5784},
+  {"name": "Nzérékoré", "lat": 7.7562, "lng": -8.8139},
+  {"name": "Kankan", "lat": 10.3854, "lng": -9.3057},
+  {"name": "Kindia", "lat": 10.0569, "lng": -12.8658},
+  {"name": "Siguiri", "lat": 11.4167, "lng": -9.1667},
+  {"name": "Kissidougou", "lat": 9.1848, "lng": -10.1082},
+  {"name": "Labé", "lat": 11.3182, "lng": -12.2922},
+  {"name": "Kamsar", "lat": 10.6667, "lng": -14.6},
+  {"name": "Mamou", "lat": 10.3755, "lng": -12.0915},
+  {"name": "Gueckedou", "lat": 8.5674, "lng": -10.1336}
+]

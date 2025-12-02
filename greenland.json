@@ -1,0 +1,23 @@
+[
+  {"name": "Nuuk", "lat": 64.1700, "lng": -51.7400},
+  {"name": "Sisimiut", "lat": 66.9400, "lng": -53.6600},
+  {"name": "Ilulissat", "lat": 69.2200, "lng": -51.1000},
+  {"name": "Qaqortoq", "lat": 60.7200, "lng": -46.0400},
+  {"name": "Aasiaat", "lat": 68.7100, "lng": -52.8600},
+  {"name": "Maniitsoq", "lat": 65.4200, "lng": -52.9000},
+  {"name": "Tasiilaq", "lat": 65.6100, "lng": -37.6300},
+  {"name": "Uummannaq", "lat": 70.6800, "lng": -52.1300},
+  {"name": "Narsaq", "lat": 60.9100, "lng": -46.0500},
+  {"name": "Paamiut", "lat": 61.9900, "lng": -49.6700},
+  {"name": "Upernavik", "lat": 72.7900, "lng": -56.1400},
+  {"name": "Qeqertarsuaq", "lat": 69.2500, "lng": -53.5300},
+  {"name": "Qaanaaq", "lat": 77.4700, "lng": -69.2300},
+  {"name": "Kangerlussuaq", "lat": 67.0100, "lng": -50.7000},
+  {"name": "Kangaatsiaq", "lat": 68.3100, "lng": -53.4600},
+  {"name": "Kulusuk", "lat": 65.5600, "lng": -37.1500},
+  {"name": "Kuummiit", "lat": 65.8700, "lng": -37.0100},
+  {"name": "Narsarsuaq", "lat": 61.1600, "lng": -45.4300},
+  {"name": "Arsuk", "lat": 61.1746, "lng": -48.4512},
+  {"name": "Ittoqqortoormiit", "lat": 70.4900, "lng": -21.9600},
+  {"name": "Zackenberg", "lat": 74.4815, "lng": -20.5558}
+]

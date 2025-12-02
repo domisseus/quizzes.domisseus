@@ -1,0 +1,12 @@
+[
+  {"name": "Jerusalem", "lat": 31.7683, "lng": 35.2137},
+  {"name": "Tel Aviv", "lat": 32.0853, "lng": 34.7818},
+  {"name": "Haifa", "lat": 32.794, "lng": 34.9896},
+  {"name": "Rishon LeZion", "lat": 31.9702, "lng": 34.7941},
+  {"name": "Petah Tikva", "lat": 32.0871, "lng": 34.8875},
+  {"name": "Ashdod", "lat": 31.8167, "lng": 34.65},
+  {"name": "Netanya", "lat": 32.3294, "lng": 34.8566},
+  {"name": "Beersheba", "lat": 31.2589, "lng": 34.7978},
+  {"name": "Holon", "lat": 32.0167, "lng": 34.7667},
+  {"name": "Bnei Brak", "lat": 32.0833, "lng": 34.8333}
+]

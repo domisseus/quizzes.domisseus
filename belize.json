@@ -1,0 +1,12 @@
+[
+  {"name": "Belize City", "lat": 17.4995, "lng": -88.1976},
+  {"name": "San Ignacio", "lat": 17.1523, "lng": -89.08},
+  {"name": "Belmopan", "lat": 17.251, "lng": -88.759},
+  {"name": "Orange Walk", "lat": 18.0812, "lng": -88.5633},
+  {"name": "Corozal", "lat": 18.3938, "lng": -88.3884},
+  {"name": "Dangriga", "lat": 16.9692, "lng": -88.2321},
+  {"name": "San Pedro", "lat": 17.9214, "lng": -87.9611},
+  {"name": "Benque Viejo", "lat": 17.075, "lng": -89.1392},
+  {"name": "Punta Gorda", "lat": 16.0983, "lng": -88.8097},
+  {"name": "Trial Farm", "lat": 18.109, "lng": -88.542}
+]

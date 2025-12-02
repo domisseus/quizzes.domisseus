@@ -1,0 +1,12 @@
+[
+  {"name": "Baghdad", "lat": 33.3152, "lng": 44.3661},
+  {"name": "Basra", "lat": 30.5081, "lng": 47.7835},
+  {"name": "Mosul", "lat": 36.34, "lng": 43.13},
+  {"name": "Erbil", "lat": 36.1901, "lng": 43.993},
+  {"name": "Kirkuk", "lat": 35.4712, "lng": 44.3915},
+  {"name": "Najaf", "lat": 32.0, "lng": 44.33},
+  {"name": "Karbala", "lat": 32.616, "lng": 44.025},
+  {"name": "Nasiriyah", "lat": 31.05, "lng": 46.25},
+  {"name": "Amarah", "lat": 31.8333, "lng": 47.15},
+  {"name": "Hillah", "lat": 32.4833, "lng": 44.4333}
+]

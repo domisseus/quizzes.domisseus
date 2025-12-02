@@ -1,0 +1,12 @@
+[
+  {"name": "Gaborone", "lat": -24.6282, "lng": 25.9231},
+  {"name": "Francistown", "lat": -21.1736, "lng": 27.5125},
+  {"name": "Molepolole", "lat": -24.4066, "lng": 25.4951},
+  {"name": "Selebi-Phikwe", "lat": -21.9615, "lng": 27.8429},
+  {"name": "Maun", "lat": -19.984, "lng": 23.4197},
+  {"name": "Serowe", "lat": -22.3833, "lng": 26.7167},
+  {"name": "Kanye", "lat": -24.9667, "lng": 25.3327},
+  {"name": "Mahalapye", "lat": -23.1041, "lng": 26.8142},
+  {"name": "Mogoditshane", "lat": -24.6258, "lng": 25.8711},
+  {"name": "Mochudi", "lat": -24.4167, "lng": 26.15}
+]

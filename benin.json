@@ -1,0 +1,12 @@
+[
+  {"name": "Cotonou", "lat": 6.3703, "lng": 2.4299},
+  {"name": "Porto-Novo", "lat": 6.4969, "lng": 2.6283},
+  {"name": "Parakou", "lat": 9.3372, "lng": 2.6303},
+  {"name": "Djougou", "lat": 9.7085, "lng": 1.666},
+  {"name": "Bohicon", "lat": 7.1783, "lng": 2.0667},
+  {"name": "Kandi", "lat": 11.1342, "lng": 2.9386},
+  {"name": "Abomey", "lat": 7.1829, "lng": 1.9912},
+  {"name": "Natitingou", "lat": 10.3042, "lng": 1.3796},
+  {"name": "Lokossa", "lat": 6.643, "lng": 1.716},
+  {"name": "Ouidah", "lat": 6.3631, "lng": 2.0851}
+]

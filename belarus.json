@@ -1,0 +1,14 @@
+[
+  {"name": "Minsk", "lat": 53.9006, "lng": 27.559},
+  {"name": "Homieĺ / Gomel", "lat": 52.4345, "lng": 30.9754},
+  {"name": "Mogilev", "lat": 53.8945, "lng": 30.3325},
+  {"name": "Vitebsk", "lat": 55.1848, "lng": 30.2016},
+  {"name": "Hrodna / Grodno", "lat": 53.6768, "lng": 23.8303},
+  {"name": "Brest", "lat": 52.0976, "lng": 23.7341},
+  {"name": "Bobruysk", "lat": 53.1384, "lng": 29.2214},
+  {"name": "Baranovichi", "lat": 53.1327, "lng": 26.0139},
+  {"name": "Orsha", "lat": 54.5167, "lng": 30.4167},
+  {"name": "Mazyr", "lat": 52.0583, "lng": 29.2333},
+  {"name": "Polatsk", "lat": 55.4833, "lng": 28.7833},
+  {"name": "Maladzyechna", "lat": 54.3167, "lng": 26.8500}
+]

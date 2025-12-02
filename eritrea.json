@@ -1,0 +1,12 @@
+[
+  {"name": "Asmara", "lat": 15.3229, "lng": 38.9251},
+  {"name": "Keren", "lat": 15.7779, "lng": 38.4581},
+  {"name": "Massawa", "lat": 15.6097, "lng": 39.45},
+  {"name": "Assab", "lat": 13.008, "lng": 42.7394},
+  {"name": "Mendefera", "lat": 14.8867, "lng": 38.8153},
+  {"name": "Barentu", "lat": 15.1107, "lng": 37.5928},
+  {"name": "Adi Keyh", "lat": 14.8417, "lng": 39.3739},
+  {"name": "Edd", "lat": 13.9317, "lng": 41.6931},
+  {"name": "Dekemhare", "lat": 15.0667, "lng": 39.0481},
+  {"name": "Ak'ordat", "lat": 15.5486, "lng": 37.8867}
+]

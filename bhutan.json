@@ -1,0 +1,15 @@
+[
+  {"name": "Thimphu", "lat": 27.4728, "lng": 89.6393},
+  {"name": "Phuntsholing", "lat": 26.8521, "lng": 89.3872},
+  {"name": "Paro", "lat": 27.4286, "lng": 89.4167},
+  {"name": "Punakha", "lat": 27.5750, "lng": 89.8667},
+  {"name": "Gelephu", "lat": 26.8695, "lng": 90.4855},
+  {"name": "Wangdue Phodrang", "lat": 27.4862, "lng": 89.8997},
+  {"name": "Jakar", "lat": 27.5500, "lng": 90.7500},
+  {"name": "Trashigang", "lat": 27.3331, "lng": 91.5542},
+  {"name": "Mongar", "lat": 27.2747, "lng": 91.2396},
+  {"name": "Sarpang", "lat": 26.8667, "lng": 90.2667},
+  {"name": "Trongsa", "lat": 27.5002, "lng": 90.5081},
+  {"name": "Zhemgang", "lat": 27.2167, "lng": 90.6500},
+  {"name": "Damphu", "lat": 27.0167, "lng": 90.1167}
+]

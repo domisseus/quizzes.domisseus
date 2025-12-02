@@ -1,0 +1,12 @@
+[
+  {"name": "Abidjan", "lat": 5.3453, "lng": -4.0244},
+  {"name": "Bouaké", "lat": 7.69, "lng": -5.03},
+  {"name": "Daloa", "lat": 6.8774, "lng": -6.4502},
+  {"name": "Yamoussoukro", "lat": 6.8276, "lng": -5.2893},
+  {"name": "Korhogo", "lat": 9.458, "lng": -5.6296},
+  {"name": "San-Pédro", "lat": 4.7485, "lng": -6.6363},
+  {"name": "Divo", "lat": 5.8374, "lng": -5.3572},
+  {"name": "Man", "lat": 7.4125, "lng": -7.5538},
+  {"name": "Gagnoa", "lat": 6.1319, "lng": -5.9506},
+  {"name": "Soubré", "lat": 5.7856, "lng": -6.6083}
+]

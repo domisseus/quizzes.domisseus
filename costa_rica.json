@@ -1,0 +1,12 @@
+[
+  {"name": "San José", "lat": 9.9281, "lng": -84.0907},
+  {"name": "Puerto Limón", "lat": 9.9907, "lng": -83.036},
+  {"name": "San Francisco", "lat": 9.9915, "lng": -84.1293},
+  {"name": "Alajuela", "lat": 10.0163, "lng": -84.2116},
+  {"name": "Liberia", "lat": 10.635, "lng": -85.4377},
+  {"name": "Paraíso", "lat": 9.8383, "lng": -83.8656},
+  {"name": "Puntarenas", "lat": 9.9763, "lng": -84.8384},
+  {"name": "San Isidro", "lat": 9.375, "lng": -83.705},
+  {"name": "Curridabat", "lat": 9.9142, "lng": -84.0406},
+  {"name": "San Vicente", "lat": 9.9622, "lng": -84.045}
+]

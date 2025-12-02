@@ -1,0 +1,12 @@
+[
+  {"name": "Budapest", "lat": 47.4979, "lng": 19.0402},
+  {"name": "Debrecen", "lat": 47.5316, "lng": 21.6273},
+  {"name": "Szeged", "lat": 46.253, "lng": 20.1414},
+  {"name": "Miskolc", "lat": 48.1035, "lng": 20.7784},
+  {"name": "Pécs", "lat": 46.0727, "lng": 18.2323},
+  {"name": "Győr", "lat": 47.6875, "lng": 17.6504},
+  {"name": "Nyíregyháza", "lat": 47.9554, "lng": 21.7168},
+  {"name": "Kecskemét", "lat": 46.8964, "lng": 19.6897},
+  {"name": "Székesfehérvár", "lat": 47.186, "lng": 18.4221},
+  {"name": "Szombathely", "lat": 47.2307, "lng": 16.6218}
+]

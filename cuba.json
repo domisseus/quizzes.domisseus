@@ -1,0 +1,12 @@
+[
+  {"name": "Havana", "lat": 23.1136, "lng": -82.3666},
+  {"name": "Santiago de Cuba", "lat": 20.0169, "lng": -75.8302},
+  {"name": "Camagüey", "lat": 21.3838, "lng": -77.9072},
+  {"name": "Holguín", "lat": 20.8872, "lng": -76.2631},
+  {"name": "Guantánamo", "lat": 20.1444, "lng": -75.2092},
+  {"name": "Santa Clara", "lat": 22.4069, "lng": -79.9647},
+  {"name": "Las Tunas", "lat": 20.9617, "lng": -76.9511},
+  {"name": "Bayamo", "lat": 20.3792, "lng": -76.6433},
+  {"name": "Cienfuegos", "lat": 22.15, "lng": -80.45},
+  {"name": "Pinar del Río", "lat": 22.4167, "lng": -83.6967}
+]

@@ -1,0 +1,8 @@
+[
+  {"name": "Sarajevo", "lat": 43.8563, "lng": 18.4131},
+  {"name": "Banja Luka", "lat": 44.7722, "lng": 17.1917},
+  {"name": "Tuzla", "lat": 44.5375, "lng": 18.6735},
+  {"name": "Zenica", "lat": 44.2034, "lng": 17.9077},
+  {"name": "Mostar", "lat": 43.3438, "lng": 17.8078},
+  {"name": "Bihac", "lat": 44.8169, "lng": 15.8708}
+]

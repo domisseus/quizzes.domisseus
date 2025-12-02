@@ -1,0 +1,12 @@
+[
+  {"name": "Tbilisi", "lat": 41.7151, "lng": 44.8271},
+  {"name": "Batumi", "lat": 41.6168, "lng": 41.6367},
+  {"name": "Kutaisi", "lat": 42.2662, "lng": 42.718},
+  {"name": "Rustavi", "lat": 41.5385, "lng": 45.0089},
+  {"name": "Gori", "lat": 41.9842, "lng": 44.1158},
+  {"name": "Zugdidi", "lat": 42.5088, "lng": 41.8709},
+  {"name": "Poti", "lat": 42.1462, "lng": 41.672},
+  {"name": "Sokhumi", "lat": 43.0033, "lng": 41.0153},
+  {"name": "Khashuri", "lat": 41.9941, "lng": 43.5999},
+  {"name": "Samtredia", "lat": 42.1625, "lng": 42.3667}
+]

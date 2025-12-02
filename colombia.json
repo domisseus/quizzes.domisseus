@@ -1,0 +1,12 @@
+[
+  {"name": "Bogotá", "lat": 4.711, "lng": -74.0721},
+  {"name": "Medellín", "lat": 6.2442, "lng": -75.5812},
+  {"name": "Cali", "lat": 3.4516, "lng": -76.532},
+  {"name": "Barranquilla", "lat": 10.9685, "lng": -74.7813},
+  {"name": "Cartagena", "lat": 10.391, "lng": -75.4794},
+  {"name": "Cúcuta", "lat": 7.8891, "lng": -72.4967},
+  {"name": "Soledad", "lat": 10.9184, "lng": -74.7646},
+  {"name": "Ibagué", "lat": 4.4389, "lng": -75.2322},
+  {"name": "Bucaramanga", "lat": 7.1193, "lng": -73.1227},
+  {"name": "Soacha", "lat": 4.5804, "lng": -74.2172}
+]

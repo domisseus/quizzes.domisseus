@@ -1,0 +1,12 @@
+[
+  {"name": "Georgetown", "lat": 6.8013, "lng": -58.1551},
+  {"name": "Linden", "lat": 5.9994, "lng": -58.3049},
+  {"name": "New Amsterdam", "lat": 6.2389, "lng": -57.5197},
+  {"name": "Anna Regina", "lat": 7.2644, "lng": -58.5077},
+  {"name": "Bartica", "lat": 6.4083, "lng": -58.6219},
+  {"name": "Skeldon", "lat": 5.8833, "lng": -57.1333},
+  {"name": "Rosignol", "lat": 6.2667, "lng": -57.5333},
+  {"name": "Mahaica", "lat": 6.7, "lng": -57.9167},
+  {"name": "Parika", "lat": 6.8667, "lng": -58.4333},
+  {"name": "Vreed en Hoop", "lat": 6.8, "lng": -58.1833}
+]

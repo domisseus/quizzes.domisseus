@@ -1,0 +1,12 @@
+[
+  {"name": "Nicosia", "lat": 35.1856, "lng": 33.3823},
+  {"name": "Limassol", "lat": 34.7071, "lng": 33.0226},
+  {"name": "Larnaca", "lat": 34.92, "lng": 33.6295},
+  {"name": "Paphos", "lat": 34.772, "lng": 32.4297},
+  {"name": "Famagusta", "lat": 35.125, "lng": 33.95},
+  {"name": "Kyrenia", "lat": 35.3353, "lng": 33.3195},
+  {"name": "Protaras", "lat": 35.0125, "lng": 34.0518},
+  {"name": "Ayia Napa", "lat": 34.9896, "lng": 34.0018},
+  {"name": "Morphou", "lat": 35.1989, "lng": 33.0044},
+  {"name": "Paralimni", "lat": 35.0375, "lng": 33.9833}
+]

@@ -1,0 +1,11 @@
+[
+  {"name": "Tirana", "lat": 41.3275, "lng": 19.8187},
+  {"name": "Durrës", "lat": 41.3246, "lng": 19.4565},
+  {"name": "Vlorë", "lat": 40.465, "lng": 19.485},
+  {"name": "Elbasan", "lat": 41.1125, "lng": 20.0822},
+  {"name": "Shkodër", "lat": 42.0693, "lng": 19.5033},
+  {"name": "Fier", "lat": 40.7239, "lng": 19.5561},
+  {"name": "Korçë", "lat": 40.6186, "lng": 20.7808},
+  {"name": "Berat", "lat": 40.7058, "lng": 19.9523},
+  {"name": "Sarandë", "lat": 39.8756, "lng": 20.0053}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Athens", "lat": 37.9838, "lng": 23.7275},
+  {"name": "Thessaloniki", "lat": 40.6401, "lng": 22.9444},
+  {"name": "Patras", "lat": 38.2466, "lng": 21.7346},
+  {"name": "Heraklion", "lat": 35.3387, "lng": 25.1442},
+  {"name": "Ioannina", "lat": 39.665, "lng": 20.8537},
+  {"name": "Larissa", "lat": 39.639, "lng": 22.4191},
+  {"name": "Volos", "lat": 39.3621, "lng": 22.9422},
+  {"name": "Rhodes", "lat": 36.4349, "lng": 28.2175},
+  {"name": "Chania", "lat": 35.5138, "lng": 24.018},
+  {"name": "Agrinio", "lat": 38.6219, "lng": 21.4122}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "Sofia", "lat": 42.6977, "lng": 23.3219},
+  {"name": "Plovdiv", "lat": 42.1354, "lng": 24.7453},
+  {"name": "Varna", "lat": 43.2141, "lng": 27.9147},
+  {"name": "Burgas", "lat": 42.5048, "lng": 27.4626},
+  {"name": "Ruse", "lat": 43.8356, "lng": 25.9657},
+  {"name": "Stara Zagora", "lat": 42.4258, "lng": 25.6345},
+  {"name": "Pleven", "lat": 43.417, "lng": 24.6067},
+  {"name": "Sliven", "lat": 42.6817, "lng": 26.3229},
+  {"name": "Dobrich", "lat": 43.5726, "lng": 27.8273},
+  {"name": "Shumen", "lat": 43.2712, "lng": 26.9361}
+]

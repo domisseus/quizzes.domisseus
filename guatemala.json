@@ -1,0 +1,12 @@
+[
+  {"name": "Guatemala City", "lat": 14.6349, "lng": -90.5069},
+  {"name": "Mixco", "lat": 14.6333, "lng": -90.6064},
+  {"name": "Villa Nueva", "lat": 14.5269, "lng": -90.5875},
+  {"name": "Petapa", "lat": 14.5, "lng": -90.5667},
+  {"name": "Quetzaltenango", "lat": 14.8347, "lng": -91.5181},
+  {"name": "San Juan Sacatepéquez", "lat": 14.7167, "lng": -90.65},
+  {"name": "Chimaltenango", "lat": 14.6611, "lng": -90.8208},
+  {"name": "Escuintla", "lat": 14.305, "lng": -90.785},
+  {"name": "Chinautla", "lat": 14.7, "lng": -90.5},
+  {"name": "Chichicastenango", "lat": 14.9333, "lng": -91.1167}
+]

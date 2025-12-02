@@ -1,0 +1,12 @@
+[
+  {"name": "Luanda", "lat": -8.839, "lng": 13.2894},
+  {"name": "Cabinda", "lat": -5.55, "lng": 12.2},
+  {"name": "Huambo", "lat": -12.7761, "lng": 15.7416},
+  {"name": "Lubango", "lat": -14.9172, "lng": 13.4925},
+  {"name": "Kuito", "lat": -12.3833, "lng": 16.9333},
+  {"name": "Malanje", "lat": -9.5402, "lng": 16.341},
+  {"name": "Lobito", "lat": -12.35, "lng": 13.55},
+  {"name": "Benguela", "lat": -12.5763, "lng": 13.4055},
+  {"name": "Uíge", "lat": -7.6087, "lng": 15.0613},
+  {"name": "Namibe", "lat": -15.1961, "lng": 12.1522}
+]
