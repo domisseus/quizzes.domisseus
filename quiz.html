@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport">: Makes the site responsive -->
+  <!-- width=device-width: Match the webpage width to the actual width of the device screen.  -->
+  <!-- initial-scale=1.0: Don’t zoom in or out -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="author" content="domisseus" />
+  <!-- description: under the title when u search -->
+  <meta name="description" content="Play the interactive city map quiz and test your geography knowledge!" />
+  <meta name="keywords" content="map quiz, geography game, city locator" />
+
+  <title>City Map Quiz – Play</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- <main>: primary content -->
+  <!-- <header>: usually contains titles, navigation, or introductory information-->
+  <!-- id="infoBar": unique ID for styling or JS updates -->
+<main id="quizContainer">
+
+  <header id="infoBar"> <!-- row above map -->
+    <button id="backButton">← Back</button>
+    <div id="question" class="infoBadge">Loading…</div> <!-- "Find: ..." -->
+    <div id="progress" class="infoBadge">Question: 0/0</div>
+    <div id="score" class="infoBadge">Correct: 0/0</div>
+    <div id="timer" class="infoBadge">Time: 0s</div>
+    <div id="status"></div> <!-- "wrong" and "found" -->
+  </header>
+
+  <!-- where the interactive map appears -->
+  <!-- <section>: thematic grouping of content often with a heading --> 
+  <section id="mapWrapper"> 
+    <div id="map"></div>
+  </section>
+
+  <button id="resetBtn" style="margin-top: 10px;">Try Again</button>
+
+  <div id="cityListContainer">
+    <ul id="cityList"></ul>
+  </div>
+
+</main>
+
+<!-- vagy headben <script src="script.js" defer></script> -->
+<script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+<script src="quiz.js"></script>
+<script src="theme.js"></script>
+
+</body>
+</html>
