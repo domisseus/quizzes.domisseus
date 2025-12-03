@@ -10,7 +10,7 @@ body {
 
 h1 {
     margin-top: 30px;
-    font-size: 32px;
+    font-size: 38px;
     line-height: 1.2;
 }
 
@@ -547,6 +547,35 @@ ul {
   color: white;
 }
 
+/* Container for the two side-by-side columns */
+#infoOtherQuizzes {
+    display: flex; 
+    justify-content: space-between; /* Pushes left group left, right group right */
+    align-items: flex-start; 
+    width: 100%; 
+}
+
+.left-column-group {
+    flex: 1; 
+    padding: 0 20px;
+    text-align: left;
+}
+
+/* Right Column: Stacks vertically and CENTERS the header/list relative to each other */
+.right-column-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: right; /* <--- This forces the "centered below" look */
+    padding: 0 20px;
+    /* justify-content: space-between on the parent handles the right alignment */
+}
+
+.quizzes-header,
+.my-maps-header {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    margin-bottom: 8px;
+}
 /* ----------------- Map ----------------- */
 #mapWrapper {
   width: calc(80% + 4px); /* add 2px border on each side = 4px */
@@ -761,6 +790,23 @@ body.dark-mode #formContainer fieldset {
   background-color: #ddd;
 }
 
+#otherQuizzes > ul > li > a,
+#infoOtherQuizzes .quiz-lists-wrapper > ul > li > a,
+#infoOtherQuizzes .my-maps-wrapper > ul > li > a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Uses the parent's color */
+    display: block;        /* Makes the whole list area clickable */
+    transition: opacity 0.2s;
+}
+
+#infoOtherQuizzes .quiz-lists-wrapper > ul > li > a:hover {
+    opacity: 0.6;          /* Slight fade when hovering */
+    transform: scale(1.01); /* Optional: tiny zoom effect */
+}
+
+#infoOtherQuizzes .my-maps-wrapper > ul {
+    width: fit-content;
+}
 
 /* ----------------- INFO PAGE DARK MODE ----------------- */
 
@@ -1134,17 +1180,19 @@ input:checked + .slider:before { transform: translateX(26px); }
 }
 
 /* 2. Style the actual links (<a> tags) */
-#otherQuizzes > ul > li > a {
+#otherQuizzes > ul > li > a{
     text-decoration: none; /* Removes the underline */
     color: inherit;        /* Uses the parent's color (#333 or White) */
     display: block;        /* Makes the whole text area clickable */
     transition: opacity 0.2s;
 }
 
-#otherQuizzes > ul > li > a:hover {
-    opacity: 0.6;          /* Slight fade when hovering */
-    transform: scale(1.05); /* Optional: tiny zoom effect */
+#otherQuizzes > ul > li > a:hover,
+#infoOtherQuizzes .my-maps-wrapper > ul > li > a:hover{
+  opacity: 0.6;          /* Slight fade when hovering */
+  transform: scale(1.05)
 }
+
 
 /* Dark Mode support for the new section text */
 body.dark-mode .quizzes-header,
@@ -1155,63 +1203,113 @@ body.dark-mode #otherQuizzes li {
 /* ----------------- Responsive ----------------- 
 max-width: “apply these styles if the viewport width is less than or equal to this value”.
 If the parent is <body> and <body> is the full viewport width, then effectively it’s 90% of the viewport.*/
-@media (max-width: 1024px) {
-  #mapWrapper, #infoBar {
-    width: 90%;
-  }
-}
 
+/* --- TABLET AND SMALLER (Max Width 768px) --- */
 @media (max-width: 768px) {
+  
+  /* --- 1. GENERAL LAYOUT --- */
+  body {
+    padding: 10px; /* Give content more room */
+  }
+
+  /* Fix Header: Stack vertically (Theme buttons top, Quizzes bottom) */
+  #header-grid {
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 20px;
+    align-items: center;
+  }
+
+  #otherQuizzes {
+    text-align: center; 
+    margin-top: 20px;
+  }
+  
+  #center-column {
+    width: 100%;
+  }
+
+  /* --- 2. REGION LIST GRID --- */
+  /* Show 3 items per row (instead of 7) */
+  .continent-list > li {
+    flex: 0 0 calc((100% - 2 * 10px) / 3);
+  }
+
+  /* --- 3. MISC SECTION FIXES --- */
+  /* Stack the World/Territories/Nav row vertically */
+  .continent-list.misc-row {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Center the Misc items and limit width */
+  .continent-list.misc-row > li:last-child, /* Territories */
+  .continent-list.misc-row > li:nth-child(3), /* Small Nations */
+  .continent-list.misc-row > li:nth-child(2), /* World */
+  .continent-list.misc-row > li:first-child { /* Nav Group */
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+  
+  /* --- 4. MAP & QUIZ UI (Kept from your original file) --- */
   #infoBar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch; /* Stretch to fill width */
+    width: 100%;
   }
 
-  #backButton, #question, #progress, #score, #status, #timer{
+  #backButton, #question, #progress, #score, #status, #timer {
     width: 100%;
-    text-align: left;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 5px;
   }
 
   #map {
-    height: 400px;
+    height: 400px; /* Smaller map height for tablets */
   }
 
+  #mapWrapper {
+    width: 100%; /* Ensure map fits screen */
+  }
+
+  /* --- 5. FORMS & BUTTONS --- */
   input[type="text"] {
     width: 100%;
   }
 
-  ul {
-    max-width: 100%;
-  }
-
   #formContainer { width: 95%; }
-  #formContainer form button { width: 100%; margin-top: 10px; }
-
+  
   .buttonGroup {
     flex-direction: column;
     gap: 10px;
   }
-
-  #regionList li,
+  
   .buttonGroup button,
   #openInfoButton,
   #openFormButton {
-    width: 90%;
+    width: 100%;
   }
 }
 
+/* --- MOBILE PHONES (Max Width 480px) --- */
 @media (max-width: 480px) {
+
+  /* Switch to 2 items per row */
+  .continent-list > li {
+    flex: 0 0 calc((100% - 10px) / 2);
+  }
+
+  /* Reduce territories to 2 columns */
+  .territories-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+  
   #map {
-    height: 300px;
-  }
-
-  #question, #progress, #score, #status, #timer {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-
-  #backButton {
-    font-size: 12px;
-    padding: 6px 10px;
+    height: 300px; /* Even smaller map for phones */
   }
 }
