@@ -27,7 +27,7 @@ const resetBtn = document.getElementById('resetBtn'); // always visible
 const timerEl = document.getElementById('timer');
 
 backButton.addEventListener('click', () => {
-  window.location.href = "index.html";
+  window.location.href = "../cities/";
 });
 
 // 1. NEW PART: Fetch settings first, then start the quiz
