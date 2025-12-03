@@ -160,7 +160,7 @@ function displayRegions(searchText = "") {
                 BtnLi.classList.add("difficulty", "misc");        
                 BtnLi.style.textAlign = "center"; 
                 BtnLi.addEventListener("click", () => {
-                    window.location.href = `../quiz.html?region=${region.toLowerCase()}&difficulty=custom`;
+                    window.location.href = `../regions/?region=${region.toLowerCase()}&difficulty=custom`;
                 });
                 regionLi.appendChild(BtnLi);
 
@@ -198,7 +198,7 @@ function displayRegions(searchText = "") {
                     territoryBtn.classList.add("difficulty", "territories"); 
                     
                     territoryBtn.addEventListener("click", () => {
-                        window.location.href = `quiz.html?region=${territory.toLowerCase()}&difficulty=custom`;
+                        window.location.href = `../regions/?region=${territory.toLowerCase()}&difficulty=custom`;
                     });
                     
                     territoriesGridContainer.appendChild(territoryBtn); 
@@ -248,7 +248,7 @@ function displayRegions(searchText = "") {
                     }
 
                     btnLi.addEventListener("click", () => {
-                        window.location.href = `quiz.html?region=${region.toLowerCase()}&difficulty=${diff}`;
+                        window.location.href = `../regions/?region=${region.toLowerCase()}&difficulty=${diff}`;
                     });
                     regionLi.appendChild(btnLi);
                 });
