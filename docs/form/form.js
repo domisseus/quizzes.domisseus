@@ -22,7 +22,7 @@ rating.addEventListener('click', () => {
 
 // BACK TO QUIZZES BUTTON
 backButton.addEventListener('click', () => {
-  window.location.href = 'index.html';
+  window.location.href = '../cities/';
 });
 
 // FORM SUBMISSION
