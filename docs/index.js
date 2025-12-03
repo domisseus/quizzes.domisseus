@@ -120,14 +120,14 @@ function displayRegions(searchText = "") {
                 const infoBtn = document.createElement("div"); 
                 infoBtn.textContent = "Info";
                 infoBtn.classList.add("difficulty", "nav-btn");
-                infoBtn.addEventListener("click", () => window.location.href = "Info/");
+                infoBtn.addEventListener("click", () => window.location.href = "info/");
                 topRow.appendChild(infoBtn);
 
                 // --- FEEDBACK Button ---
                 const formBtn = document.createElement("div"); 
                 formBtn.textContent = "Feedback";
                 formBtn.classList.add("difficulty", "nav-btn");
-                formBtn.addEventListener("click", () => window.location.href = "form.html");
+                formBtn.addEventListener("click", () => window.location.href = "form/");
                 topRow.appendChild(formBtn);
 
                 // Add the row to the main stack
@@ -138,7 +138,7 @@ function displayRegions(searchText = "") {
                 achBtn.textContent = "Achievements";
                 achBtn.classList.add("difficulty", "nav-btn", "achievements-btn");
                 achBtn.addEventListener("click", () => {
-                    window.location.href = "ach.html"; 
+                    window.location.href = "achievements/"; 
                 });
                 buttonStack.appendChild(achBtn);
                 
