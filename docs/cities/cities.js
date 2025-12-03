@@ -160,7 +160,7 @@ function displayRegions(searchText = "") {
                 BtnLi.classList.add("difficulty", "misc");        
                 BtnLi.style.textAlign = "center"; 
                 BtnLi.addEventListener("click", () => {
-                    window.location.href = `quiz.html?region=${region.toLowerCase()}&difficulty=custom`;
+                    window.location.href = `../quiz.html?region=${region.toLowerCase()}&difficulty=custom`;
                 });
                 regionLi.appendChild(BtnLi);
 
