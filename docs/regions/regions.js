@@ -32,13 +32,13 @@ backButton.addEventListener('click', () => {
 
 // 1. NEW PART: Fetch settings first, then start the quiz
 async function initGame() {
-  const response = await fetch('../region_settings.json');
+  const response = await fetch('region_settings.json');
   regionSettings = await response.json();
   startQuiz(region);
 }
 
 function startQuiz(region) {
-  const citiesFile = `../city_jsons/${region}.json`;
+  const citiesFile = `city_jsons/${region}.json`;
   
   // 2. Logic to read the Bbox or Center from the JSON
   let mapConfig = {
