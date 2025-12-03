@@ -120,7 +120,7 @@ function displayRegions(searchText = "") {
                 const infoBtn = document.createElement("div"); 
                 infoBtn.textContent = "Info";
                 infoBtn.classList.add("difficulty", "nav-btn");
-                infoBtn.addEventListener("click", () => window.location.href = "info.html");
+                infoBtn.addEventListener("click", () => window.location.href = "Info/");
                 topRow.appendChild(infoBtn);
 
                 // --- FEEDBACK Button ---
