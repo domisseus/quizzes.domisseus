@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grammar & Rules - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Grammar Rules & Concepts (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search rules..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Concept <-> Rule</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is the rule for... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Nouns & Comparisons</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Concept</th><th>Rule / Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>Masc. Endings</td><td>-or, -ón, -és, compound nouns</td></tr>
+                      <tr><td>Fem. Endings</td><td>-dad, -tad, -tud, -ie, -ión, -ción, -umbre</td></tr>
+                      <tr><td>Adverb Placement</td><td>After verbs, before adjectives</td></tr>
+                      <tr><td>Inequality (+)</td><td>más + adj + que (more than)</td></tr>
+                      <tr><td>Inequality (-)</td><td>menos + adj + que (less than)</td></tr>
+                      <tr><td>Equality (Adj)</td><td>tan + adj + como (as... as)</td></tr>
+                      <tr><td>Equality (Noun)</td><td>tanto/a + noun + como (as many... as)</td></tr>
+                      <tr><td>Superlative (+/-)</td><td>el/la más/menos + adj + de (the most/least of)</td></tr>
+                      <tr><td>Comparison (Adv)</td><td>verb + más + adverb + que</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Time Expressions</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Concept</th><th>Rule / Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>How long ago (Question)</td><td>Cuánto tiempo hace + que + preterite</td></tr>
+                      <tr><td>Ago (Statement)</td><td>Hace + time + que + preterite</td></tr>
+                      <tr><td>How long had been (Q)</td><td>Cuánto tiempo hacía que + imperfect</td></tr>
+                      <tr><td>Had been... for (S)</td><td>Hacía + time + que + imperfect</td></tr>
+                      <tr><td>Since when?</td><td>Desde cuándo + imperfect</td></tr>
+                      <tr><td>Had been (Since)</td><td>imperfect + desde hace + time</td></tr>
+                      <tr><td>No "Hundred" years</td><td>Don't say 19-64 or 22-hundred</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Verb Distinctions</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Concept</th><th>Rule / Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>Ser</td><td>Characteristics, Nationality, Occupation, Time, Events</td></tr>
+                      <tr><td>Estar</td><td>Temporary conditions, Location, Feelings, Health</td></tr>
+                      <tr><td>Conocer</td><td>To be acquainted with (people/places)</td></tr>
+                      <tr><td>Saber</td><td>Facts / How to do something</td></tr>
+                      <tr><td>Llevar</td><td>Carry / Wear / Duration (have been doing)</td></tr>
+                      <tr><td>Tomar</td><td>Take / Drink / Catch / Grab</td></tr>
+                      <tr><td>Sacar</td><td>Take out / Remove / Take (photo)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Irregulars & Resources</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Concept</th><th>Rule / Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>bueno (good)</td><td>mejor (better)</td></tr>
+                      <tr><td>malo (bad)</td><td>peor (worse)</td></tr>
+                      <tr><td>pequeño (little)</td><td>menor (younger)</td></tr>
+                      <tr><td>grande (big)</td><td>mayor (older)</td></tr>
+                      <tr><td>viejo (old)</td><td>mayor (older)</td></tr>
+                      <tr><td>joven (young)</td><td>menor (younger)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

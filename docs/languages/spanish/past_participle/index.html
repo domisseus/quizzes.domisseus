@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Past Participle - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Past Participles (4 | 34)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search verbs..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Verb <-> Form</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is the participle for... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">1. Totally Irregular (12)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Participle</th></tr></thead>
+                  <tbody>
+                      <tr><td>Decir</td><td>dicho</td></tr>
+                      <tr><td>Hacer</td><td>hecho</td></tr>
+                      <tr><td>Satisfacer</td><td>satisfecho</td></tr>
+                      <tr><td>Ver</td><td>visto</td></tr>
+                      <tr><td>Escribir</td><td>escrito</td></tr>
+                      <tr><td>Romper</td><td>roto (broken)</td></tr>
+                      <tr><td>Abrir</td><td>abierto</td></tr>
+                      <tr><td>Cubrir</td><td>cubierto</td></tr>
+                      <tr><td>Morir</td><td>muerto</td></tr>
+                      <tr><td>Poner</td><td>puesto</td></tr>
+                      <tr><td>Volver</td><td>vuelto</td></tr>
+                      <tr><td>Resolver</td><td>resuelto</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">2. Accented -ído (9)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Participle</th></tr></thead>
+                  <tbody>
+                      <tr><td>Leer</td><td>leído</td></tr>
+                      <tr><td>Creer</td><td>creído</td></tr>
+                      <tr><td>Caer</td><td>caído</td></tr>
+                      <tr><td>Traer</td><td>traído</td></tr>
+                      <tr><td>Poseer</td><td>poseído</td></tr>
+                      <tr><td>Proveer</td><td>proveído</td></tr>
+                      <tr><td>Raer</td><td>raído</td></tr>
+                      <tr><td>Reír</td><td>reído</td></tr>
+                      <tr><td>Oír</td><td>oído</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">3. Adjective vs Participle</div>
+              <table class="vocab-table no-links">
+                  <thead>
+                      <tr>
+                          <th>Verb</th>
+                          <th style="font-size: 13px;">Action<br>(Regular)</th>
+                          <th style="font-size: 13px;">Adjective<br>(Irregular)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Atender</td>
+                          <td>atendido</td>
+                          <td>atento (attentive)</td>
+                      </tr>
+                      <tr>
+                          <td>Bendecir</td>
+                          <td>bendecido</td>
+                          <td>bendito (blessed)</td>
+                      </tr>
+                      <tr>
+                          <td>Maldecir</td>
+                          <td>maldecido</td>
+                          <td>maldito (cursed)</td>
+                      </tr>
+                      <tr>
+                          <td>Confundir</td>
+                          <td>confundido</td>
+                          <td>confuso (confusing)</td>
+                      </tr>
+                      <tr>
+                          <td>Corromper</td>
+                          <td>corrompido</td>
+                          <td>corrupto (corrupt)</td>
+                      </tr>
+                      <tr>
+                          <td>Despertar</td>
+                          <td>despertado</td>
+                          <td>despierto (awake)</td>
+                      </tr>
+                      <tr>
+                          <td>Poseer</td>
+                          <td>poseído</td>
+                          <td>poseso (possessed)</td>
+                      </tr>
+                      <tr>
+                          <td>Presumir</td>
+                          <td>presumido</td>
+                          <td>presunto (alleged)</td>
+                      </tr>
+                      <tr>
+                          <td>Suspender</td>
+                          <td>suspendido</td>
+                          <td>suspenso (suspenseful)</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">4. Two Valid Forms (4)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Both Accepted</th></tr></thead>
+                  <tbody>
+                      <tr><td>Imprimir</td><td>imprimido / impreso</td></tr>
+                      <tr><td>Freír</td><td>freído / frito</td></tr>
+                      <tr><td>Proveer</td><td>proveído / provisto</td></tr>
+                      <tr><td>Describir</td><td>descrito / descripto</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

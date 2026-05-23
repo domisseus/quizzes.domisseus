@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Food & Kitchen (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Fruits & Vegetables</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la fruta</td><td>fruit</td></tr>
+                      <tr><td>el arándano</td><td>blueberry</td></tr>
+                      <tr><td>la ciruela</td><td>plum</td></tr>
+                      <tr><td>la frambuesa</td><td>raspberry</td></tr>
+                      <tr><td>la fresa</td><td>strawberry</td></tr>
+                      <tr><td>la grosella</td><td>currant</td></tr>
+                      <tr><td>el kiwi</td><td>kiwi</td></tr>
+                      <tr><td>la lima</td><td>lime</td></tr>
+                      <tr><td>el limón</td><td>lemon</td></tr>
+                      <tr><td>el mango</td><td>mango</td></tr>
+                      <tr><td>la manzana</td><td>apple</td></tr>
+                      <tr><td>el maracuyá</td><td>passion fruit</td></tr>
+                      <tr><td>el melocotón</td><td>peach</td></tr>
+                      <tr><td>el melón</td><td>melon</td></tr>
+                      <tr><td>la naranja</td><td>orange</td></tr>
+                      <tr><td>la pasa</td><td>raisin</td></tr>
+                      <tr><td>la pera</td><td>pear</td></tr>
+                      <tr><td>la piña</td><td>pineapple</td></tr>
+                      <tr><td>el plátano</td><td>banana</td></tr>
+                      <tr><td>la sandía</td><td>watermelon</td></tr>
+                      <tr><td>la uva</td><td>grape</td></tr>
+                      <tr><td>la zarzamora</td><td>blackberry</td></tr>
+                      <tr><td>la verdura</td><td>vegetable</td></tr>
+                      <tr><td>el ajo</td><td>garlic</td></tr>
+                      <tr><td>la arveja / el guisante</td><td>pea</td></tr>
+                      <tr><td>la berenjena</td><td>eggplant / aubergine</td></tr>
+                      <tr><td>el brócoli</td><td>broccoli</td></tr>
+                      <tr><td>la cebolla</td><td>onion</td></tr>
+                      <tr><td>el champiñón</td><td>mushroom</td></tr>
+                      <tr><td>la col / el repollo</td><td>cabbage</td></tr>
+                      <tr><td>la coliflor</td><td>cauliflower</td></tr>
+                      <tr><td>la espinaca</td><td>spinach</td></tr>
+                      <tr><td>la lechuga</td><td>lettuce</td></tr>
+                      <tr><td>el maíz</td><td>corn</td></tr>
+                      <tr><td>la patata / la papa</td><td>potato</td></tr>
+                      <tr><td>el pepino</td><td>cucumber</td></tr>
+                      <tr><td>el pimiento</td><td>pepper</td></tr>
+                      <tr><td>el puerro</td><td>leek</td></tr>
+                      <tr><td>el tomate</td><td>tomato</td></tr>
+                      <tr><td>la zanahoria</td><td>carrot</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Proteins & Staples</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la carne</td><td>meat</td></tr>
+                      <tr><td>la carne de res</td><td>beef</td></tr>
+                      <tr><td>el cerdo</td><td>pork</td></tr>
+                      <tr><td>el cordero</td><td>lamb</td></tr>
+                      <tr><td>el jamón</td><td>ham</td></tr>
+                      <tr><td>el pollo</td><td>chicken</td></tr>
+                      <tr><td>los mariscos</td><td>seafood</td></tr>
+                      <tr><td>el atún</td><td>tuna</td></tr>
+                      <tr><td>el camarón / la gamba</td><td>shrimp</td></tr>
+                      <tr><td>la langosta</td><td>lobster</td></tr>
+                      <tr><td>el pescado</td><td>fish (food)</td></tr>
+                      <tr><td>el salmón</td><td>salmon</td></tr>
+                      <tr><td>los lácteos</td><td>dairy products</td></tr>
+                      <tr><td>el huevo</td><td>egg</td></tr>
+                      <tr><td>la leche</td><td>milk</td></tr>
+                      <tr><td>la mantequilla</td><td>butter</td></tr>
+                      <tr><td>el queso</td><td>cheese</td></tr>
+                      <tr><td>el yogur</td><td>yogurt</td></tr>
+                      <tr><td>los granos</td><td>grains</td></tr>
+                      <tr><td>el arroz</td><td>rice</td></tr>
+                      <tr><td>la avena</td><td>oats</td></tr>
+                      <tr><td>la harina</td><td>flour</td></tr>
+                      <tr><td>el pan</td><td>bread</td></tr>
+                      <tr><td>la pasta</td><td>pasta</td></tr>
+                      <tr><td>el trigo</td><td>wheat</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Drinks, Sweets & Flavors</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>las bebidas</td><td>drinks</td></tr>
+                      <tr><td>el agua</td><td>water</td></tr>
+                      <tr><td>el café</td><td>coffee</td></tr>
+                      <tr><td>la cerveza</td><td>beer</td></tr>
+                      <tr><td>el jugo / el zumo</td><td>juice</td></tr>
+                      <tr><td>el refresco</td><td>soda / soft drink</td></tr>
+                      <tr><td>el té</td><td>tea</td></tr>
+                      <tr><td>el vino</td><td>wine</td></tr>
+                      <tr><td>el postre</td><td>dessert</td></tr>
+                      <tr><td>los dulces</td><td>sweets</td></tr>
+                      <tr><td>el caramelo</td><td>candy</td></tr>
+                      <tr><td>el chocolate</td><td>chocolate</td></tr>
+                      <tr><td>el flan</td><td>flan</td></tr>
+                      <tr><td>la galleta</td><td>cookie</td></tr>
+                      <tr><td>el helado</td><td>ice cream</td></tr>
+                      <tr><td>el pastel</td><td>cake</td></tr>
+                      <tr><td>el sándwich</td><td>sandwich</td></tr>
+                      <tr><td>la tarta</td><td>pie</td></tr>
+                      <tr><td>la torta</td><td>cake / sandwich</td></tr>
+                      <tr><td>el condimento</td><td>condiment</td></tr>
+                      <tr><td>el aceite</td><td>oil</td></tr>
+                      <tr><td>el azúcar</td><td>sugar</td></tr>
+                      <tr><td>la canela</td><td>cinnamon</td></tr>
+                      <tr><td>el cilantro</td><td>cilantro</td></tr>
+                      <tr><td>la especia</td><td>spice</td></tr>
+                      <tr><td>la mayonesa</td><td>mayonnaise</td></tr>
+                      <tr><td>la mostaza</td><td>mustard</td></tr>
+                      <tr><td>el perejil</td><td>parsley</td></tr>
+                      <tr><td>la pimienta</td><td>pepper (spice)</td></tr>
+                      <tr><td>la sal</td><td>salt</td></tr>
+                      <tr><td>el vinagre</td><td>vinegar</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Kitchen & Cooking verbs</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la comida</td><td>food / meal</td></tr>
+                      <tr><td>los comestibles</td><td>groceries</td></tr>
+                      <tr><td>el desayuno</td><td>breakfast</td></tr>
+                      <tr><td>el almuerzo</td><td>lunch</td></tr>
+                      <tr><td>la cena</td><td>dinner</td></tr>
+                      <tr><td>la merienda</td><td>snack</td></tr>
+                      <tr><td>los cubiertos</td><td>cutlery</td></tr>
+                      <tr><td>el abrelatas</td><td>can opener</td></tr>
+                      <tr><td>la bandeja</td><td>tray</td></tr>
+                      <tr><td>la batidora</td><td>blender / mixer</td></tr>
+                      <tr><td>la copa</td><td>wine glass</td></tr>
+                      <tr><td>la cuchara</td><td>spoon</td></tr>
+                      <tr><td>el cuchillo</td><td>knife</td></tr>
+                      <tr><td>el mantel</td><td>tablecloth</td></tr>
+                      <tr><td>el palillo</td><td>toothpick</td></tr>
+                      <tr><td>el plato</td><td>plate</td></tr>
+                      <tr><td>el plato hondo</td><td>bowl</td></tr>
+                      <tr><td>la sartén</td><td>frying pan</td></tr>
+                      <tr><td>la servilleta</td><td>napkin</td></tr>
+                      <tr><td>la tabla de cortar</td><td>cutting board</td></tr>
+                      <tr><td>la taza</td><td>cup (coffee/tea)</td></tr>
+                      <tr><td>el tazón</td><td>large bowl</td></tr>
+                      <tr><td>el tenedor</td><td>fork</td></tr>
+                      <tr><td>el vaso</td><td>glass (water)</td></tr>
+                      <tr><td>cocinar</td><td>to cook</td></tr>
+                      <tr><td>asar</td><td>to roast</td></tr>
+                      <tr><td>cortar</td><td>to cut</td></tr>
+                      <tr><td>freír</td><td>to fry</td></tr>
+                      <tr><td>hervir</td><td>to boil</td></tr>
+                      <tr><td>hornear</td><td>to bake</td></tr>
+                      <tr><td>masticar</td><td>to chew</td></tr>
+                      <tr><td>mezclar</td><td>to mix</td></tr>
+                      <tr><td>picar</td><td>to chop</td></tr>
+                      <tr><td>probar</td><td>to taste</td></tr>
+                      <tr><td>servir</td><td>to serve</td></tr>
+                      <tr><td>tragar</td><td>to swallow</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

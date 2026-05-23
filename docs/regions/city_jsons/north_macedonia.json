@@ -1,0 +1,17 @@
+[
+  {"name": "Skopje", "lat": 41.9961, "lng": 21.4317},
+  {"name": "Kumanovo", "lat": 42.1322, "lng": 21.7144},
+  {"name": "Bitola", "lat": 41.0319, "lng": 21.3347},
+  {"name": "Prilep", "lat": 41.3464, "lng": 21.5542},
+  {"name": "Tetovo", "lat": 42.0103, "lng": 20.9714},
+  {"name": "Štip", "lat": 41.7358, "lng": 22.1914},
+  {"name": "Veles", "lat": 41.7153, "lng": 21.7753},
+  {"name": "Ohrid", "lat": 41.1169, "lng": 20.8019},
+  {"name": "Strumica", "lat": 41.4375, "lng": 22.6431},
+  {"name": "Gostivar", "lat": 41.8000, "lng": 20.9167},
+  {"name": "Kavadarci", "lat": 41.4328, "lng": 22.0117},
+  {"name": "Kočani", "lat": 41.9167, "lng": 22.4125},
+  {"name": "Kičevo", "lat": 41.5142, "lng": 20.9631},
+  {"name": "Struga", "lat": 41.1775, "lng": 20.6789},
+  {"name": "Radoviš", "lat": 41.6381, "lng": 22.4644}
+]

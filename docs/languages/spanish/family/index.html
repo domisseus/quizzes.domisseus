@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Family & Relationships (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">The Core Family</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la familia</td><td>family</td></tr>
+                      <tr><td>el árbol genealógico</td><td>family tree</td></tr>
+                      <tr><td>la gente</td><td>people</td></tr>
+                      <tr><td>el hombre</td><td>man</td></tr>
+                      <tr><td>la mujer</td><td>woman</td></tr>
+                      <tr><td>el chico / la chica</td><td>boy / girl</td></tr>
+                      <tr><td>el niño / la niña</td><td>child</td></tr>
+                      <tr><td>el padre</td><td>father</td></tr>
+                      <tr><td>la madre</td><td>mother</td></tr>
+                      <tr><td>el hijo</td><td>son</td></tr>
+                      <tr><td>la hija</td><td>daughter</td></tr>
+                      <tr><td>el hermano</td><td>brother</td></tr>
+                      <tr><td>la hermana</td><td>sister</td></tr>
+                      <tr><td>el abuelo</td><td>grandfather</td></tr>
+                      <tr><td>la abuela</td><td>grandmother</td></tr>
+                      <tr><td>el nieto</td><td>grandson</td></tr>
+                      <tr><td>la nieta</td><td>granddaughter</td></tr>
+                      <tr><td>el tío</td><td>uncle</td></tr>
+                      <tr><td>la tía</td><td>aunt</td></tr>
+                      <tr><td>el primo / la prima</td><td>cousin</td></tr>
+                      <tr><td>el sobrino</td><td>nephew</td></tr>
+                      <tr><td>la sobrina</td><td>niece</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Partners & In-Laws</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la pareja</td><td>partner</td></tr>
+                      <tr><td>el esposo / marido</td><td>husband</td></tr>
+                      <tr><td>la esposa / mujer</td><td>wife</td></tr>
+                      <tr><td>el novio</td><td>boyfriend</td></tr>
+                      <tr><td>la novia</td><td>girlfriend</td></tr>
+                      <tr><td>el amigo / la amiga</td><td>friend</td></tr>
+                      <tr><td>el suegro</td><td>father-in-law</td></tr>
+                      <tr><td>la suegra</td><td>mother-in-law</td></tr>
+                      <tr><td>el yerno</td><td>son-in-law</td></tr>
+                      <tr><td>la nuera</td><td>daughter-in-law</td></tr>
+                      <tr><td>el cuñado</td><td>brother-in-law</td></tr>
+                      <tr><td>la cuñada</td><td>sister-in-law</td></tr>
+                      <tr><td>el padrastro</td><td>stepfather</td></tr>
+                      <tr><td>la madrastra</td><td>stepmother</td></tr>
+                      <tr><td>el hijastro</td><td>stepson</td></tr>
+                      <tr><td>la hijastra</td><td>stepdaughter</td></tr>
+                      <tr><td>el hermanastro</td><td>stepbrother</td></tr>
+                      <tr><td>la hermanastra</td><td>stepsister</td></tr>
+                      <tr><td>gemelos/as</td><td>twins (identical)</td></tr>
+                      <tr><td>mellizos/as</td><td>twins (fraternal)</td></tr>
+                      <tr><td>adoptado,a</td><td>adopted</td></tr>
+                      <tr><td>huérfano,a</td><td>orphan</td></tr>
+                      <tr><td>soltero,a</td><td>single</td></tr>
+                      <tr><td>viudo,a</td><td>widowed</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Events & Feelings</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la relación</td><td>relationship</td></tr>
+                      <tr><td>el compromiso</td><td>engagement</td></tr>
+                      <tr><td>la boda</td><td>wedding</td></tr>
+                      <tr><td>el matrimonio</td><td>marriage</td></tr>
+                      <tr><td>la separación</td><td>separation</td></tr>
+                      <tr><td>el divorcio</td><td>divorce</td></tr>
+                      <tr><td>la reconciliación</td><td>reconciliation</td></tr>
+                      <tr><td>el amor</td><td>love</td></tr>
+                      <tr><td>el cariño</td><td>affection</td></tr>
+                      <tr><td>la amistad</td><td>friendship</td></tr>
+                      <tr><td>la confianza</td><td>trust</td></tr>
+                      <tr><td>el respeto</td><td>respect</td></tr>
+                      <tr><td>la comprensión</td><td>understanding</td></tr>
+                      <tr><td>los celos</td><td>jealousy</td></tr>
+                      <tr><td>la discusión</td><td>argument</td></tr>
+                      <tr><td>los ancestros</td><td>ancestors</td></tr>
+                      <tr><td>la consanguinidad</td><td>blood relation</td></tr>
+                      <tr><td>la crianza</td><td>upbringing</td></tr>
+                      <tr><td>los descendientes</td><td>descendants</td></tr>
+                      <tr><td>la generación</td><td>generation</td></tr>
+                      <tr><td>la herencia</td><td>inheritance/heritage</td></tr>
+                      <tr><td>la parentela</td><td>relatives</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Actions & Phrases</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>casarse (con)</td><td>get married</td></tr>
+                      <tr><td>celebrar una reunión</td><td>have a gathering</td></tr>
+                      <tr><td>conocerse</td><td>meet / get to know</td></tr>
+                      <tr><td>criar a los hijos</td><td>raise children</td></tr>
+                      <tr><td>divorciarse (de)</td><td>get divorced</td></tr>
+                      <tr><td>estar enamorado de</td><td>be in love with</td></tr>
+                      <tr><td>hacer las paces</td><td>make peace</td></tr>
+                      <tr><td>llevarse bien</td><td>get along well</td></tr>
+                      <tr><td>llevarse mal</td><td>get along badly</td></tr>
+                      <tr><td>pasar tiempo</td><td>spend time</td></tr>
+                      <tr><td>reconciliarse</td><td>reconcile</td></tr>
+                      <tr><td>romper con alguien</td><td>break up with</td></tr>
+                      <tr><td>salir con alguien</td><td>go out with</td></tr>
+                      <tr><td>ser como uña y carne</td><td>be inseparable</td></tr>
+                      <tr><td>ser el favorito/a</td><td>be the favorite</td></tr>
+                      <tr><td>ser el mayor</td><td>be the oldest</td></tr>
+                      <tr><td>ser el menor</td><td>be the youngest</td></tr>
+                      <tr><td>tener una pelea</td><td>have a fight</td></tr>
+                      <tr><td>tener una relación</td><td>have a relationship</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

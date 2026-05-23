@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abstract Concepts - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Abstract Concepts (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Society & Culture</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el accidente</td><td>accident</td></tr>
+                      <tr><td>el arte</td><td>art</td></tr>
+                      <tr><td>el baile</td><td>dance</td></tr>
+                      <tr><td>la canción</td><td>song</td></tr>
+                      <tr><td>el cumpleaños</td><td>birthday</td></tr>
+                      <tr><td>la cultura</td><td>culture</td></tr>
+                      <tr><td>el deporte</td><td>sport</td></tr>
+                      <tr><td>el drama</td><td>drama</td></tr>
+                      <tr><td>la economía</td><td>economy</td></tr>
+                      <tr><td>la fiesta</td><td>party</td></tr>
+                      <tr><td>el gobierno</td><td>government</td></tr>
+                      <tr><td>la guerra</td><td>war</td></tr>
+                      <tr><td>la historia</td><td>history</td></tr>
+                      <tr><td>la ley</td><td>law</td></tr>
+                      <tr><td>la moda</td><td>fashion</td></tr>
+                      <tr><td>la muchedumbre</td><td>crowd</td></tr>
+                      <tr><td>la nación</td><td>nation</td></tr>
+                      <tr><td>la paz</td><td>peace</td></tr>
+                      <tr><td>el poema</td><td>poem</td></tr>
+                      <tr><td>la política</td><td>politics</td></tr>
+                      <tr><td>la serie</td><td>series</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Mind & Communication</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el asunto</td><td>matter / issue</td></tr>
+                      <tr><td>la clave</td><td>key (code/password)</td></tr>
+                      <tr><td>el consejo</td><td>advice</td></tr>
+                      <tr><td>el conocimiento</td><td>knowledge</td></tr>
+                      <tr><td>la duda</td><td>doubt</td></tr>
+                      <tr><td>el idioma</td><td>language</td></tr>
+                      <tr><td>la idea</td><td>idea</td></tr>
+                      <tr><td>la información</td><td>information</td></tr>
+                      <tr><td>la inteligencia</td><td>intelligence</td></tr>
+                      <tr><td>la memoria</td><td>memory</td></tr>
+                      <tr><td>la mentira</td><td>lie</td></tr>
+                      <tr><td>el mensaje</td><td>message</td></tr>
+                      <tr><td>el nombre</td><td>name</td></tr>
+                      <tr><td>la opinión</td><td>opinion</td></tr>
+                      <tr><td>la palabra</td><td>word</td></tr>
+                      <tr><td>el pensamiento</td><td>thought</td></tr>
+                      <tr><td>la pregunta</td><td>question</td></tr>
+                      <tr><td>el problema</td><td>problem</td></tr>
+                      <tr><td>la razón</td><td>reason</td></tr>
+                      <tr><td>la respuesta</td><td>answer</td></tr>
+                      <tr><td>el secreto</td><td>secret</td></tr>
+                      <tr><td>la verdad</td><td>truth</td></tr>
+                      <tr><td>la voz</td><td>voice</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">States & Qualities</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la belleza</td><td>beauty</td></tr>
+                      <tr><td>la condición</td><td>condition</td></tr>
+                      <tr><td>la culpa</td><td>guilt / fault</td></tr>
+                      <tr><td>la dificultad</td><td>difficulty</td></tr>
+                      <tr><td>la esperanza</td><td>hope</td></tr>
+                      <tr><td>el éxito</td><td>success</td></tr>
+                      <tr><td>el fracaso</td><td>failure</td></tr>
+                      <tr><td>la fuerza</td><td>strength</td></tr>
+                      <tr><td>el humor</td><td>mood / humor</td></tr>
+                      <tr><td>la inspiración</td><td>inspiration</td></tr>
+                      <tr><td>la juventud</td><td>youth</td></tr>
+                      <tr><td>la libertad</td><td>liberty / freedom</td></tr>
+                      <tr><td>el miedo</td><td>fear</td></tr>
+                      <tr><td>la oportunidad</td><td>opportunity</td></tr>
+                      <tr><td>la paciencia</td><td>patience</td></tr>
+                      <tr><td>el peligro</td><td>danger</td></tr>
+                      <tr><td>el poder</td><td>power</td></tr>
+                      <tr><td>la responsabilidad</td><td>responsibility</td></tr>
+                      <tr><td>la salud</td><td>health</td></tr>
+                      <tr><td>la suerte</td><td>luck</td></tr>
+                      <tr><td>el valor</td><td>courage / value</td></tr>
+                      <tr><td>la vergüenza</td><td>shame / embarrassment</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Systems & General</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el aire</td><td>air</td></tr>
+                      <tr><td>el cambio</td><td>change</td></tr>
+                      <tr><td>la cantidad</td><td>quantity</td></tr>
+                      <tr><td>el caso</td><td>case</td></tr>
+                      <tr><td>la cosa</td><td>thing</td></tr>
+                      <tr><td>la cura</td><td>cure</td></tr>
+                      <tr><td>el ejemplo</td><td>example</td></tr>
+                      <tr><td>el espacio</td><td>space</td></tr>
+                      <tr><td>el fin</td><td>end</td></tr>
+                      <tr><td>la forma</td><td>shape / way</td></tr>
+                      <tr><td>el futuro</td><td>future</td></tr>
+                      <tr><td>el inicio</td><td>start / beginning</td></tr>
+                      <tr><td>la latitud</td><td>latitude</td></tr>
+                      <tr><td>la manera</td><td>way / manner</td></tr>
+                      <tr><td>el modo</td><td>mode / way</td></tr>
+                      <tr><td>la muerte</td><td>death</td></tr>
+                      <tr><td>el nivel</td><td>level</td></tr>
+                      <tr><td>la orden</td><td>command / order</td></tr>
+                      <tr><td>el orden</td><td>arrangement / order</td></tr>
+                      <tr><td>la parte</td><td>part</td></tr>
+                      <tr><td>el pasado</td><td>past</td></tr>
+                      <tr><td>la realidad</td><td>reality</td></tr>
+                      <tr><td>el sistema</td><td>system</td></tr>
+                      <tr><td>la situación</td><td>situation</td></tr>
+                      <tr><td>el sueño</td><td>dream / sleep</td></tr>
+                      <tr><td>la tarea</td><td>task / homework</td></tr>
+                      <tr><td>el tipo</td><td>type</td></tr>
+                      <tr><td>la vida</td><td>life</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

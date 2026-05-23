@@ -1,12 +1,16 @@
 [
-  {"name": "Accra", "lat": 5.6037, "lng": -0.187},
-  {"name": "Kumasi", "lat": 6.6885, "lng": -1.6244},
+  {"name": "Accra", "lat": 5.6037, "lng": -0.1870},
+  {"name": "Kumasi", "lat": 6.6666, "lng": -1.6163},
   {"name": "Tamale", "lat": 9.4008, "lng": -0.8393},
-  {"name": "Takoradi", "lat": 4.8845, "lng": -1.7554},
-  {"name": "Ashaiman", "lat": 5.7, "lng": -0.0333},
-  {"name": "Cape Coast", "lat": 5.1063, "lng": -1.2466},
-  {"name": "Obuasi", "lat": 6.2, "lng": -1.6833},
-  {"name": "Teshie", "lat": 5.5833, "lng": -0.1},
-  {"name": "Tema", "lat": 5.6667, "lng": 0.0},
-  {"name": "Koforidua", "lat": 6.0941, "lng": -0.2609}
+  {"name": "Takoradi", "lat": 4.8917, "lng": -1.7522},
+  {"name": "Sunyani", "lat": 7.3349, "lng": -2.3123},
+  {"name": "Cape Coast", "lat": 5.1053, "lng": -1.2466},
+  {"name": "Obuasi", "lat": 6.2000, "lng": -1.6667},
+  {"name": "Tema", "lat": 5.6667, "lng": -0.0167},
+  {"name": "Koforidua", "lat": 6.0941, "lng": -0.2591},
+  {"name": "Wa", "lat": 10.0607, "lng": -2.5019},
+  {"name": "Techiman", "lat": 7.5833, "lng": -1.9333},
+  {"name": "Ho", "lat": 6.6000, "lng": 0.4719},
+  {"name": "Bolgatanga", "lat": 10.7856, "lng": -0.8514},
+  {"name": "Hohoe", "lat": 7.1519, "lng": 0.4736}
 ]

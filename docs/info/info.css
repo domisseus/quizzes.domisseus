@@ -1,0 +1,137 @@
+/* ----------------- INFO PAGE SPECIFIC STYLES ----------------- */
+/* Save this file inside your 'info/' folder */
+
+#infoContainer {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+#infoContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#infoContainer section {
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#infoContainer section h2 {
+  margin-top: 0;
+}
+
+/* --- FIX: UPDATED BUTTON STYLING (MATCHING ACHIEVEMENTS) --- */
+#infoContainer button {
+  display: block;
+  margin: 20px auto 0 auto;
+  
+  /* Match the image: Light Grey + Thick Dark Border */
+  background-color: #f0f0f0;
+  color: black;
+  border: 2px solid #333; 
+  border-radius: 8px;
+  
+  /* Sizing */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+
+  /* Font matches the rest */
+  font-family: "Segoe Script", cursive;
+  font-weight: normal;
+  transition: background-color 0.2s;
+}
+
+#infoContainer button:hover {
+  background-color: #ddd;
+}
+
+/* ----------------- INFO PAGE SPECIFIC LAYOUTS ----------------- */
+
+/* Container for the two side-by-side columns (My Maps & Other Quizzes) */
+#infoOtherQuizzes {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.left-column-group {
+    flex: 1; 
+    padding: 0 20px;
+    text-align: left;
+}
+
+.right-column-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: right; 
+    padding: 0 20px;
+}
+
+.quizzes-header,
+.my-maps-header {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    margin-bottom: 8px;
+}
+
+/* Links inside lists */
+#infoOtherQuizzes .quiz-lists-wrapper > ul > li > a,
+#infoOtherQuizzes .my-maps-wrapper > ul > li > a {
+    text-decoration: none;
+    color: inherit;       
+    display: block;      
+    transition: opacity 0.2s;
+}
+
+#infoOtherQuizzes .quiz-lists-wrapper > ul > li > a:hover,
+#infoOtherQuizzes .my-maps-wrapper > ul > li > a:hover {
+    opacity: 0.6;          
+    transform: scale(1.01); 
+}
+
+#infoOtherQuizzes .my-maps-wrapper > ul {
+    width: fit-content;
+}
+
+/* ----------------- DARK MODE OVERRIDES (INFO) ----------------- */
+
+/* 1. Darken the Info Sections */
+body.dark-mode #infoContainer section {
+    background-color: #333;       
+    border-color: #555;          
+    color: #f0f0f0;             
+}
+
+/* 2. Fix the "Back to Home" Button (High Contrast) */
+body.dark-mode #infoContainer button {
+    background-color: #e0e0e0; /* Light Gray */
+    color: black;              /* Black Text */
+    border: 2px solid #999;    /* Visible Border */
+}
+
+body.dark-mode #infoContainer button:hover {
+    background-color: #fff;    /* White on hover */
+}
+
+/* 3. Fix Links (Feedback Form) - Light Blue for visibility */
+body.dark-mode #infoContainer a {
+    color: #8ab4f8; 
+}
+
+/* 4. Fix Inline Colors (Red/Green text) for contrast */
+body.dark-mode #infoContainer span[style*="red"] {
+    color: #ff6b6b !important; /* Soft Red */
+}
+
+body.dark-mode #infoContainer li[style*="green"] {
+    color: #69f0ae !important; /* Bright Green */
+}

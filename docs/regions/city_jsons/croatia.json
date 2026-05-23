@@ -1,12 +1,17 @@
 [
-  {"name": "Zagreb", "lat": 45.815, "lng": 15.9819},
+  {"name": "Zagreb", "lat": 45.8150, "lng": 15.9819},
   {"name": "Split", "lat": 43.5081, "lng": 16.4402},
   {"name": "Rijeka", "lat": 45.3271, "lng": 14.4422},
-  {"name": "Osijek", "lat": 45.555, "lng": 18.6955},
-  {"name": "Zadar", "lat": 44.1194, "lng": 15.2314},
+  {"name": "Osijek", "lat": 45.5550, "lng": 18.6955},
+  {"name": "Zadar", "lat": 44.1197, "lng": 15.2314},
   {"name": "Pula", "lat": 44.8683, "lng": 13.8481},
-  {"name": "Slavonski Brod", "lat": 45.1603, "lng": 18.0156},
-  {"name": "Velika Gorica", "lat": 45.7118, "lng": 16.07},
+  {"name": "Slavonski Brod", "lat": 45.1631, "lng": 18.0116},
   {"name": "Karlovac", "lat": 45.4929, "lng": 15.5553},
-  {"name": "Dubrovnik", "lat": 42.6507, "lng": 18.0944}
+  {"name": "Varaždin", "lat": 46.3044, "lng": 16.3378},
+  {"name": "Šibenik", "lat": 43.7350, "lng": 15.8906},
+  {"name": "Dubrovnik", "lat": 42.6507, "lng": 18.0944},
+  {"name": "Sisak", "lat": 45.4872, "lng": 16.3761},
+  {"name": "Makarska", "lat": 43.2969, "lng": 17.0178},
+  {"name": "Trogir", "lat": 43.5150, "lng": 16.2519},
+  {"name": "Hvar", "lat": 43.1714, "lng": 16.4433}
 ]

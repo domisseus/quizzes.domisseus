@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="domisseus" />
+  <meta name="description" content="A full Spanish language course (Grammar, Vocabulary)." />
+  <title>Spanish Course.domisseus</title>
+
+  <link rel="icon" type="image/png" href="../../images/favicon.png" />
+  
+  <link rel="stylesheet" href="../../base.css" />
+  <link rel="stylesheet" href="../../dark.css" />
+  
+  <link rel="stylesheet" href="spanish.css" />
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid">
+    <div id="otherQuizzes">
+        <a href="../">languages menu</a>
+    </div>
+
+    <div id="center-column">
+      <h1>Spanish Course</h1>
+    </div>
+
+    <div id="theme-controls">
+      <button id="lightBtn" class="theme-btn active">Light</button>
+      <button id="darkBtn" class="theme-btn">Dark</button>
+    </div>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="topicSearch" onkeyup="filterTopics()" placeholder="Search topics..." />
+  </div>
+
+  <div id="spanishContainer">
+    <div id="main-content-grid">
+        
+        <div class="column-wrapper">
+            <h2 class="column-header">Vocabulary Topics <span style="font-size: 22px;">(... | ...)</span></h2>            <ul class="topic-list" id="vocabList">
+                <li class="topic-item"><a href="verbs/">Verbs (<span id="count-verbs">...</span>)</a></li>
+                <li class="topic-item"><a href="adjectives/">Adjectives (<span id="count-adjectives">...</span>)</a></li>
+                <li class="topic-item"><a href="animals/">Animals (<span id="count-animals">...</span>)</a></li>
+                <li class="topic-item"><a href="food/">Food (<span id="count-food">...</span>)</a></li>
+                <li class="topic-item"><a href="body_parts/">Body parts (<span id="count-body-parts">...</span>)</a></li>
+                <li class="topic-item"><a href="family/">Family (<span id="count-family">...</span>)</a></li>
+                <li class="topic-item"><a href="clothes_colors/">Clothes, Colors (<span id="count-clothes-colors">...</span>)</a></li>
+                <li class="topic-item"><a href="shopping/">Shopping (<span id="count-shopping">...</span>)</a></li>
+                <li class="topic-item"><a href="time_weather/">Time, Weather (<span id="count-time-weather">...</span>)</a></li>
+                <li class="topic-item"><a href="travel/">Travel (<span id="count-travel">...</span>)</a></li>
+                <li class="topic-item"><a href="work/">Work (<span id="count-work">...</span>)</a></li>
+                <li class="topic-item"><a href="housing/">Housing (<span id="count-housing">...</span>)</a></li>
+                <li class="topic-item"><a href="education/">Education (<span id="count-education">...</span>)</a></li>
+                <li class="topic-item"><a href="environment/">Environment (<span id="count-environment">...</span>)</a></li>
+                <li class="topic-item"><a href="free_time_hobbies/">Free Time, Hobbies (<span id="count-free-time-hobbies">...</span>)</a></li>
+                <li class="topic-item"><a href="things/">Things (<span id="count-things">...</span>)</a></li>
+                <li class="topic-item"><a href="other_things/">Other Things (<span id="count-other-things">...</span>)</a></li>
+                <li class="topic-item"><a href="other_vocab/">Other (<span id="count-other-vocab">...</span>)</a></li>
+            </ul>
+        </div>
+        
+        <div class="column-wrapper">
+            <h2 class="column-header">Grammar Topics</h2>
+            <ul class="topic-list" id="grammarList">
+                
+                <li class="topic-item split-row">
+                    <a href="tenses/" class="nav-btn">Theory</a>
+                    <span class="center-label">Tenses (18)</span>
+                    <a href="tenses/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="present_irregular/" class="nav-btn">Theory</a>
+                    <span class="center-label">Present Irregular Verbs (23)</span>
+                    <a href="present_irregular/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="stem_changers/" class="nav-btn">Theory</a>
+                    <span class="center-label">Stem-changers (10 | 164) </span>
+                    <a href="stem_changers/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                
+
+                <li class="topic-item split-row">
+                    <a href="preterite/" class="nav-btn">Theory</a>
+                    <span class="center-label">Preterite (6 | 100)</span>
+                    <a href="preterite/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                
+
+                <li class="topic-item split-row">
+                    <a href="future_conditional/" class="nav-btn">Theory</a>
+                    <span class="center-label">Future, Conditional (13)</span>
+                    <a href="future_conditional/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="past_participle/" class="nav-btn">Theory</a>
+                    <span class="center-label">Past Participle (4 | 34)</span>
+                    <a href="past_participle/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="pronouns_prepositions/" class="nav-btn">Theory</a>
+                    <span class="center-label">Pronouns (10) & Prepositions (28)</span>
+                    <a href="pronouns_prepositions/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="conjunctions/" class="nav-btn">Theory</a>
+                    <span class="center-label">Linking Words & Conjunctions (17)</span>
+                    <a href="conjunctions/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="passive_causative/" class="nav-btn">Theory</a>
+                    <span class="center-label">Passive Voice & Causative</span>
+                    <a href="passive_causative/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="if_clauses_reported/" class="nav-btn">Theory</a>
+                    <span class="center-label">If Clauses & Reported Speech</span>
+                    <a href="if_clauses/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="gustar/" class="nav-btn">Theory</a>
+                    <span class="center-label">Verbs Like Gustar</span>
+                    <a href="verbs_gustar/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+                <li class="topic-item split-row">
+                    <a href="other_grammar/" class="nav-btn">Theory</a>
+                    <span class="center-label">Other (29)</span>
+                    <a href="other_grammar/quiz.html" class="nav-btn">Practice</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="../../theme.js"></script>
+<script src="spanish.js"></script>
+
+</body>
+</html>

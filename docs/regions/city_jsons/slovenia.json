@@ -1,12 +1,19 @@
 [
   {"name": "Ljubljana", "lat": 46.0569, "lng": 14.5058},
   {"name": "Maribor", "lat": 46.5547, "lng": 15.6459},
-  {"name": "Kranj", "lat": 46.2417, "lng": 14.3536},
-  {"name": "Celje", "lat": 46.2333, "lng": 15.2667},
-  {"name": "Koper", "lat": 45.5469, "lng": 13.7294},
-  {"name": "Novo Mesto", "lat": 45.8039, "lng": 15.1689},
-  {"name": "Velenje", "lat": 46.3636, "lng": 15.1114},
-  {"name": "Nova Gorica", "lat": 45.9558, "lng": 13.6486},
-  {"name": "Krško", "lat": 45.9611, "lng": 15.4858},
-  {"name": "Ptuj", "lat": 46.42, "lng": 15.87}
+  {"name": "Kranj", "lat": 46.2389, "lng": 14.3556},
+  {"name": "Celje", "lat": 46.2283, "lng": 15.2645},
+  {"name": "Koper", "lat": 45.5481, "lng": 13.7302},
+  {"name": "Novo Mesto", "lat": 45.8031, "lng": 15.1689},
+  {"name": "Velenje", "lat": 46.3592, "lng": 15.1103},
+  {"name": "Ptuj", "lat": 46.4200, "lng": 15.8697},
+  {"name": "Murska Sobota", "lat": 46.6625, "lng": 16.1664},
+  {"name": "Kamnik", "lat": 46.2259, "lng": 14.6122},
+  {"name": "Domžale", "lat": 46.1367, "lng": 14.5942},
+  {"name": "Izola", "lat": 45.5392, "lng": 13.6606},
+  {"name": "Postojna", "lat": 45.7761, "lng": 14.2144},
+  {"name": "Logatec", "lat": 45.9167, "lng": 14.2333},
+  {"name": "Portorož", "lat": 45.5144, "lng": 13.5906},
+  {"name": "Piran", "lat": 45.5283, "lng": 13.5683},
+  {"name": "Bled", "lat": 46.3683, "lng": 14.1146}
 ]

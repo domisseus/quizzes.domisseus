@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objects & Materials - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">General Objects & Materials (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Containers & Daily Items</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la caja</td><td>box</td></tr>
+                      <tr><td>la botella</td><td>bottle</td></tr>
+                      <tr><td>el paquete</td><td>package</td></tr>
+                      <tr><td>el sobre</td><td>envelope</td></tr>
+                      <tr><td>el cesto / la cesta</td><td>basket</td></tr>
+                      <tr><td>el objeto</td><td>object</td></tr>
+                      <tr><td>la cosa</td><td>thing</td></tr>
+                      <tr><td>el regalo</td><td>gift / present</td></tr>
+                      <tr><td>el juguete</td><td>toy</td></tr>
+                      <tr><td>el cigarrillo</td><td>cigarette</td></tr>
+                      <tr><td>el encendedor</td><td>lighter</td></tr>
+                      <tr><td>el paraguas</td><td>umbrella</td></tr>
+                      <tr><td>la cartera</td><td>wallet</td></tr>
+                      <tr><td>el dinero</td><td>money</td></tr>
+                      <tr><td>la moneda</td><td>coin</td></tr>
+                      <tr><td>el billete</td><td>bill / banknote</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Materials</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el material</td><td>material</td></tr>
+                      <tr><td>el papel</td><td>paper</td></tr>
+                      <tr><td>el cartón</td><td>cardboard</td></tr>
+                      <tr><td>el plástico</td><td>plastic</td></tr>
+                      <tr><td>el vidrio / cristal</td><td>glass</td></tr>
+                      <tr><td>la madera</td><td>wood</td></tr>
+                      <tr><td>el metal</td><td>metal</td></tr>
+                      <tr><td>el oro</td><td>gold</td></tr>
+                      <tr><td>la plata</td><td>silver</td></tr>
+                      <tr><td>la piedra</td><td>stone</td></tr>
+                      <tr><td>la tela</td><td>fabric / cloth</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Tools & Hardware</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la herramienta</td><td>tool</td></tr>
+                      <tr><td>el martillo</td><td>hammer</td></tr>
+                      <tr><td>el tornillo</td><td>screw</td></tr>
+                      <tr><td>el clavo</td><td>nail (metal)</td></tr>
+                      <tr><td>la máquina</td><td>machine</td></tr>
+                      <tr><td>la batería / pila</td><td>battery</td></tr>
+                      <tr><td>el cable</td><td>cable / wire</td></tr>
+                      <tr><td>la cuerda</td><td>rope</td></tr>
+                      <tr><td>el hilo</td><td>thread</td></tr>
+                      <tr><td>la aguja</td><td>needle</td></tr>
+                      <tr><td>las tijeras</td><td>scissors</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Hygiene & Misc Objects</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el jabón</td><td>soap</td></tr>
+                      <tr><td>el champú</td><td>shampoo</td></tr>
+                      <tr><td>la toalla</td><td>towel</td></tr>
+                      <tr><td>el peine</td><td>comb</td></tr>
+                      <tr><td>el cepillo</td><td>brush</td></tr>
+                      <tr><td>el pañuelo</td><td>tissue / handkerchief</td></tr>
+                      <tr><td>la pasta de dientes</td><td>toothpaste</td></tr>
+                      <tr><td>el anillo</td><td>ring</td></tr>
+                      <tr><td>el collar</td><td>necklace</td></tr>
+                      <tr><td>la pulsera</td><td>bracelet</td></tr>
+                      <tr><td>el globo</td><td>balloon</td></tr>
+                      <tr><td>la vela</td><td>candle</td></tr>
+                      <tr><td>la bandera</td><td>flag</td></tr>
+                      <tr><td>la campana</td><td>bell</td></tr>
+                      <tr><td>la rueda</td><td>wheel</td></tr>
+                      <tr><td>la escalera</td><td>ladder</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

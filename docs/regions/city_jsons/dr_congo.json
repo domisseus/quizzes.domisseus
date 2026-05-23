@@ -5,8 +5,8 @@
   {"name": "Kananga", "lat": -5.8903, "lng": 22.4167},
   {"name": "Kisangani", "lat": 0.5153, "lng": 25.191},
   {"name": "Bukavu", "lat": -2.5083, "lng": 28.8608},
-  {"name": "Tshikapa", "lat": -6.4167, "lng": 20.8},
-  {"name": "Kolwezi", "lat": -10.7148, "lng": 25.4667},
   {"name": "Likasi", "lat": -10.9814, "lng": 26.7333},
-  {"name": "Goma", "lat": -1.6585, "lng": 29.2205}
+  {"name": "Goma", "lat": -1.6585, "lng": 29.2205},
+  {"name": "Kikwit", "lat": -5.0410, "lng": 18.8162},
+  {"name": "Matadi", "lat": -5.8167, "lng": 13.4500}
 ]

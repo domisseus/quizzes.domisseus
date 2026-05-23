@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Shopping (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Places & Goods</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el bazar</td><td>bazaar</td></tr>
+                      <tr><td>la boutique</td><td>boutique</td></tr>
+                      <tr><td>el café</td><td>café</td></tr>
+                      <tr><td>la carnicería</td><td>butcher shop</td></tr>
+                      <tr><td>el centro comercial</td><td>shopping mall</td></tr>
+                      <tr><td>la farmacia</td><td>pharmacy</td></tr>
+                      <tr><td>la frutería</td><td>fruit shop</td></tr>
+                      <tr><td>la joyería</td><td>jewelry store</td></tr>
+                      <tr><td>la librería</td><td>bookstore</td></tr>
+                      <tr><td>el mercado</td><td>market</td></tr>
+                      <tr><td>la panadería</td><td>bakery</td></tr>
+                      <tr><td>la pescadería</td><td>fish market</td></tr>
+                      <tr><td>el puesto</td><td>stall / stand</td></tr>
+                      <tr><td>el supermercado</td><td>supermarket</td></tr>
+                      <tr><td>la tienda</td><td>store</td></tr>
+                      <tr><td>la tienda de electrónica</td><td>electronics store</td></tr>
+                      <tr><td>la tienda de ropa</td><td>clothing store</td></tr>
+                      <tr><td>la zapatería</td><td>shoe store</td></tr>
+                      <tr><td>los alimentos</td><td>food</td></tr>
+                      <tr><td>los cosméticos</td><td>cosmetics</td></tr>
+                      <tr><td>los electrodomésticos</td><td>appliances</td></tr>
+                      <tr><td>las joyas</td><td>jewelry</td></tr>
+                      <tr><td>los juguetes</td><td>toys</td></tr>
+                      <tr><td>los libros</td><td>books</td></tr>
+                      <tr><td>los muebles</td><td>furniture</td></tr>
+                      <tr><td>los productos</td><td>products</td></tr>
+                      <tr><td>los regalos</td><td>gifts</td></tr>
+                      <tr><td>la ropa</td><td>clothes</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Money & Payment</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el cajero automático</td><td>ATM</td></tr>
+                      <tr><td>el cambio</td><td>change</td></tr>
+                      <tr><td>la cartera</td><td>wallet</td></tr>
+                      <tr><td>el costo</td><td>cost</td></tr>
+                      <tr><td>el descuento</td><td>discount</td></tr>
+                      <tr><td>la devolución</td><td>refund</td></tr>
+                      <tr><td>el dinero</td><td>money</td></tr>
+                      <tr><td>el efectivo</td><td>cash</td></tr>
+                      <tr><td>la factura</td><td>invoice</td></tr>
+                      <tr><td>el impuesto</td><td>tax</td></tr>
+                      <tr><td>la oferta</td><td>offer / sale</td></tr>
+                      <tr><td>el precio</td><td>price</td></tr>
+                      <tr><td>el presupuesto</td><td>budget</td></tr>
+                      <tr><td>el recibo</td><td>receipt</td></tr>
+                      <tr><td>la tarjeta de crédito</td><td>credit card</td></tr>
+                      <tr><td>la tarjeta de débito</td><td>debit card</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Descriptions</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                     <tr><td>barato,a</td><td>cheap</td></tr>
+                      <tr><td>bonito,a</td><td>pretty</td></tr>
+                      <tr><td>caro,a</td><td>expensive</td></tr>
+                      <tr><td>cómodo,a</td><td>comfortable</td></tr>
+                      <tr><td>costoso,a</td><td>costly</td></tr>
+                      <tr><td>de moda</td><td>fashionable</td></tr>
+                      <tr><td>económico,a</td><td>economical</td></tr>
+                      <tr><td>feo,a</td><td>ugly</td></tr>
+                      <tr><td>grande</td><td>big</td></tr>
+                      <tr><td>incómodo,a</td><td>uncomfortable</td></tr>
+                      <tr><td>ligero,a</td><td>light (weight)</td></tr>
+                      <tr><td>moderno,a</td><td>modern</td></tr>
+                      <tr><td>nuevo,a</td><td>new</td></tr>
+                      <tr><td>pasado de moda</td><td>out of fashion</td></tr>
+                      <tr><td>pequeño,a</td><td>small</td></tr>
+                      <tr><td>pesado,a</td><td>heavy</td></tr>
+                      <tr><td>tradicional</td><td>traditional</td></tr>
+                      <tr><td>usado,a</td><td>used</td></tr>
+                      <tr><td>útil</td><td>useful</td></tr> 
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Actions & Phrases</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>ahorrar</td><td>to save</td></tr>
+                      <tr><td>buscar</td><td>to look for</td></tr>
+                      <tr><td>cambiar</td><td>to exchange</td></tr>
+                      <tr><td>comparar</td><td>to compare</td></tr>
+                      <tr><td>comprar</td><td>to buy</td></tr>
+                      <tr><td>devolver</td><td>to return</td></tr>
+                      <tr><td>elegir</td><td>to choose</td></tr>
+                      <tr><td>encontrar</td><td>to find</td></tr>
+                      <tr><td>entregar</td><td>to deliver</td></tr>
+                      <tr><td>gastar</td><td>to spend</td></tr>
+                      <tr><td>llevar</td><td>to take / carry</td></tr>
+                      <tr><td>pagar</td><td>to pay</td></tr>
+                      <tr><td>pedir</td><td>to order / ask for</td></tr>
+                      <tr><td>probar</td><td>to try on</td></tr>
+                      <tr><td>recibir</td><td>to receive</td></tr>
+                      <tr><td>regatear</td><td>to haggle</td></tr>
+                      <tr><td>vender</td><td>to sell</td></tr>
+                      <tr><td>¿Acepta tarjeta?</td><td>Do you accept cards?</td></tr>
+                      <tr><td>¿Cuál es la política?</td><td>What is the return policy?</td></tr>
+                      <tr><td>¿Cuánto cuesta?</td><td>How much does it cost?</td></tr>
+                      <tr><td>¿Dónde está la caja?</td><td>Where is the checkout?</td></tr>
+                      <tr><td>¿Hay garantía?</td><td>Is there a warranty?</td></tr>
+                      <tr><td>¿Hay ofertas?</td><td>Are there any sales?</td></tr>
+                      <tr><td>¿Puede envolverlo?</td><td>Can you wrap it?</td></tr>
+                      <tr><td>¿Puedo cambiar esto?</td><td>Can I exchange this?</td></tr>
+                      <tr><td>¿Puedo devolverlo?</td><td>Can I return it?</td></tr>
+                      <tr><td>¿Puedo pagar en efectivo?</td><td>Can I pay with cash?</td></tr>
+                      <tr><td>¿Puedo probármelo?</td><td>Can I try it on?</td></tr>
+                      <tr><td>¿Tiene descuento?</td><td>Is there a discount?</td></tr>
+                      <tr><td>¿Tiene otra talla?</td><td>Do you have another size?</td></tr>
+                      <tr><td>Es demasiado caro</td><td>It's too expensive</td></tr>
+                      <tr><td>Estoy buscando...</td><td>I'm looking for...</td></tr>
+                      <tr><td>Me gustaría comprar...</td><td>I would like to buy...</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

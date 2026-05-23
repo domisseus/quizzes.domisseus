@@ -1,0 +1,197 @@
+/* ----------------- ACHIEVEMENTS PAGE STYLES ----------------- */
+/* Save this file inside your 'achievements/' folder */
+
+#achievementsContainer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.achievements-section {
+    margin-bottom: 40px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.achievements-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* --- COUNTRY GRID LAYOUT --- */
+.country-grid {
+    display: grid;
+    /* Cards will be approx 200px wide */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+/* The Country Card */
+.country-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.country-card:hover {
+    transform: translateY(-2px);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+/* Row for the two badges */
+.badge-row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* The Small Status Pills */
+.status-pill {
+    flex: 1; /* Split width equally */
+    padding: 5px 2px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* Colors */
+.status-pill.locked {
+    background-color: #e0e0e0;
+    color: #999;
+    border-color: #ccc;
+    font-weight: normal;
+}
+
+.status-pill.easy-done {
+    background-color: #81c784; /* Green */
+    color: #000;
+    border-color: #2e7d32;
+}
+
+.status-pill.hard-done {
+    background-color: #ffb74d; /* Gold */
+    color: #000;
+    border-color: #e65100;
+}
+
+/* --- TOGGLE SWITCH --- */
+.setting-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: #dbad30; }
+input:checked + .slider:before { transform: translateX(26px); }
+
+
+/* --- FIX: BACK BUTTON STYLING --- */
+#backButton {
+  /* Match the image: Light Grey + Thick Dark Border */
+  background-color: #f0f0f0;
+  color: black;
+  border: 2px solid #333; 
+  border-radius: 8px;
+  
+  /* Sizing */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+  
+  /* Font matches the rest */
+  font-family: "Segoe Script", cursive;
+  font-weight: normal;
+  transition: background-color 0.2s;
+}
+
+#backButton:hover {
+  background-color: #ddd;
+}
+
+
+/* --- DARK MODE OVERRIDES (ACHIEVEMENTS) --- */
+body.dark-mode .achievements-section {
+    background-color: #333;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .country-card {
+    background-color: #444;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .card-title {
+    border-color: #555;
+}
+
+body.dark-mode .status-pill.locked {
+    background-color: #555;
+    color: #777;
+    border-color: #666;
+}
+
+body.dark-mode .status-pill.easy-done {
+    background-color: #2e8534;
+    color: #fff;
+    border-color: #66bb6a;
+}
+
+body.dark-mode .status-pill.hard-done {
+    background-color: #da8b1d;
+    color: #fff;
+    border-color: #ffa726;
+}
+
+body.dark-mode .setting-row {
+    background-color: #333;
+    border-color: #555;
+}
+
+/* --- FIX: Back Button in Dark Mode (High Contrast) --- */
+/* Matches your screenshot: Light Button on Dark Background */
+body.dark-mode #backButton {
+    background-color: #e0e0e0; /* Light Gray */
+    color: black;              /* Black Text */
+    border: 2px solid #999;    /* Visible Border */
+}
+
+body.dark-mode #backButton:hover {
+    background-color: #fff;    /* White on hover */
+}

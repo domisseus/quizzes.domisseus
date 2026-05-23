@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Present Irregular - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Present Irregular Verbs (23)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search verbs..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Verb <-> Conjugation</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">Conjugate... <span id="quizWord" style="border-bottom: 2px solid #555;"></span></h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Totally Irregulars</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Ser</td><td>soy, eres, es, somos, sois, son</td></tr>
+                      <tr><td>Estar</td><td>estoy, estás, está, estamos, est-áis,án</td></tr>
+                      <tr><td>Ir</td><td>voy, vas, va, vamos, vais, van</td></tr>
+                      <tr><td>Haber</td><td>he, has, ha (hay), hemos, habéis, han</td></tr>
+                      <tr><td>Dar</td><td>doy, dais (rest regular)</td></tr>
+                      <tr><td>Ver</td><td>veo, veis (rest regular)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">"Go" Verbs (Yo form)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Decir</td><td>digo, dices, dice, decimos, decís, dicen</td></tr>
+                      <tr><td>Venir</td><td>vengo, vienes, viene, venimos, venís, vienen</td></tr>
+                      <tr><td>Tener</td><td>tengo, tienes, tiene, tenemos, tenéis, tienen</td></tr>
+                      <tr><td>Hacer</td><td>hago (rest regular)</td></tr>
+                      <tr><td>Poner</td><td>pongo (rest regular)</td></tr>
+                      <tr><td>Valer</td><td>valgo (rest regular)</td></tr>
+                      <tr><td>Salir</td><td>salgo (rest regular)</td></tr>
+                      <tr><td>Asir (grab)</td><td>asgo (rest regular)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Unique Yo</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Conjugation (Yo)</th></tr></thead>
+                  <tbody>
+                      <tr><td>Saber</td><td>sé</td></tr>
+                      <tr><td>Caber</td><td>quepo</td></tr>
+                      <tr><td>Caer</td><td>caigo</td></tr>
+                      <tr><td>Traer (bring)</td><td>traigo</td></tr>
+                      
+                      <tr>
+                          <td>
+                              Contraer (contract)
+                              <br>
+                              <span style="font-size: 0.85rem; font-size: 13px;">
+                                  (marriage/disease/muscle)
+                              </span>
+                          </td>
+                          <td>contraigo</td>
+                      </tr>
+                      
+                      <tr><td>Atraer (attract)</td><td>atraigo</td></tr>
+                      <tr><td>Raer (erase/rub)</td><td>raigo</td></tr>
+                      <tr><td>Sustraer (subtract/steal)</td><td>sustraigo</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Vowels & Spelling</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Oír</td><td>oigo, oyes, oye, oímos, oís, oyen</td></tr>
+                      <tr><td>Reír</td><td>río, ríes, ríe, reímos, reís, ríen</td></tr>
+                      <tr><td>Freír (fry)</td><td>frío, fríes, fríe, freímos, freís, fríen</td></tr>
+                      <tr><td>Jugar (u-ue)</td><td>juego, juegas, juega, jugamos, jugáis, juegan</td></tr>
+                      <tr><td>Oler (o-hue)</td><td>huelo, hueles, huele, olemos, oléis, huelen</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

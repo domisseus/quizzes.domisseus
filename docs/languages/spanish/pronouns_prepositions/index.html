@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pronouns & Prepositions - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+  
+  <style>
+      /* --- LAYOUT FIXES --- */
+      
+      /* Balanced 4-Column Layout */
+      .masonry-layout {
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+          width: 100%;
+          box-sizing: border-box; /* Ensures padding doesn't widen width */
+      }
+      
+      .masonry-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 20px; 
+          min-width: 250px; /* Prevents columns from becoming too thin */
+          max-width: 100%;  /* Ensures column stays within container */
+      }
+
+      /* OVERRIDE: Fixes the overlapping issue */
+      .vocab-table {
+          width: 100%;
+          table-layout: fixed; /* Forces table to respect column width */
+      }
+      
+      /* Force text to wrap instead of overflowing */
+      .vocab-table td, 
+      .vocab-table td:first-child {
+          white-space: normal !important; 
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+      }
+      
+      /* Responsive Rules */
+      @media (max-width: 1200px) {
+          .masonry-layout { flex-wrap: wrap; }
+          .masonry-column { flex: 1 1 45%; } /* 2 columns */
+      }
+      @media (max-width: 700px) {
+          .masonry-column { flex: 1 1 100%; } /* 1 column */
+      }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Pronouns & Prepositions</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Spanish <-> English</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">Translate / Identify... <span id="quizWord" style="border-bottom: 2px solid #555;"></span></h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="masonry-layout" id="columnsContainer">
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">1. Subject Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Yo</td><td>I</td></tr>
+                          <tr><td>Tú</td><td>You (informal)</td></tr>
+                          <tr><td>Él / Ella</td><td>He / She</td></tr>
+                          <tr><td>Usted</td><td>You (formal)</td></tr>
+                          <tr><td>Nosotros / Nosotras</td><td>We</td></tr>
+                          <tr><td>Vosotros / Vosotras</td><td>You all (Spain informal)</td></tr>
+                          <tr><td>Ellos / Ellas</td><td>They</td></tr>
+                          <tr><td>Ustedes</td><td>You all</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">2. Possessive Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Mío(s) / Mía(s)</td><td>Mine</td></tr>
+                          <tr><td>Tuyo(s) / Tuya(s)</td><td>Yours (informal)</td></tr>
+                          <tr><td>Suyo(s) / Suya(s)</td><td>His / Hers / Its / Yours / Theirs</td></tr>
+                          <tr><td>Nuestro(s) / Nuestra(s)</td><td>Ours</td></tr>
+                          <tr><td>Vuestro(s) / Vuestra(s)</td><td>Yours (Spain)</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">3. Prepositional Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Mí</td><td>Me (Note the accent!)</td></tr>
+                          <tr><td>Ti</td><td>You (No accent)</td></tr>
+                          <tr><td>Conmigo</td><td>With me (Irregular)</td></tr>
+                          <tr><td>Contigo</td><td>With you (Irregular)</td></tr>
+                          <tr><td>Consigo</td><td>With himself/herself</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">4. Reflexive Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Me</td><td>Myself</td></tr>
+                          <tr><td>Te</td><td>Yourself</td></tr>
+                          <tr><td>Se</td><td>Himself / Herself / Itself</td></tr>
+                          <tr><td>Nos</td><td>Ourselves</td></tr>
+                          <tr><td>Os</td><td>Yourselves</td></tr>
+                          <tr><td>Se</td><td>Themselves / Yourselves</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">5. Direct Object Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Function</th></tr></thead>
+                      <tbody>
+                          <tr><td>Me</td><td>Me</td></tr>
+                          <tr><td>Te</td><td>You</td></tr>
+                          <tr><td>Lo / La</td><td>Him / Her / It / You</td></tr>
+                          <tr><td>Nos</td><td>Us</td></tr>
+                          <tr><td>Os</td><td>You all (Spain)</td></tr>
+                          <tr><td>Los / Las</td><td>Them</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">6. Indirect Object Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Function</th></tr></thead>
+                      <tbody>
+                          <tr><td>Me</td><td>To me</td></tr>
+                          <tr><td>Te</td><td>To you</td></tr>
+                          <tr><td>Le (Se)</td><td>To him/her/you</td></tr>
+                          <tr><td>Nos</td><td>To us</td></tr>
+                          <tr><td>Os</td><td>To you all</td></tr>
+                          <tr><td>Les (Se)</td><td>To them/you all</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">7. Interrogative Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Word</th><th>Meaning / Usage</th></tr></thead>
+                      <tbody>
+                          <tr><td>Qué</td><td>What</td></tr>
+                          <tr><td>Quién / Quiénes</td><td>Who</td></tr>
+                          <tr><td>Cuál / Cuáles</td><td>Which / Which ones</td></tr>
+                          <tr><td>Cómo</td><td>How</td></tr>
+                          <tr><td>Cuándo</td><td>When</td></tr>
+                          <tr><td>Dónde</td><td>Where</td></tr>
+                          <tr><td>Por qué</td><td>Why</td></tr>
+                          <tr><td>Cuánto/a/os/as</td><td>How much / many</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">8. Relative Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Word</th><th>Meaning / Usage</th></tr></thead>
+                      <tbody>
+                          <tr><td>Que</td><td>That / Which / Who</td></tr>
+                          <tr><td>Lo que</td><td>What / That which</td></tr>
+                          <tr><td>Quien / Quienes</td><td>Who (people only)</td></tr>
+                          <tr><td>Cuyo(a)(s)</td><td>Whose (matches noun)</td></tr>
+                          <tr><td>El(los) que / La(s) que</td><td>The one(s) that</td></tr>
+                          <tr><td>El(los) cual / La(s) cual</td><td>Which / Who (formal)</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">9. Demonstrative Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Este / Esta</td><td>This (here)</td></tr>
+                          <tr><td>Estos / Estas</td><td>These (here)</td></tr>
+                          <tr><td>Ese / Esa</td><td>That (there)</td></tr>
+                          <tr><td>Esos / Esas</td><td>Those (there)</td></tr>
+                          <tr><td>Aquel / Aquella</td><td>That (way over there)</td></tr>
+                          <tr><td>Aquellos / Aquellas</td><td>Those (way over there)</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">10. Indefinite Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Pronoun</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Alguien</td><td>Someone / Anybody</td></tr>
+                          <tr><td>Nadie</td><td>No one / Nobody</td></tr>
+                          <tr><td>Algo</td><td>Something</td></tr>
+                          <tr><td>Nada</td><td>Nothing</td></tr>
+                          <tr><td>Alguno(a)(s) / Algún</td><td>Some / Any / One</td></tr>
+                          <tr><td>Ninguno(a) / Ningún</td><td>None / Not any</td></tr>
+                          <tr><td>Todo(a)(s)</td><td>Everything / All</td></tr>
+                          <tr><td>Cada</td><td>Each</td></tr>
+                          <tr><td>Varios(as)</td><td>Several</td></tr>
+                          <tr><td>Otro(a)(s)</td><td>Other / Others</td></tr>
+                          <tr><td>Cualquiera</td><td>Any / Anyone</td></tr>
+                          <tr><td>Uno(a)</td><td>One (general person)</td></tr>
+                          <tr><td>Tanto(a)(s)</td><td>So much / So many</td></tr>
+                          <tr><td>Poco(a)(s)</td><td>Little / Few</td></tr>
+                          <tr><td>Mucho(a)(s)</td><td>A lot / Many</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">Simple Prepositions</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Preposition</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>A</td><td>To / At</td></tr>
+                          <tr><td>De</td><td>Of / From</td></tr>
+                          <tr><td>En</td><td>In / On / At</td></tr>
+                          <tr><td>Con</td><td>With</td></tr>
+                          <tr><td>Sin</td><td>Without</td></tr>
+                          <tr><td>Por</td><td>For / By / Because of</td></tr>
+                          <tr><td>Para</td><td>For / To / In order to</td></tr>
+                          <tr><td>Sobre</td><td>On / About / Over</td></tr>
+                          <tr><td>Bajo</td><td>Under / Below</td></tr>
+                          <tr><td>Entre</td><td>Between / Among</td></tr>
+                          <tr><td>Ante</td><td>Before (in presence of)</td></tr>
+                          <tr><td>Hasta</td><td>Until / Even</td></tr>
+                          <tr><td>Desde</td><td>Since / From</td></tr>
+                          <tr><td>Hacia</td><td>Towards</td></tr>
+                          <tr><td>Contra</td><td>Against</td></tr>
+                          <tr><td>Durante</td><td>During</td></tr>
+                          <tr><td>Según</td><td>According to</td></tr>
+                          <tr><td>Tras</td><td>After / Behind</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">Compound Prepositions</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Phrase</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Delante de</td><td>In front of</td></tr>
+                          <tr><td>Detrás de</td><td>Behind</td></tr>
+                          <tr><td>Cerca de</td><td>Close to</td></tr>
+                          <tr><td>Lejos de</td><td>Far from</td></tr>
+                          <tr><td>Dentro de</td><td>Inside of</td></tr>
+                          <tr><td>Fuera de</td><td>Outside of</td></tr>
+                          <tr><td>Junto a</td><td>Next to</td></tr>
+                          <tr><td>A través de</td><td>Through / Across</td></tr>
+                          <tr><td>Después de</td><td>After (time)</td></tr>
+                          <tr><td>Antes de</td><td>Before (time)</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

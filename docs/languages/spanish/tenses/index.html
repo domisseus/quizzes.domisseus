@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenses - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Verb Tenses & Rules (18)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search rules..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Tense <-> Rule</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is the rule for... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Indicative Simple</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Tense/Aspect</th><th>Rule / Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Presente (AR)</td><td>o, as, a, amos, áis, an</td></tr>
+                      <tr><td>Presente (ER)</td><td>o, es, e, emos, éis, en</td></tr>
+                      <tr><td>Presente (IR)</td><td>o, es, e, imos, ís, en</td></tr>
+                      <tr><td>Presente (Shoe Verbs)</td><td>o>ue, e>ie, e>i (except nosotros/vosotros)</td></tr>
+                      <tr><td>Presente (Ending-Y)</td><td>uir -> uy (except nosotros/vosotros)</td></tr>
+                      <tr><td>Presente (Accent Shift)</td><td>iar -> í, uar -> ú (e.g., envío, actúo)</td></tr>
+                      <tr><td>Presente (Yo Irregulars)</td><td>cer/cir>zco, ger/gir>jo, guir>go, quir>co</td></tr>
+                      <tr><td>Pretérito (AR)</td><td>é, aste, ó, amos, asteis, aron</td></tr>
+                      <tr><td>Pretérito (ER/IR)</td><td>í, iste, ió, imos, isteis, ieron</td></tr>
+                      <tr><td>Pretérito (Yo Forms)</td><td>car>qué, gar>gué, zar>cé</td></tr>
+                      <tr><td>Pretérito (i-verbs / uir)</td><td>3rd person: ió>yó, ieron>yeron</td></tr>
+                      <tr><td>Pretérito (Sandal Verbs)</td><td>IR verbs only: o>u, e>i (3rd person)</td></tr>
+                      <tr><td>Pretérito (Irregulars)</td><td>e, iste, o, imos, isteis, ieron (No Accents)</td></tr>
+                      <tr><td>Imperfecto (AR)</td><td>aba, abas, aba, ábamos, abais, aban</td></tr>
+                      <tr><td>Imperfecto (ER/IR)</td><td>ía, ías, ía, íamos, íais, ían</td></tr>
+                      <tr><td>Imperfecto (Irregulars)</td><td>ser (era), ir (iba), ver (veía)</td></tr>
+                      <tr><td>Futuro</td><td>Infinitive + é, ás, á, emos, éis, án</td></tr>
+                      <tr><td>Futuro (Irregulars)</td><td>er>r (5), er/ir>dr (12), e+c drop (6)</td></tr>
+                      <tr><td>Futuro Próximo (Going to)</td><td>Ir (present) + a + infinitive</td></tr>
+                      <tr><td>Condicional</td><td>Infinitive + ía, ías, ía, íamos, íais, ían</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Compound (Haber) Tenses</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Tense</th><th>Rule / Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Perfecto (Present Perfect)</td><td>Haber (Present) + Participle</td></tr>
+                      <tr><td>Haber (Present)</td><td>he, has, ha, hemos, habéis, han</td></tr>
+                      <tr><td>Pluscuamperfecto (Past Perfect)</td><td>Haber (Imperfect) + Participle</td></tr>
+                      <tr><td>Haber (Imperfect)</td><td>había, habías, había, habíamos, habíais, habían</td></tr>
+                      <tr><td>Futuro Perfecto</td><td>Haber (Future) + Participle</td></tr>
+                      <tr><td>Haber (Future)</td><td>habré, habrás, habrá, habremos, habréis, habrán</td></tr>
+                      <tr><td>Condicional Perfecto</td><td>Haber (Conditional) + Participle</td></tr>
+                      <tr><td>Haber (Conditional)</td><td>habría, habrías, habría, habríamos, habríais, habrían</td></tr>
+                      <tr><td>Pretérito Anterior (Formal)</td><td>Haber (Preterite) + Participle</td></tr>
+                      <tr><td>Haber (Preterite)</td><td>hube, hubiste, hubo, hubimos, hubisteis, hubieron</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Commands & Progressive</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Mode</th><th>Rule / Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Imperativo (Affirmative AR)</td><td>tú-a, ud-e, nos-emos, vos-ad, uds-en</td></tr>
+                      <tr><td>Imperativo (Affirmative ER)</td><td>tú-e, ud-a, nos-amos, vos-ed, uds-an</td></tr>
+                      <tr><td>Imperativo (Affirmative IR)</td><td>tú-e, ud-a, nos-amos, vos-id, uds-an</td></tr>
+                      <tr><td>Imperativo (Negative)</td><td>Same as Subjunctive Present (No s-switch)</td></tr>
+                      <tr><td>Imperativo (Stem Changes)</td><td>Applies to all except Nos/Vos (IR changes in Nos/Vos)</td></tr>
+                      <tr><td>Imperativo (Tú Irregulars)</td><td>di, haz, ve, pon, sal, sé, ten, ven</td></tr>
+                      <tr><td>Imperativo (Pronouns)</td><td>Affirmative: Attach to end (Accent!). Negative: Before verb.</td></tr>
+                      <tr><td>Progresivo (Structure)</td><td>Estar + Present Participle (Gerund)</td></tr>
+                      <tr><td>Gerundio (AR)</td><td>-ando</td></tr>
+                      <tr><td>Gerundio (ER/IR)</td><td>-iendo</td></tr>
+                      <tr><td>Gerundio (Stem Changes)</td><td>IR verbs only: e>i, o>u</td></tr>
+                      <tr><td>Gerundio (i-y change)</td><td>-yendo (caer, leer, traer, oír, ir)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">The Subjunctive Mood</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Tense</th><th>Rule / Conjugation</th></tr></thead>
+                  <tbody>
+                      <tr><td>Subjuntivo Presente (Form)</td><td>Yo form -> Drop 'o' -> Swap endings (ar>e, er/ir>a)</td></tr>
+                      <tr><td>Subjuntivo Presente (AR)</td><td>e, es, e, emos, éis, en</td></tr>
+                      <tr><td>Subjuntivo Presente (ER/IR)</td><td>a, as, a, amos, áis, an</td></tr>
+                      <tr><td>Subjuntivo Presente (Stem)</td><td>Shoe rules apply. IR changes in Nos/Vos (o>u, e>i)</td></tr>
+                      <tr><td>Subjuntivo Presente (Irreg)</td><td>sea, esté, vaya, haya, dé, sepa</td></tr>
+                      <tr><td>Subjuntivo Imperfecto (Form)</td><td>3rd Plural Preterite -> Drop 'ron' -> Add endings</td></tr>
+                      <tr><td>Subjuntivo Imperfecto (RA)</td><td>ra, ras, ra, 'ramos, rais, ran</td></tr>
+                      <tr><td>Subjuntivo Imperfecto (SE)</td><td>se, ses, se, 'semos, seis, sen (Less common)</td></tr>
+                      <tr><td>Subjuntivo Perfecto</td><td>Haber (Subj. Pres) + Participle</td></tr>
+                      <tr><td>Haber (Subj. Pres)</td><td>haya, hayas, haya, hayamos, hayáis, hayan</td></tr>
+                      <tr><td>Subjuntivo Pluscuamperfecto</td><td>Haber (Subj. Imp) + Participle</td></tr>
+                      <tr><td>Haber (Subj. Imp)</td><td>hubiera, hubieras, hubiera, hubiéramos, hubierais, hubieran</td></tr>
+                      <tr><td>Subjuntivo Futuro (Form)</td><td>3rd Plural Preterite -> Drop 'ron' -> Add re, res...</td></tr>
+                      <tr><td>Subjuntivo Futuro (Use)</td><td>Archaic / Legal documents only</td></tr>
+                      <tr><td>Subjuntivo Futuro Perfecto</td><td>hubiere + Participle (Archaic)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

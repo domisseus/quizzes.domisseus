@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clothes & Colors - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Clothes & Colors (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Clothing & Footwear</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la ropa</td><td>clothes</td></tr>
+                      <tr><td>el abrigo</td><td>coat</td></tr>
+                      <tr><td>la blusa</td><td>blouse</td></tr>
+                      <tr><td>la camisa</td><td>shirt</td></tr>
+                      <tr><td>la camiseta</td><td>t-shirt</td></tr>
+                      <tr><td>la chaqueta</td><td>jacket</td></tr>
+                      <tr><td>la falda</td><td>skirt</td></tr>
+                      <tr><td>los pantalones</td><td>pants / trousers</td></tr>
+                      <tr><td>los pantalones cortos</td><td>shorts</td></tr>
+                      <tr><td>el suéter / jersey</td><td>sweater</td></tr>
+                      <tr><td>el vestido</td><td>dress</td></tr>
+                      <tr><td>el calzado</td><td>footwear</td></tr>
+                      <tr><td>las botas</td><td>boots</td></tr>
+                      <tr><td>las sandalias</td><td>sandals</td></tr>
+                      <tr><td>los tacones</td><td>heels</td></tr>
+                      <tr><td>los tenis / zapatillas</td><td>sneakers</td></tr>
+                      <tr><td>los zapatos</td><td>shoes</td></tr>
+                      <tr><td>las zapatillas de deporte</td><td>sports shoes</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Accessories & Intimates</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el accesorio</td><td>accessory</td></tr>
+                      <tr><td>el bolso</td><td>handbag</td></tr>
+                      <tr><td>la bufanda</td><td>scarf</td></tr>
+                      <tr><td>los calcetines</td><td>socks</td></tr>
+                      <tr><td>el cinturón</td><td>belt</td></tr>
+                      <tr><td>las gafas / lentes</td><td>glasses</td></tr>
+                      <tr><td>las gafas de sol</td><td>sunglasses</td></tr>
+                      <tr><td>la gorra</td><td>cap</td></tr>
+                      <tr><td>los guantes</td><td>gloves</td></tr>
+                      <tr><td>las medias</td><td>stockings</td></tr>
+                      <tr><td>la mochila</td><td>backpack</td></tr>
+                      <tr><td>el sombrero</td><td>hat</td></tr>
+                      <tr><td>la ropa interior</td><td>underwear</td></tr>
+                      <tr><td>la bata</td><td>robe</td></tr>
+                      <tr><td>las bragas</td><td>panties (women)</td></tr>
+                      <tr><td>los calzoncillos</td><td>underwear (men)</td></tr>
+                      <tr><td>el pijama</td><td>pajamas</td></tr>
+                      <tr><td>el sostén / sujetador</td><td>bra</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Formal, Weather & Materials</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el chaleco</td><td>vest</td></tr>
+                      <tr><td>la corbata</td><td>tie</td></tr>
+                      <tr><td>el esmoquin</td><td>tuxedo</td></tr>
+                      <tr><td>el traje</td><td>suit</td></tr>
+                      <tr><td>el vestido de gala</td><td>evening gown</td></tr>
+                      <tr><td>la bufanda de lana</td><td>wool scarf</td></tr>
+                      <tr><td>el guante de invierno</td><td>winter glove</td></tr>
+                      <tr><td>el impermeable</td><td>raincoat</td></tr>
+                      <tr><td>el paraguas</td><td>umbrella</td></tr>
+                      <tr><td>el traje de baño</td><td>swimsuit</td></tr>
+                      <tr><td>el material</td><td>material</td></tr>
+                      <tr><td>el algodón</td><td>cotton</td></tr>
+                      <tr><td>el cuero</td><td>leather</td></tr>
+                      <tr><td>el denim</td><td>denim</td></tr>
+                      <tr><td>la lana</td><td>wool</td></tr>
+                      <tr><td>la seda</td><td>silk</td></tr>
+                      <tr><td>el estampado</td><td>pattern</td></tr>
+                      <tr><td>los cuadros</td><td>checked / plaid</td></tr>
+                      <tr><td>las rayas</td><td>stripes</td></tr>
+                      <tr><td>la costumbre</td><td>custom</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Colors & Actions</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el color</td><td>color</td></tr>
+                      <tr><td>amarillo</td><td>yellow</td></tr>
+                      <tr><td>azul</td><td>blue</td></tr>
+                      <tr><td>blanco</td><td>white</td></tr>
+                      <tr><td>claro</td><td>light (color)</td></tr>
+                      <tr><td>gris</td><td>gray</td></tr>
+                      <tr><td>marrón / café</td><td>brown</td></tr>
+                      <tr><td>morado / violeta</td><td>purple</td></tr>
+                      <tr><td>naranja</td><td>orange</td></tr>
+                      <tr><td>negro</td><td>black</td></tr>
+                      <tr><td>oscuro</td><td>dark (color)</td></tr>
+                      <tr><td>rojo</td><td>red</td></tr>
+                      <tr><td>rosa / rosado</td><td>pink</td></tr>
+                      <tr><td>verde</td><td>green</td></tr>
+                      <tr><td>comprar</td><td>to buy</td></tr>
+                      <tr><td>guardar</td><td>to put away</td></tr>
+                      <tr><td>lavar</td><td>to wash</td></tr>
+                      <tr><td>llevar</td><td>to wear</td></tr>
+                      <tr><td>planchar</td><td>to iron</td></tr>
+                      <tr><td>probarse</td><td>to try on</td></tr>
+                      <tr><td>vestirse</td><td>to get dressed</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

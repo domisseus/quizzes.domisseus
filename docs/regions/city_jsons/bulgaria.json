@@ -1,12 +1,20 @@
 [
   {"name": "Sofia", "lat": 42.6977, "lng": 23.3219},
-  {"name": "Plovdiv", "lat": 42.1354, "lng": 24.7453},
+  {"name": "Plovdiv", "lat": 42.1449, "lng": 24.7504},
   {"name": "Varna", "lat": 43.2141, "lng": 27.9147},
   {"name": "Burgas", "lat": 42.5048, "lng": 27.4626},
-  {"name": "Ruse", "lat": 43.8356, "lng": 25.9657},
+  {"name": "Ruse", "lat": 43.8491, "lng": 25.9536},
   {"name": "Stara Zagora", "lat": 42.4258, "lng": 25.6345},
-  {"name": "Pleven", "lat": 43.417, "lng": 24.6067},
-  {"name": "Sliven", "lat": 42.6817, "lng": 26.3229},
-  {"name": "Dobrich", "lat": 43.5726, "lng": 27.8273},
-  {"name": "Shumen", "lat": 43.2712, "lng": 26.9361}
+  {"name": "Pleven", "lat": 43.4170, "lng": 24.6067},
+  {"name": "Sliven", "lat": 42.6816, "lng": 26.3229},
+  {"name": "Dobrich", "lat": 43.5670, "lng": 27.8333},
+  {"name": "Shumen", "lat": 43.2712, "lng": 26.9261},
+  {"name": "Pernik", "lat": 42.6052, "lng": 23.0378},
+  {"name": "Haskovo", "lat": 41.9344, "lng": 25.5554},
+  {"name": "Yambol", "lat": 42.4842, "lng": 26.5036},
+  {"name": "Pazardzhik", "lat": 42.1928, "lng": 24.3336},
+  {"name": "Blagoevgrad", "lat": 42.0209, "lng": 23.0943},
+  {"name": "Veliko Tarnovo", "lat": 43.0757, "lng": 25.6172},
+  {"name": "Vratsa", "lat": 43.2046, "lng": 23.5529},
+  {"name": "Nessebar", "lat": 42.6592,"lng": 27.7339}
 ]

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobbies & Free Time - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Hobbies & Free Time (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Sports & Exercise</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el atletismo</td><td>athletics</td></tr>
+                      <tr><td>el baloncesto</td><td>basketball</td></tr>
+                      <tr><td>el béisbol</td><td>baseball</td></tr>
+                      <tr><td>el boxeo</td><td>boxing</td></tr>
+                      <tr><td>el ciclismo</td><td>cycling</td></tr>
+                      <tr><td>el fútbol</td><td>soccer</td></tr>
+                      <tr><td>el golf</td><td>golf</td></tr>
+                      <tr><td>el hockey</td><td>hockey</td></tr>
+                      <tr><td>el pilates</td><td>pilates</td></tr>
+                      <tr><td>el tenis</td><td>tennis</td></tr>
+                      <tr><td>el voleibol</td><td>volleyball</td></tr>
+                      <tr><td>el yoga</td><td>yoga</td></tr>
+                      <tr><td>hacer ejercicio</td><td>to exercise</td></tr>
+                      <tr><td>ir al gimnasio</td><td>go to the gym</td></tr>
+                      <tr><td>jugar en equipo</td><td>play team sports</td></tr>
+                      <tr><td>la natación</td><td>swimming</td></tr>
+                      <tr><td>las artes marciales</td><td>martial arts</td></tr>
+                      <tr><td>montar en bicicleta</td><td>ride a bike</td></tr>
+                      <tr><td>nadar</td><td>to swim</td></tr>
+                      <tr><td>patinar</td><td>to skate</td></tr>
+                      <tr><td>practicar deportes</td><td>to play sports</td></tr>
+                      <tr><td>surfear</td><td>to surf</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Arts, Games & Culture</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el ajedrez</td><td>chess</td></tr>
+                      <tr><td>el ballet</td><td>ballet</td></tr>
+                      <tr><td>el cine</td><td>cinema</td></tr>
+                      <tr><td>el concierto</td><td>concert</td></tr>
+                      <tr><td>el museo</td><td>museum</td></tr>
+                      <tr><td>el teatro</td><td>theater</td></tr>
+                      <tr><td>hacer manualidades</td><td>do crafts</td></tr>
+                      <tr><td>hacer puzzles</td><td>do puzzles</td></tr>
+                      <tr><td>la danza</td><td>dance</td></tr>
+                      <tr><td>la escultura</td><td>sculpture</td></tr>
+                      <tr><td>la exposición</td><td>exhibition</td></tr>
+                      <tr><td>la galería</td><td>gallery</td></tr>
+                      <tr><td>la literatura</td><td>literature</td></tr>
+                      <tr><td>la música</td><td>music</td></tr>
+                      <tr><td>la ópera</td><td>opera</td></tr>
+                      <tr><td>la pintura</td><td>painting</td></tr>
+                      <tr><td>la poesía</td><td>poetry</td></tr>
+                      <tr><td>las cartas</td><td>cards</td></tr>
+                      <tr><td>los juegos de mesa</td><td>board games</td></tr>
+                      <tr><td>los videojuegos</td><td>video games</td></tr>
+                      <tr><td>visitar museos</td><td>visit museums</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Hobbies & Outdoors</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>acampar</td><td>to camp</td></tr>
+                      <tr><td>cocinar</td><td>to cook</td></tr>
+                      <tr><td>coleccionar</td><td>to collect</td></tr>
+                      <tr><td>coser</td><td>to sew</td></tr>
+                      <tr><td>el picnic</td><td>picnic</td></tr>
+                      <tr><td>el senderismo</td><td>hiking</td></tr>
+                      <tr><td>el voluntariado</td><td>volunteering</td></tr>
+                      <tr><td>escalar</td><td>to climb</td></tr>
+                      <tr><td>hornear</td><td>to bake</td></tr>
+                      <tr><td>ir de excursión</td><td>go on a trip</td></tr>
+                      <tr><td>la acampada</td><td>camping</td></tr>
+                      <tr><td>la caza</td><td>hunting</td></tr>
+                      <tr><td>la fotografía</td><td>photography</td></tr>
+                      <tr><td>la jardinería</td><td>gardening</td></tr>
+                      <tr><td>la pesca</td><td>fishing</td></tr>
+                      <tr><td>pescar</td><td>to fish</td></tr>
+                      <tr><td>tejer</td><td>to knit</td></tr>
+                      <tr><td>tomar fotos</td><td>to take photos</td></tr>
+                      <tr><td>viajar</td><td>to travel</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Actions & Phrases</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>¿Qué te gusta hacer?</td><td>What do you like to do?</td></tr>
+                      <tr><td>aprender algo nuevo</td><td>learn something new</td></tr>
+                      <tr><td>bailar</td><td>to dance</td></tr>
+                      <tr><td>cantar</td><td>to sing</td></tr>
+                      <tr><td>correr</td><td>to run</td></tr>
+                      <tr><td>dibujar</td><td>to draw</td></tr>
+                      <tr><td>disfrutar de la vida</td><td>enjoy life</td></tr>
+                      <tr><td>escribir</td><td>to write</td></tr>
+                      <tr><td>escuchar música</td><td>listen to music</td></tr>
+                      <tr><td>hacer barbacoas</td><td>have barbecues</td></tr>
+                      <tr><td>ir a fiestas</td><td>go to parties</td></tr>
+                      <tr><td>ir de compras</td><td>go shopping</td></tr>
+                      <tr><td>leer</td><td>to read</td></tr>
+                      <tr><td>meditar</td><td>to meditate</td></tr>
+                      <tr><td>me gusta...</td><td>I like...</td></tr>
+                      <tr><td>no me gusta...</td><td>I don't like...</td></tr>
+                      <tr><td>pasear</td><td>to take a walk</td></tr>
+                      <tr><td>pintar</td><td>to paint (art)</td></tr>
+                      <tr><td>relajarse</td><td>to relax</td></tr>
+                      <tr><td>salir con amigos</td><td>go out with friends</td></tr>
+                      <tr><td>tocar un instrumento</td><td>play an instrument</td></tr>
+                      <tr><td>ver películas</td><td>watch movies</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

@@ -1,12 +1,14 @@
 [
   {"name": "Vilnius", "lat": 54.6872, "lng": 25.2797},
   {"name": "Kaunas", "lat": 54.8985, "lng": 23.9036},
-  {"name": "Klaipeda", "lat": 55.7033, "lng": 21.1443},
-  {"name": "Siauliai", "lat": 55.9349, "lng": 23.3137},
-  {"name": "Panevezys", "lat": 55.7333, "lng": 24.35},
-  {"name": "Alytus", "lat": 54.3963, "lng": 24.0459},
-  {"name": "Marijampole", "lat": 54.555, "lng": 23.35},
-  {"name": "Mazeikiai", "lat": 56.3167, "lng": 22.3333},
-  {"name": "Jonava", "lat": 55.0722, "lng": 24.2806},
-  {"name": "Utena", "lat": 55.5, "lng": 25.6}
+  {"name": "Klaipėda", "lat": 55.7033, "lng": 21.1443},
+  {"name": "Šiauliai", "lat": 55.9349, "lng": 23.3137},
+  {"name": "Panevėžys", "lat": 55.7344, "lng": 24.3582},
+  {"name": "Alytus", "lat": 54.3962, "lng": 24.0414},
+  {"name": "Marijampolė", "lat": 54.5574, "lng": 23.3510},
+  {"name": "Mažeikiai", "lat": 56.3167, "lng": 22.3333},
+  {"name": "Utena", "lat": 55.5000, "lng": 25.6000},
+  {"name": "Tauragė", "lat": 55.2500, "lng": 22.2833},
+  {"name": "Palanga", "lat": 55.9167, "lng": 21.0667},
+  {"name": "Trakai", "lat": 54.6375, "lng": 24.9336}
 ]

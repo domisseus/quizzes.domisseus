@@ -1,0 +1,237 @@
+/* ----------------- REGIONS (QUIZ) PAGE STYLES ----------------- */
+/* Save this file inside your 'regions/' folder */
+
+/* 1. Map Layout */
+#mapWrapper {
+  width: calc(80% + 4px); /* add 2px border on each side = 4px */
+  margin: 0 auto;          /* centers the wrapper */
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+  border: 2px solid #333;
+  box-sizing: border-box; /* include border in width */
+  cursor: default;
+}
+
+.mapboxgl-canvas,
+.maplibregl-canvas {
+  cursor: default !important; /* forces this rule to override any other cursor styles */
+}
+
+/* 2. Info Bar (Score, Timer, Question) */
+#infoBar {
+  display: flex;          
+  align-items: center;    
+  justify-content: flex-start; 
+  flex-wrap: wrap;        
+  gap: 10px;              
+  width: 80%;             
+  margin: 0 auto 10px auto;
+}
+
+/* Info Badges (Question, Progress, Score) */
+.infoBadge, 
+#question, 
+#progress, 
+#score, 
+#timer {
+  background: rgba(255,255,255,0.9);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: normal !important;
+  font-size: 16px;
+  display: inline-block;
+  
+  /* Visual style from original */
+  border: none !important;  
+  box-shadow: none !important; 
+}
+
+#status {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 180px;
+}
+
+/* 3. Buttons (Back & Reset) */
+#backButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+  font-weight: normal !important;
+  transition: all 0.2s;
+}
+
+#backButton:hover {
+  background-color: #ddd;
+}
+
+#resetBtn {
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  width: 250px;
+  transition: background 0.2s;
+}
+
+#resetBtn:hover {
+  background-color: #ddd;
+}
+
+.buttonGroup {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 10px;
+}
+
+/* 4. City List (Bottom) */
+#cityListContainer {
+  width: calc(80% + 4px); 
+  margin: 0 auto;  
+}
+
+#cityList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  justify-content: flex-start; 
+}
+
+#cityList li {
+  flex: 0 0 calc((100% - 4 * 8px) / 5);
+  padding: 10px;
+  background-color: #ccc;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+#cityList li.correct {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+
+#cityList li.wrong {
+  background-color: #f44336; /* red */
+  color: white;
+}
+
+/* 5. Theme Controls (Specific Position for Quiz Page) */
+#theme-controls.top-corner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Sit above the map */
+}
+
+/* ----------------- DARK MODE OVERRIDES (REGIONS) ----------------- */
+
+/* 1. Map Border */
+body.dark-mode #map {
+    border-color: #666;
+}
+
+/* 2. Info Badges */
+body.dark-mode .infoBadge,
+body.dark-mode #question, 
+body.dark-mode #progress, 
+body.dark-mode #score,
+body.dark-mode #timer {
+  background-color: #e0e0e0 !important; /* Light Gray */
+  color: #000 !important;            /* Black Text */
+  border: 2px solid #333 !important;
+  box-shadow: none;
+}
+
+/* 3. Buttons */
+body.dark-mode #backButton, 
+body.dark-mode #resetBtn {
+    background-color: #e0e0e0; 
+    color: #000;
+    border-color: #999;
+}
+
+body.dark-mode #backButton:hover, 
+body.dark-mode #resetBtn:hover {
+    background-color: #fff; /* White on hover */
+}
+
+/* 4. City List Items */
+body.dark-mode #cityList li {
+    background-color: #444; 
+    color: #fff;
+    border-color: #666;
+}
+
+/* Success/Fail colors in Dark Mode */
+body.dark-mode #cityList li[style*="lightgreen"] {
+    background-color: #1b5e20 !important; /* Darker Green */
+    color: #fff;
+}
+body.dark-mode #cityList li[style*="lightcoral"] {
+    background-color: #d62f23 !important; /* Darker Red */
+    color: #fff;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+
+@media (max-width: 768px) {
+  /* Stack Info Bar Vertically */
+  #infoBar {
+    flex-direction: column;
+    align-items: stretch; 
+    width: 100%;
+  }
+
+  #backButton, #question, #progress, #score, #status, #timer {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  /* Adjust Map Size */
+  #map {
+    height: 400px; 
+  }
+
+  #mapWrapper {
+    width: 100%; 
+  }
+  
+  #cityListContainer {
+      width: 100%;
+  }
+  
+  #resetBtn {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #map {
+    height: 300px; 
+  }
+  
+  /* List items 2 per row on small screens */
+  #cityList li {
+    flex: 0 0 calc((100% - 8px) / 2);
+  }
+}

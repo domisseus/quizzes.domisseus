@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>flags.domisseus</title>
+  
+  <link rel="stylesheet" href="../base.css" />
+  <link rel="stylesheet" href="../dark.css" />
+  <link rel="stylesheet" href="flags.css" />
+</head>
+<body>
+
+  <div id="header-grid">
+    <div id="otherQuizzes">
+      <div class="quizzes-header">other quizzes:</div>
+      <ul>
+        <li><a href="../cities/">cities</a></li>
+        <li><a href="../languages/">languages</a></li>
+        <li><a href="../chess/">chess</a></li>
+        <li><a href="../maths/">maths</a></li>
+      </ul>
+    </div>
+
+    <div id="center-column">
+      <h1>flags.domisseus</h1>
+    </div>
+
+    <div id="theme-controls">
+      <button id="lightBtn" class="theme-btn active">Light</button>
+      <button id="darkBtn" class="theme-btn">Dark</button>
+    </div>
+  </div>
+
+  <main>
+    <div id="menu-view">
+      
+      <div class="top-separator"></div>
+
+      <div class="section-container">
+        <h2 class="section-title">Available Modes</h2>
+      </div>
+
+      <div class="mode-grid top-grid">
+        <div class="mode-item">
+          <div id="btn-world" class="mode-card world-bg">
+            <span class="card-title">World</span>
+          </div>
+        </div>
+
+        <div class="mode-item">
+          <div id="btn-territories" class="mode-card territories-bg">
+            <span class="card-title">Territories</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mode-grid continents-grid">
+        <div class="mode-item">
+          <div id="btn-europe" class="mode-card europe-bg">
+            <span class="card-title">Europe</span>
+          </div>
+        </div>
+
+        <div class="mode-item">
+          <div id="btn-americas" class="mode-card americas-bg">
+            <span class="card-title">Americas</span>
+          </div>
+        </div>
+
+        <div class="mode-item">
+          <div id="btn-asia" class="mode-card asia-bg">
+            <span class="card-title">Asia</span>
+          </div>
+        </div>
+
+        <div class="mode-item">
+          <div id="btn-africa" class="mode-card africa-bg">
+            <span class="card-title">Africa</span>
+          </div>
+        </div>
+
+        <div class="mode-item">
+          <div id="btn-oceania" class="mode-card oceania-bg">
+            <span class="card-title">Oceania</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div id="game-view" style="display: none;">
+      
+      <div class="game-nav">
+        <button id="back-btn" class="nav-btn">← Back to Menu</button>
+      </div>
+
+      <div id="flashcard">
+        <div id="flag-display">FLAG PLACEHOLDER</div>
+        <h2 id="flag-name" class="hidden">Country Name</h2>
+        <p id="instruction"></p>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../theme.js"></script>
+  <script src="flags.js"></script>
+
+</body>
+</html>

@@ -1,12 +1,14 @@
 [
-  {"name": "Belgrade", "lat": 44.7866, "lng": 20.4489},
-  {"name": "Novi Sad", "lat": 45.2671, "lng": 19.8335},
-  {"name": "Nis", "lat": 43.3209, "lng": 21.8954},
+  {"name": "Belgrade", "lat": 44.8125, "lng": 20.4612},
+  {"name": "Novi Sad", "lat": 45.2396, "lng": 19.8227},
+  {"name": "Niš", "lat": 43.3209, "lng": 21.8958},
   {"name": "Kragujevac", "lat": 44.0128, "lng": 20.9114},
-  {"name": "Subotica", "lat": 46.1005, "lng": 19.6631},
-  {"name": "Pancevo", "lat": 44.8708, "lng": 20.6403},
-  {"name": "Zrenjanin", "lat": 45.3833, "lng": 20.3906},
-  {"name": "Cacak", "lat": 43.8914, "lng": 20.3497},
-  {"name": "Kraljevo", "lat": 43.7258, "lng": 20.6894},
-  {"name": "Novi Pazar", "lat": 43.1367, "lng": 20.5122}
+  {"name": "Subotica", "lat": 46.1000, "lng": 19.6667},
+  {"name": "Zrenjanin", "lat": 45.3836, "lng": 20.3819},
+  {"name": "Čačak", "lat": 43.8914, "lng": 20.3497},
+  {"name": "Kruševac", "lat": 43.5800, "lng": 21.3250},
+  {"name": "Leskovac", "lat": 42.9981, "lng": 21.9461},
+  {"name": "Šabac", "lat": 44.7553, "lng": 19.6923},
+  {"name": "Sombor", "lat": 45.7742, "lng": 19.1122},
+  {"name": "Pirot", "lat": 43.1531, "lng": 22.5861}
 ]

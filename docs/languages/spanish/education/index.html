@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Education(<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">People & Places</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el/la becario/a</td><td>scholarship holder</td></tr>
+                      <tr><td>el compañero de clase</td><td>classmate</td></tr>
+                      <tr><td>el/la director(a)</td><td>principal</td></tr>
+                      <tr><td>el/la estudiante</td><td>student</td></tr>
+                      <tr><td>el/la graduado/a</td><td>graduate</td></tr>
+                      <tr><td>el/la maestro/a</td><td>teacher (primary)</td></tr>
+                      <tr><td>el/la profesor(a)</td><td>teacher / professor</td></tr>
+                      <tr><td>el/la rector(a)</td><td>university rector</td></tr>
+                      <tr><td>el/la tutor(a)</td><td>tutor</td></tr>
+                      <tr><td>el aula</td><td>classroom</td></tr>
+                      <tr><td>la biblioteca</td><td>library</td></tr>
+                      <tr><td>el colegio</td><td>school (primary/secondary)</td></tr>
+                      <tr><td>el comedor escolar</td><td>school cafeteria</td></tr>
+                      <tr><td>la escuela</td><td>school</td></tr>
+                      <tr><td>la facultad</td><td>faculty / department</td></tr>
+                      <tr><td>el instituto</td><td>high school</td></tr>
+                      <tr><td>el laboratorio</td><td>laboratory</td></tr>
+                      <tr><td>el patio</td><td>playground / courtyard</td></tr>
+                      <tr><td>la universidad</td><td>university</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Subjects & Supplies</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la asignatura</td><td>subject</td></tr>
+                      <tr><td>las artes</td><td>arts</td></tr>
+                      <tr><td>la biología</td><td>biology</td></tr>
+                      <tr><td>las ciencias</td><td>science</td></tr>
+                      <tr><td>la educación física</td><td>physical education</td></tr>
+                      <tr><td>la filosofía</td><td>philosophy</td></tr>
+                      <tr><td>la física</td><td>physics</td></tr>
+                      <tr><td>la geografía</td><td>geography</td></tr>
+                      <tr><td>la historia</td><td>history</td></tr>
+                      <tr><td>los idiomas</td><td>languages</td></tr>
+                      <tr><td>la informática</td><td>computer science</td></tr>
+                      <tr><td>la lengua/literatura</td><td>language / literature</td></tr>
+                      <tr><td>las matemáticas</td><td>mathematics</td></tr>
+                      <tr><td>la química</td><td>chemistry</td></tr>
+                      <tr><td>el bolígrafo / la pluma</td><td>pen</td></tr>
+                      <tr><td>el cuaderno</td><td>notebook</td></tr>
+                      <tr><td>el estuche</td><td>pencil case</td></tr>
+                      <tr><td>la goma / el borrador</td><td>eraser</td></tr>
+                      <tr><td>el lápiz</td><td>pencil</td></tr>
+                      <tr><td>el libro</td><td>book</td></tr>
+                      <tr><td>el marcador</td><td>marker</td></tr>
+                      <tr><td>la mochila</td><td>backpack</td></tr>
+                      <tr><td>la pizarra</td><td>blackboard</td></tr>
+                      <tr><td>la regla</td><td>ruler</td></tr>
+                      <tr><td>la tiza</td><td>chalk</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Academics & Actions</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el aprobado</td><td>pass</td></tr>
+                      <tr><td>el boletín de notas</td><td>report card</td></tr>
+                      <tr><td>la calificación</td><td>mark / grade</td></tr>
+                      <tr><td>la clase</td><td>class</td></tr>
+                      <tr><td>los deberes</td><td>homework</td></tr>
+                      <tr><td>el examen</td><td>exam</td></tr>
+                      <tr><td>la lección</td><td>lesson</td></tr>
+                      <tr><td>la matrícula de honor</td><td>highest honors</td></tr>
+                      <tr><td>la nota</td><td>grade</td></tr>
+                      <tr><td>la prueba</td><td>test</td></tr>
+                      <tr><td>el suspenso</td><td>fail</td></tr>
+                      <tr><td>aprender</td><td>to learn</td></tr>
+                      <tr><td>aprobar</td><td>to pass</td></tr>
+                      <tr><td>asistir a clase</td><td>to attend class</td></tr>
+                      <tr><td>enseñar</td><td>to teach</td></tr>
+                      <tr><td>estudiar</td><td>to study</td></tr>
+                      <tr><td>graduarse</td><td>to graduate</td></tr>
+                      <tr><td>hacer los deberes</td><td>to do homework</td></tr>
+                      <tr><td>presentar un examen</td><td>to take an exam</td></tr>
+                      <tr><td>repetir un curso</td><td>to repeat a year</td></tr>
+                      <tr><td>suspender</td><td>to fail</td></tr>
+                      <tr><td>tomar apuntes</td><td>to take notes</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Useful Phrases</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>¿Qué asignaturas te gustan más?</td><td>What subjects do you like most?</td></tr>
+                      <tr><td>¿Qué carrera vas a estudiar?</td><td>What degree will you study?</td></tr>
+                      <tr><td>El profesor nos puso deberes</td><td>The teacher gave us homework</td></tr>
+                      <tr><td>Me cuesta entender las matemáticas</td><td>I find math hard to understand</td></tr>
+                      <tr><td>Me gradué el año pasado</td><td>I graduated last year</td></tr>
+                      <tr><td>Saqué un diez en el examen</td><td>I got a ten on the exam</td></tr>
+                      <tr><td>Tengo que entregar un ensayo</td><td>I have to hand in an essay</td></tr>
+                      <tr><td>Tengo que estudiar para el examen</td><td>I have to study for the exam</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

@@ -1,12 +1,16 @@
 [
   {"name": "Baghdad", "lat": 33.3152, "lng": 44.3661},
   {"name": "Basra", "lat": 30.5081, "lng": 47.7835},
-  {"name": "Mosul", "lat": 36.34, "lng": 43.13},
-  {"name": "Erbil", "lat": 36.1901, "lng": 43.993},
-  {"name": "Kirkuk", "lat": 35.4712, "lng": 44.3915},
-  {"name": "Najaf", "lat": 32.0, "lng": 44.33},
-  {"name": "Karbala", "lat": 32.616, "lng": 44.025},
-  {"name": "Nasiriyah", "lat": 31.05, "lng": 46.25},
-  {"name": "Amarah", "lat": 31.8333, "lng": 47.15},
-  {"name": "Hillah", "lat": 32.4833, "lng": 44.4333}
+  {"name": "Mosul", "lat": 36.3400, "lng": 43.1300},
+  {"name": "Erbil", "lat": 36.1900, "lng": 44.0090},
+  {"name": "Sulaymaniyah", "lat": 35.5500, "lng": 45.4333},
+  {"name": "Kirkuk", "lat": 35.4670, "lng": 44.3833},
+  {"name": "Najaf", "lat": 31.9960, "lng": 44.3148},
+  {"name": "Karbala", "lat": 32.6160, "lng": 44.0249},
+  {"name": "Nasiriyah", "lat": 31.0580, "lng": 46.2573},
+  {"name": "Amarah", "lat": 31.8400, "lng": 47.1433},
+  {"name": "Kut", "lat": 32.5056, "lng": 45.8247},
+  {"name": "Hillah", "lat": 32.4833, "lng": 44.4333},
+  {"name": "Ramadi", "lat": 33.4253, "lng": 43.3125},
+  {"name": "Tikrit", "lat": 34.6158, "lng": 43.6786}
 ]

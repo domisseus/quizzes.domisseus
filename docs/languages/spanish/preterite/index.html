@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preterite Irregulars - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Preterite Irregular Verbs (6 | 100)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search verbs..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Verb <-> Meaning</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">Conjugate / Meaning... <span id="quizWord" style="border-bottom: 2px solid #555;"></span></h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">1. car &rarr; qué (Yo form) (23)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>aplicar</td><td>apply</td></tr>
+                      <tr><td>aparcar</td><td>park</td></tr>
+                      <tr><td>buscar</td><td>look for</td></tr>
+                      <tr><td>colocar</td><td>place / put</td></tr>
+                      <tr><td>comunicar</td><td>communicate</td></tr>
+                      <tr><td>clarificar</td><td>clarify</td></tr>
+                      <tr><td>clasificar</td><td>classify (besorol)</td></tr>
+                      <tr><td>dedicar</td><td>dedicate</td></tr>
+                      <tr><td>destacar</td><td>stand out / highlight</td></tr>
+                      <tr><td>empacar</td><td>pack</td></tr>
+                      <tr><td>explicar</td><td>explain</td></tr>
+                      <tr><td>educar</td><td>educate</td></tr>
+                      <tr><td>indicar</td><td>indicate</td></tr>
+                      <tr><td>fabricar</td><td>manufacture</td></tr>
+                      <tr><td>justificar</td><td>justify</td></tr>
+                      <tr><td>marcar</td><td>mark / dial</td></tr>
+                      <tr><td>masticar</td><td>chew</td></tr>
+                      <tr><td>pescar</td><td>fish</td></tr>
+                      <tr><td>practicar</td><td>practice</td></tr>
+                      <tr><td>publicar</td><td>publish</td></tr>
+                      <tr><td>significar</td><td>mean / signify</td></tr>
+                      <tr><td>sacar</td><td>take out / get</td></tr>
+                      <tr><td>tocar</td><td>touch / play music</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">2. gar &rarr; gué (Yo form) (20)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>agregar</td><td>add</td></tr>
+                      <tr><td>apagar</td><td>turn off / extinguish</td></tr>
+                      <tr><td>ahogar</td><td>drown / choke</td></tr>
+                      <tr><td>castigar</td><td>punish</td></tr>
+                      <tr><td>colgar</td><td>hang</td></tr>
+                      <tr><td>cargar</td><td>carry / load</td></tr>
+                      <tr><td>encargar</td><td>put in charge</td></tr>
+                      <tr><td>entregar</td><td>deliver / hand over</td></tr>
+                      <tr><td>jugar</td><td>play</td></tr>
+                      <tr><td>negar</td><td>deny</td></tr>
+                      <tr><td>llegar</td><td>arrive</td></tr>
+                      <tr><td>obligar</td><td>oblige / force</td></tr>
+                      <tr><td>madrugar</td><td>get up early</td></tr>
+                      <tr><td>pagar</td><td>pay</td></tr>
+                      <tr><td>pegar</td><td>hit / glue</td></tr>
+                      <tr><td>rogar</td><td>pray / beg</td></tr>
+                      <tr><td>regar</td><td>water (plants)</td></tr>
+                      <tr><td>segar</td><td>mow (lawn)</td></tr>
+                      <tr><td>tragar</td><td>swallow</td></tr>
+                      <tr><td>vagar</td><td>wander</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">3. zar &rarr; cé (Yo form) (17)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>almorzar</td><td>eat lunch</td></tr>
+                      <tr><td>abrazar</td><td>hug / embrace</td></tr>
+                      <tr><td>avanzar</td><td>advance</td></tr>
+                      <tr><td>amenazar</td><td>threaten</td></tr>
+                      <tr><td>alcanzar</td><td>reach / achieve</td></tr>
+                      <tr><td>lanzar</td><td>launch / throw</td></tr>
+                      <tr><td>comenzar</td><td>start</td></tr>
+                      <tr><td>empezar</td><td>start</td></tr>
+                      <tr><td>cruzar</td><td>cross</td></tr>
+                      <tr><td>gozar</td><td>enjoy</td></tr>
+                      <tr><td>tropezar</td><td>trip / run into</td></tr>
+                      <tr><td>trazar</td><td>trace</td></tr>
+                      <tr><td>realizar</td><td>perform / realize</td></tr>
+                      <tr><td>rezar</td><td>pray</td></tr>
+                      <tr><td>autorizar</td><td>authorize</td></tr>
+                      <tr><td>organizar</td><td>organize</td></tr>
+                      <tr><td>simbolizar</td><td>symbolize</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              
+              <div class="group-header-title">4. er &rarr; yó/yeron (3rd person) (7)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>leer</td><td>read</td></tr>
+                      <tr><td>creer</td><td>believe</td></tr>
+                      <tr><td>caer</td><td>fall</td></tr>
+                      <tr><td>poseer</td><td>possess</td></tr>
+                      <tr><td>proveer</td><td>provide</td></tr>
+                      <tr><td>raer</td><td>scrape / rub</td></tr>
+                      <tr><td>oír</td><td>hear</td></tr>
+                  </tbody>
+              </table>
+
+              <div class="group-header-title" style="margin-top: 20px;">5. uir &rarr; yó/yeron (3rd person) (12)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Meaning</th></tr></thead>
+                  <tbody>
+                      <tr><td>construir</td><td>build</td></tr>
+                      <tr><td>destruir</td><td>destroy</td></tr>
+                      <tr><td>contribuir</td><td>contribute</td></tr>
+                      <tr><td>distribuir</td><td>distribute</td></tr>
+                      <tr><td>constituir</td><td>constitute</td></tr>
+                      <tr><td>incluir</td><td>include</td></tr>
+                      <tr><td>excluir</td><td>exclude</td></tr>
+                      <tr><td>concluir</td><td>conclude</td></tr>
+                      <tr><td>disminuir</td><td>reduce</td></tr>
+                      <tr><td>huir</td><td>flee</td></tr>
+                      <tr><td>fluir</td><td>flow</td></tr>
+                      <tr><td>influir</td><td>influence</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">6.1 UV / U Stems (7)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Stem / Note</th></tr></thead>
+                  <tbody>
+                      <tr><td>estar</td><td>estuv-</td></tr>
+                      <tr><td>andar</td><td>anduv-</td></tr>
+                      <tr><td>tener</td><td>tuv-</td></tr>
+                      <tr><td>poder</td><td>pud-</td></tr>
+                      <tr><td>poner</td><td>pus-</td></tr>
+                      <tr><td>saber</td><td>sup-</td></tr>
+                      <tr><td>caber</td><td>cup-</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">6.2 I Stems (4)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Stem / Note</th></tr></thead>
+                  <tbody>
+                      <tr><td>querer</td><td>quis-</td></tr>
+                      <tr><td>venir</td><td>vin-</td></tr>
+                      <tr><td>hacer</td><td>hic- (3rd: hizo)</td></tr>
+                      <tr><td>haber</td><td>hub- (haber)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">6.3 J Stems (6)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Stem (-jeron)</th></tr></thead>
+                  <tbody>
+                      <tr><td>decir</td><td>dij-</td></tr>
+                      <tr><td>traer</td><td>traj-</td></tr>
+                      <tr><td>traducir</td><td>traduj-</td></tr>
+                      <tr><td>conducir</td><td>conduj-</td></tr>
+                      <tr><td>producir</td><td>produj-</td></tr>
+                      <tr><td>introducir</td><td>introduj-</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">6.4 Total Irregulars (4)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Forms</th></tr></thead>
+                  <tbody>
+                      <tr><td>ser / ir</td><td> fui, fuiste, fue, fuimos, fuisteis, fueron</td></tr>
+                      <tr><td>ver</td><td>vi, vio (no accents)</td></tr>
+                      <tr><td>dar</td><td>di, dio (no accents)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

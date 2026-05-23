@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adjectives - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Adjectives (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Personality (People)</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>activo,a</td><td>active</td></tr>
+                      <tr><td>agresivo,a</td><td>aggressive</td></tr>
+                      <tr><td>amable</td><td>kind</td></tr>
+                      <tr><td>ambicioso,a</td><td>ambitious</td></tr>
+                      <tr><td>amistoso,a</td><td>friendly</td></tr>
+                      <tr><td>audaz</td><td>bold</td></tr>
+                      <tr><td>aventurero,a</td><td>adventurous</td></tr>
+                      <tr><td>bondadoso,a</td><td>kind-hearted</td></tr>
+                      <tr><td>cabezón,ona</td><td>stubborn (colloquial)</td></tr>
+                      <tr><td>capaz</td><td>capable</td></tr>
+                      <tr><td>cariñoso,a</td><td>affectionate</td></tr>
+                      <tr><td>chistoso,a</td><td>funny (person)</td></tr>
+                      <tr><td>cobarde</td><td>cowardly</td></tr>
+                      <tr><td>competitivo,a</td><td>competitive</td></tr>
+                      <tr><td>confiable</td><td>reliable</td></tr>
+                      <tr><td>conservador,a</td><td>conservative</td></tr>
+                      <tr><td>creativo,a</td><td>creative</td></tr>
+                      <tr><td>cuidadoso,a</td><td>careful</td></tr>
+                      <tr><td>curioso,a</td><td>curious</td></tr>
+                      <tr><td>decidido,a</td><td>determined</td></tr>
+                      <tr><td>desordenado,a</td><td>messy</td></tr>
+                      <tr><td>detallista</td><td>detail-oriented</td></tr>
+                      <tr><td>discreto,a</td><td>discreet</td></tr>
+                      <tr><td>educado,a</td><td>polite</td></tr>
+                      <tr><td>egoísta</td><td>selfish</td></tr>
+                      <tr><td>elocuente</td><td>eloquent</td></tr>
+                      <tr><td>encantador,a</td><td>charming</td></tr>
+                      <tr><td>estricto,a</td><td>strict</td></tr>
+                      <tr><td>exigente</td><td>demanding</td></tr>
+                      <tr><td>falso,a</td><td>fake / false</td></tr>
+                      <tr><td>fiel</td><td>loyal</td></tr>
+                      <tr><td>generoso</td><td>generous</td></tr>
+                      <tr><td>gracioso,a</td><td>funny</td></tr>
+                      <tr><td>hábil</td><td>skillful</td></tr>
+                      <tr><td>honesto,a</td><td>honest</td></tr>
+                      <tr><td>idealista</td><td>idealistic</td></tr>
+                      <tr><td>imaginativo,a</td><td>imaginative</td></tr>
+                      <tr><td>impaciente</td><td>impatient</td></tr>
+                      <tr><td>independiente</td><td>independent</td></tr>
+                      <tr><td>ingenuo,a</td><td>naive</td></tr>
+                      <tr><td>inteligente</td><td>intelligent</td></tr>
+                      <tr><td>intuitivo,a</td><td>intuitive</td></tr>
+                      <tr><td>irresponsable</td><td>irresponsible</td></tr>
+                      <tr><td>juguetón,ona</td><td>playful</td></tr>
+                      <tr><td>listo,a</td><td>clever</td></tr>
+                      <tr><td>loco,a</td><td>crazy</td></tr>
+                      <tr><td>maduro,a</td><td>mature</td></tr>
+                      <tr><td>modesto,a</td><td>modest</td></tr>
+                      <tr><td>optimista</td><td>optimistic</td></tr>
+                      <tr><td>ordenado,a</td><td>organized</td></tr>
+                      <tr><td>paciente</td><td>patient</td></tr>
+                      <tr><td>pasivo,a</td><td>passive</td></tr>
+                      <tr><td>perezoso</td><td>lazy</td></tr>
+                      <tr><td>persistente</td><td>persistent</td></tr>
+                      <tr><td>pesimista</td><td>pessimistic</td></tr>
+                      <tr><td>profesional</td><td>professional</td></tr>
+                      <tr><td>prudente</td><td>prudent</td></tr>
+                      <tr><td>realista</td><td>realistic</td></tr>
+                      <tr><td>responsable</td><td>responsible</td></tr>
+                      <tr><td>respetuoso,a</td><td>respectful</td></tr>
+                      <tr><td>romántico,a</td><td>romantic</td></tr>
+                      <tr><td>sabio,a</td><td>wise</td></tr>
+                      <tr><td>sagaz</td><td>shrewd</td></tr>
+                      <tr><td>sensato,a</td><td>sensible</td></tr>
+                      <tr><td>serio,a</td><td>serious</td></tr>
+                      <tr><td>simpático,a</td><td>nice / likable</td></tr>
+                      <tr><td>sincero,a</td><td>sincere</td></tr>
+                      <tr><td>sociable</td><td>sociable</td></tr>
+                      <tr><td>soñador,a</td><td>dreamy</td></tr>
+                      <tr><td>talentoso,a</td><td>talented</td></tr>
+                      <tr><td>terco,a</td><td>stubborn</td></tr>
+                      <tr><td>tímido,a</td><td>shy</td></tr>
+                      <tr><td>tolerante</td><td>tolerant</td></tr>
+                      <tr><td>tonto,a</td><td>silly / foolish</td></tr>
+                      <tr><td>trabajador,a</td><td>hardworking</td></tr>
+                      <tr><td>valiente</td><td>brave</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Feelings & States</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>aburrido,a</td><td>bored</td></tr>
+                      <tr><td>alegre</td><td>cheerful</td></tr>
+                      <tr><td>animado,a</td><td>lively / animated</td></tr>
+                      <tr><td>asombrado,a</td><td>amazed</td></tr>
+                      <tr><td>asustado,a</td><td>scared</td></tr>
+                      <tr><td>callado,a</td><td>quiet</td></tr>
+                      <tr><td>cansado,a</td><td>tired</td></tr>
+                      <tr><td>celoso,a</td><td>jealous</td></tr>
+                      <tr><td>confundido,a</td><td>confused</td></tr>
+                      <tr><td>contento,a</td><td>content / happy</td></tr>
+                      <tr><td>emocional</td><td>emotional</td></tr>
+                      <tr><td>emocionado,a</td><td>excited</td></tr>
+                      <tr><td>enfermo,a</td><td>sick</td></tr>
+                      <tr><td>enojado,a</td><td>angry</td></tr>
+                      <tr><td>entusiasta</td><td>enthusiastic</td></tr>
+                      <tr><td>feliz</td><td>happy</td></tr>
+                      <tr><td>frustrado,a</td><td>frustrated</td></tr>
+                      <tr><td>indiferente</td><td>indifferent</td></tr>
+                      <tr><td>infeliz</td><td>unhappy</td></tr>
+                      <tr><td>inseguro,a</td><td>insecure</td></tr>
+                      <tr><td>listo,a</td><td>ready</td></tr>
+                      <tr><td>malhumorado,a</td><td>grumpy</td></tr>
+                      <tr><td>nervioso,a</td><td>nervous</td></tr>
+                      <tr><td>orgulloso,a</td><td>proud</td></tr>
+                      <tr><td>preocupado,a</td><td>worried</td></tr>
+                      <tr><td>relajado,a</td><td>relaxed</td></tr>
+                      <tr><td>sano,a</td><td>healthy</td></tr>
+                      <tr><td>seguro,a</td><td>sure / confident</td></tr>
+                      <tr><td>sensible</td><td>sensitive</td></tr>
+                      <tr><td>sorprendido,a</td><td>surprised</td></tr>
+                      <tr><td>tranquilo,a</td><td>calm</td></tr>
+                      <tr><td>triste</td><td>sad</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Physical & Sensory</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>alto,a</td><td>tall</td></tr>
+                      <tr><td>atractivo,a</td><td>attractive</td></tr>
+                      <tr><td>bajo,a</td><td>short (height)</td></tr>
+                      <tr><td>bonito,a</td><td>pretty</td></tr>
+                      <tr><td>brillante</td><td>bright / shiny</td></tr>
+                      <tr><td>calvo,a</td><td>bald</td></tr>
+                      <tr><td>delgado,a</td><td>thin</td></tr>
+                      <tr><td>débil</td><td>weak</td></tr>
+                      <tr><td>elegante</td><td>elegant</td></tr>
+                      <tr><td>feo,a</td><td>ugly</td></tr>
+                      <tr><td>fuerte</td><td>strong</td></tr>
+                      <tr><td>gordo,a</td><td>fat</td></tr>
+                      <tr><td>grande</td><td>big / large</td></tr>
+                      <tr><td>guapo</td><td>handsome</td></tr>
+                      <tr><td>hermoso,a</td><td>beautiful</td></tr>
+                      <tr><td>joven</td><td>young</td></tr>
+                      <tr><td>lindo,a</td><td>cute</td></tr>
+                      <tr><td>oscuro,a</td><td>dark</td></tr>
+                      <tr><td>pequeño,a</td><td>small</td></tr>
+                      <tr><td>rápido,a</td><td>fast</td></tr>
+                      <tr><td>rubio,a</td><td>blonde</td></tr>
+                      <tr><td>viejo,a</td><td>old</td></tr>
+                      <tr><td>ácido,a</td><td>sour</td></tr>
+                      <tr><td>agrio,a</td><td>sour</td></tr>
+                      <tr><td>amargo,a</td><td>bitter</td></tr>
+                      <tr><td>asqueroso,a</td><td>disgusting</td></tr>
+                      <tr><td>caliente</td><td>hot</td></tr>
+                      <tr><td>caluroso,a</td><td>warm</td></tr>
+                      <tr><td>delicioso,a</td><td>delicious</td></tr>
+                      <tr><td>dulce</td><td>sweet</td></tr>
+                      <tr><td>duro,a</td><td>hard</td></tr>
+                      <tr><td>fresco,a</td><td>fresh / cool</td></tr>
+                      <tr><td>frío,a</td><td>cold</td></tr>
+                      <tr><td>húmedo,a</td><td>humid</td></tr>
+                      <tr><td>lento,a</td><td>slow</td></tr>
+                      <tr><td>ligero</td><td>light (weight)</td></tr>
+                      <tr><td>limpio,a</td><td>clean</td></tr>
+                      <tr><td>mojado,a</td><td>wet</td></tr>
+                      <tr><td>pesado,a</td><td>heavy</td></tr>
+                      <tr><td>picante</td><td>spicy</td></tr>
+                      <tr><td>repugnante</td><td>disgusting</td></tr>
+                      <tr><td>rico,a</td><td>tasty</td></tr>
+                      <tr><td>salado,a</td><td>salty</td></tr>
+                      <tr><td>seco,a</td><td>dry</td></tr>
+                      <tr><td>suave</td><td>soft</td></tr>
+                      <tr><td>sucio,a</td><td>dirty</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Objects & Situations</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>abierto,a</td><td>open</td></tr>
+                      <tr><td>aburrido,a</td><td>boring</td></tr>
+                      <tr><td>afortunado,a</td><td>lucky</td></tr>
+                      <tr><td>agradable</td><td>pleasant</td></tr>
+                      <tr><td>amplio,a</td><td>wide / spacious</td></tr>
+                      <tr><td>antiguo</td><td>old / antique</td></tr>
+                      <tr><td>asombroso,a</td><td>amazing</td></tr>
+                      <tr><td>barato,a</td><td>cheap</td></tr>
+                      <tr><td>bueno,a</td><td>good</td></tr>
+                      <tr><td>caro,a</td><td>expensive</td></tr>
+                      <tr><td>cerrado,a</td><td>closed</td></tr>
+                      <tr><td>claro,a</td><td>clear</td></tr>
+                      <tr><td>cómodo,a</td><td>comfortable</td></tr>
+                      <tr><td>complicado,a</td><td>complicated</td></tr>
+                      <tr><td>correcto,a</td><td>correct</td></tr>
+                      <tr><td>corto,a</td><td>short (length)</td></tr>
+                      <tr><td>desafortunado,a</td><td>unlucky</td></tr>
+                      <tr><td>diferente</td><td>different</td></tr>
+                      <tr><td>difícil</td><td>difficult</td></tr>
+                      <tr><td>divertido,a</td><td>fun</td></tr>
+                      <tr><td>eficaz</td><td>effective</td></tr>
+                      <tr><td>eficiente</td><td>efficient</td></tr>
+                      <tr><td>enérgico,a</td><td>energetic</td></tr>
+                      <tr><td>enorme</td><td>enormous</td></tr>
+                      <tr><td>equivocado,a</td><td>wrong</td></tr>
+                      <tr><td>esencial</td><td>essential</td></tr>
+                      <tr><td>espacioso,a</td><td>spacious</td></tr>
+                      <tr><td>especial</td><td>special</td></tr>
+                      <tr><td>estrecho,a</td><td>narrow</td></tr>
+                      <tr><td>excelente</td><td>excellent</td></tr>
+                      <tr><td>extranjero</td><td>foreign</td></tr>
+                      <tr><td>extraño,a</td><td>strange</td></tr>
+                      <tr><td>fácil</td><td>easy</td></tr>
+                      <tr><td>flexible</td><td>flexible</td></tr>
+                      <tr><td>formal</td><td>formal</td></tr>
+                      <tr><td>horrible</td><td>horrible</td></tr>
+                      <tr><td>importante</td><td>important</td></tr>
+                      <tr><td>impresionante</td><td>impressive</td></tr>
+                      <tr><td>incierto,a</td><td>uncertain</td></tr>
+                      <tr><td>incorrecto,a</td><td>incorrect</td></tr>
+                      <tr><td>injusto,a</td><td>unfair</td></tr>
+                      <tr><td>intenso,a</td><td>intense</td></tr>
+                      <tr><td>interesante</td><td>interesting</td></tr>
+                      <tr><td>inútil</td><td>useless</td></tr>
+                      <tr><td>justo,a</td><td>fair</td></tr>
+                      <tr><td>largo</td><td>long</td></tr>
+                      <tr><td>lleno,a</td><td>full</td></tr>
+                      <tr><td>malo,a</td><td>bad</td></tr>
+                      <tr><td>necesario</td><td>necessary</td></tr>
+                      <tr><td>nuevo,a</td><td>new</td></tr>
+                      <tr><td>objetivo,a</td><td>objective</td></tr>
+                      <tr><td>peligroso,a</td><td>dangerous</td></tr>
+                      <tr><td>pobre</td><td>poor</td></tr>
+                      <tr><td>popular</td><td>popular</td></tr>
+                      <tr><td>práctico,a</td><td>practical</td></tr>
+                      <tr><td>rico,a</td><td>rich (money)</td></tr>
+                      <tr><td>seguro,a</td><td>safe</td></tr>
+                      <tr><td>simple</td><td>simple</td></tr>
+                      <tr><td>terminado,a</td><td>completed</td></tr>
+                      <tr><td>útil</td><td>useful</td></tr>
+                      <tr><td>vacío,a</td><td>empty</td></tr>
+                      <tr><td>ventoso,a</td><td>windy</td></tr>
+                      <tr><td>verdadero,a</td><td>true</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

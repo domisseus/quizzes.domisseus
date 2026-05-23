@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Housing - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Housing(<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Types & Rooms</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el albergue</td><td>hostel</td></tr>
+                      <tr><td>el apartamento</td><td>apartment</td></tr>
+                      <tr><td>el ático</td><td>penthouse / attic</td></tr>
+                      <tr><td>la cabaña</td><td>cabin</td></tr>
+                      <tr><td>el camping</td><td>campsite</td></tr>
+                      <tr><td>la casa</td><td>house</td></tr>
+                      <tr><td>la casa adosada</td><td>townhouse</td></tr>
+                      <tr><td>la casa rural</td><td>country house</td></tr>
+                      <tr><td>el chalet</td><td>chalet</td></tr>
+                      <tr><td>el dúplex</td><td>duplex</td></tr>
+                      <tr><td>el edificio</td><td>building</td></tr>
+                      <tr><td>el estudio</td><td>studio</td></tr>
+                      <tr><td>la habitación</td><td>room</td></tr>
+                      <tr><td>el hostal</td><td>guesthouse</td></tr>
+                      <tr><td>el hotel</td><td>hotel</td></tr>
+                      <tr><td>el loft</td><td>loft</td></tr>
+                      <tr><td>el piso</td><td>flat / apartment</td></tr>
+                      <tr><td>la residencia</td><td>residence hall</td></tr>
+                      <tr><td>la villa</td><td>villa</td></tr>
+                      <tr><td>el balcón</td><td>balcony</td></tr>
+                      <tr><td>el baño</td><td>bathroom</td></tr>
+                      <tr><td>la cocina</td><td>kitchen</td></tr>
+                      <tr><td>el comedor</td><td>dining room</td></tr>
+                      <tr><td>el despacho</td><td>office</td></tr>
+                      <tr><td>el dormitorio</td><td>bedroom</td></tr>
+                      <tr><td>la entrada</td><td>entrance</td></tr>
+                      <tr><td>el garaje</td><td>garage</td></tr>
+                      <tr><td>el jardín</td><td>garden</td></tr>
+                      <tr><td>la lavandería</td><td>laundry room</td></tr>
+                      <tr><td>el pasillo</td><td>hallway</td></tr>
+                      <tr><td>el salón</td><td>living room</td></tr>
+                      <tr><td>el sótano</td><td>basement</td></tr>
+                      <tr><td>la terraza</td><td>terrace</td></tr>
+                      <tr><td>el trastero</td><td>storage room</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Furniture & Objects</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la alfombra</td><td>rug</td></tr>
+                      <tr><td>la almohada</td><td>pillow</td></tr>
+                      <tr><td>el armario</td><td>wardrobe</td></tr>
+                      <tr><td>la cama</td><td>bed</td></tr>
+                      <tr><td>los cojines</td><td>cushions</td></tr>
+                      <tr><td>las cortinas</td><td>curtains</td></tr>
+                      <tr><td>el escritorio</td><td>desk</td></tr>
+                      <tr><td>el espejo</td><td>mirror</td></tr>
+                      <tr><td>la estantería</td><td>bookshelf</td></tr>
+                      <tr><td>la lámpara</td><td>lamp</td></tr>
+                      <tr><td>la manta</td><td>blanket</td></tr>
+                      <tr><td>la mesa</td><td>table</td></tr>
+                      <tr><td>la silla</td><td>chair</td></tr>
+                      <tr><td>el sofá</td><td>sofa</td></tr>
+                      <tr><td>el horno</td><td>oven</td></tr>
+                      <tr><td>la lavadora</td><td>washing machine</td></tr>
+                      <tr><td>el lavavajillas</td><td>dishwasher</td></tr>
+                      <tr><td>el microondas</td><td>microwave</td></tr>
+                      <tr><td>la nevera</td><td>refrigerator</td></tr>
+                      <tr><td>el ordenador</td><td>computer</td></tr>
+                      <tr><td>la secadora</td><td>dryer</td></tr>
+                      <tr><td>la televisión</td><td>television</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Structure & Utilities</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el ascensor</td><td>elevator</td></tr>
+                      <tr><td>la cerradura</td><td>lock</td></tr>
+                      <tr><td>las escaleras</td><td>stairs</td></tr>
+                      <tr><td>el interruptor</td><td>light switch</td></tr>
+                      <tr><td>la pared</td><td>wall</td></tr>
+                      <tr><td>la puerta</td><td>door</td></tr>
+                      <tr><td>el suelo</td><td>floor</td></tr>
+                      <tr><td>el techo</td><td>ceiling</td></tr>
+                      <tr><td>la ventana</td><td>window</td></tr>
+                      <tr><td>el agua</td><td>water</td></tr>
+                      <tr><td>el aire acondicionado</td><td>air conditioning</td></tr>
+                      <tr><td>la basura</td><td>garbage</td></tr>
+                      <tr><td>el buzón</td><td>mailbox</td></tr>
+                      <tr><td>la calefacción</td><td>heating</td></tr>
+                      <tr><td>la electricidad</td><td>electricity</td></tr>
+                      <tr><td>el enchufe</td><td>power outlet</td></tr>
+                      <tr><td>el gas</td><td>gas</td></tr>
+                      <tr><td>la llave</td><td>key</td></tr>
+                      <tr><td>la luz</td><td>light</td></tr>
+                      <tr><td>el timbre</td><td>doorbell</td></tr>
+                      <tr><td>la wifi</td><td>wifi</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Living & Describing</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>alquilar</td><td>to rent</td></tr>
+                      <tr><td>amueblar</td><td>to furnish</td></tr>
+                      <tr><td>arreglar la casa</td><td>to fix up the house</td></tr>
+                      <tr><td>buscar piso</td><td>to look for an apartment</td></tr>
+                      <tr><td>cerrar con llave</td><td>to lock</td></tr>
+                      <tr><td>compartir piso</td><td>to share an apartment</td></tr>
+                      <tr><td>comprar</td><td>to buy</td></tr>
+                      <tr><td>construir</td><td>to build</td></tr>
+                      <tr><td>decorar</td><td>to decorate</td></tr>
+                      <tr><td>firmar contrato</td><td>to sign a contract</td></tr>
+                      <tr><td>limpiar</td><td>to clean</td></tr>
+                      <tr><td>mudarse</td><td>to move</td></tr>
+                      <tr><td>pagar el alquiler</td><td>to pay rent</td></tr>
+                      <tr><td>pintar</td><td>to paint</td></tr>
+                      <tr><td>renovar</td><td>to renovate</td></tr>
+                      <tr><td>reparar</td><td>to repair</td></tr>
+                      <tr><td>vender</td><td>to sell</td></tr>
+                      <tr><td>vivir solo/a</td><td>to live alone</td></tr>
+                      <tr><td>acogedor,a</td><td>cozy</td></tr>
+                      <tr><td>amueblado,a</td><td>furnished</td></tr>
+                      <tr><td>antiguo,a</td><td>old</td></tr>
+                      <tr><td>barato,a</td><td>cheap</td></tr>
+                      <tr><td>cálido,a</td><td>warm</td></tr>
+                      <tr><td>caro,a</td><td>expensive</td></tr>
+                      <tr><td>cómodo,a</td><td>comfortable</td></tr>
+                      <tr><td>compartido,a</td><td>shared</td></tr>
+                      <tr><td>espacioso,a</td><td>spacious</td></tr>
+                      <tr><td>frío,a</td><td>cold</td></tr>
+                      <tr><td>grande</td><td>big</td></tr>
+                      <tr><td>luminoso,a</td><td>bright</td></tr>
+                      <tr><td>moderno,a</td><td>modern</td></tr>
+                      <tr><td>nuevo,a</td><td>new</td></tr>
+                      <tr><td>oscuro,a</td><td>dark</td></tr>
+                      <tr><td>peligroso,a</td><td>dangerous</td></tr>
+                      <tr><td>pequeño,a</td><td>small</td></tr>
+                      <tr><td>privado,a</td><td>private</td></tr>
+                      <tr><td>seguro,a</td><td>safe</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

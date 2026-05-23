@@ -1,0 +1,382 @@
+/* ----------------- CITIES PAGE SPECIFIC STYLES ----------------- */
+/* Save this file inside your 'cities/' folder */
+
+/* 1. Header & Layout */
+#header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#center-column {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+}
+
+#center-column label {
+    margin-top: auto !important; 
+    margin-bottom: 3px; 
+}
+
+#search-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0; 
+}
+
+#search-row input[type="text"] {
+    margin: 0;
+    width: 250px;
+}
+
+/* 2. Other Quizzes (Left Column) */
+#otherQuizzes {
+    grid-column: 1;
+    justify-self: center;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#otherQuizzes > ul {
+    /* Local override for spacing, but global reset handles the rest */
+    margin: 5px 0 0 0;
+}
+
+.quizzes-header {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: "Segoe Script", cursive;
+}
+
+#otherQuizzes > ul > li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    cursor: pointer; 
+    color: #333;
+    font-family: "Segoe Script", cursive;
+}
+
+#otherQuizzes > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+#otherQuizzes > ul > li > a:hover {
+  opacity: 0.6;
+  transform: scale(1.05)
+}
+
+/* Dark Mode for Sidebar */
+body.dark-mode .quizzes-header,
+body.dark-mode #otherQuizzes li {
+    color: #f0f0f0;
+}
+
+/* 3. Regions Container */
+#regionsContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.continent-title {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.continent-list {
+  display: flex;
+  flex-wrap: wrap;      
+  gap: 10px;            
+  justify-content: center; 
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  align-items: stretch; 
+}
+
+.continent-list > li {
+  padding: 12px 10px;
+  cursor: default;
+  flex: 0 0 calc((100% - 6 * 10px) / 7);
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+/* 4. Individual List Items & Difficulty Buttons */
+.name-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  line-height: 1.2;
+  font-size: 20px;
+}
+
+.continent-list li li{
+  padding: 10px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.continent-list li li.easy {
+  background-color: #b9fbc0;
+  color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.continent-list li li.hard {
+  background-color: #ffb3b3;
+  color: #000;
+}
+
+.continent-list li li.custom {
+  background-color: #c8a2c8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.continent-list li li.easy:hover { background-color: #9ef5a6; }
+.continent-list li li.hard:hover { background-color: #ff9999; }
+.continent-list li li.custom:hover { background-color: #b87fd1; }
+
+/* 5. Misc & Grid Specifics */
+.difficulty.misc {
+  background-color: #0e8c8c;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.difficulty.misc:hover { background-color: #0fc0c0; }
+
+.difficulty.territories {
+  background-color: #c4a723d9;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.difficulty.territories:hover { background-color: #c4a723; }
+
+.difficulty.territory-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.territories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr)); 
+    gap: 5px;
+    overflow: visible; 
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* --- FIX: Restored Specific ID Selector for Territories Positioning --- */
+/* This specific rule was missing, causing the positioning error */
+#regionsContainer ul:first-of-type > li:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    width: fit-content;
+    
+    /* Ensures the container itself doesn't shrink smaller than its content */
+    min-width: min-content; 
+    margin: 0;
+    margin-right: 80px; /* <--- This is the key positioning fix */
+}
+
+/* Grid Layout for Misc Row */
+.continent-list.misc-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto; 
+    align-items: start; 
+    gap: 10px;
+    width: 100%;
+}
+
+/* Fallback/Additional rules for misc row items */
+.continent-list.misc-row > li:last-child {
+    /* Most styles handled by ID selector above, but keeping grid props here */
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    width: fit-content;
+    min-width: min-content;
+}
+
+.continent-list.misc-row > li:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    width: auto;
+    margin-top: 5px;
+    margin-left: -80px;
+    margin-bottom: -20px;
+}
+
+.continent-list.misc-row > li:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 250px;
+}
+
+.continent-list.misc-row > li:first-child {
+    grid-column: 3;
+    grid-row: 1 / span 2; 
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%; 
+    margin-top: 60px;
+}
+
+/* 6. Navigation Buttons (Info/Feedback/Ach) */
+.nav-button-stack {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    width: 90%;             
+    max-width: 260px;       
+    justify-content: center;
+}
+
+.nav-button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.difficulty.nav-btn {
+    background-color: #808080;
+    color: black;
+    border-radius: 10px;
+    padding: 12px 5px;         
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+.difficulty.nav-btn:hover { background-color: #606060; }
+
+.difficulty.nav-btn.achievements-btn {
+    width: 100%;
+    background-color: #dbad30;
+    color: black;
+}
+.difficulty.nav-btn.achievements-btn:hover { background-color: #c39619; }
+
+body.dark-mode .difficulty.nav-btn {
+    background-color: #e0e0e0;
+    color: #000;
+    border: 1px solid #ccc;
+}
+body.dark-mode .difficulty.nav-btn:hover { background-color: #fff; }
+
+body.dark-mode .difficulty.nav-btn.achievements-btn {
+    background-color: #dcac28;
+    color: #000;
+    border: none;
+}
+body.dark-mode .difficulty.nav-btn.achievements-btn:hover {
+    background-color: #c39619;
+}
+
+/* 7. Mastery Star */
+.mastery-star {
+    position: absolute;
+    top: 0px; 
+    right: 0px; 
+    color: gold;            
+    padding: 4px 6px;
+    font-size: 20px;
+    line-height: 1;           
+    font-weight: 900;         
+    z-index: 10;              
+}
+
+/* 8. Responsive Rules (Specific to Cities/Menu) */
+@media (max-width: 768px) {
+  #header-grid {
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 20px;
+    align-items: center;
+  }
+
+  #otherQuizzes {
+    text-align: center; 
+    margin-top: 20px;
+  }
+  
+  #center-column { width: 100%; }
+
+  .continent-list > li {
+    flex: 0 0 calc((100% - 2 * 10px) / 3);
+  }
+
+  /* Misc Section Fixes */
+  .continent-list.misc-row {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .continent-list.misc-row > li:last-child,
+  .continent-list.misc-row > li:nth-child(3),
+  .continent-list.misc-row > li:nth-child(2),
+  .continent-list.misc-row > li:first-child { 
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .continent-list > li {
+    flex: 0 0 calc((100% - 10px) / 2);
+  }
+
+  .territories-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}

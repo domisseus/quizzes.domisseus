@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Body Parts - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Body Parts (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Head & Face</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la barba</td><td>beard</td></tr>
+                      <tr><td>la barbilla</td><td>chin</td></tr>
+                      <tr><td>la boca</td><td>mouth</td></tr>
+                      <tr><td>la cabeza</td><td>head</td></tr>
+                      <tr><td>la cara</td><td>face</td></tr>
+                      <tr><td>las cejas</td><td>eyebrows</td></tr>
+                      <tr><td>el cráneo</td><td>skull</td></tr>
+                      <tr><td>el diente</td><td>tooth</td></tr>
+                      <tr><td>los dientes</td><td>teeth</td></tr>
+                      <tr><td>la frente</td><td>forehead</td></tr>
+                      <tr><td>la garganta</td><td>throat</td></tr>
+                      <tr><td>los labios</td><td>lips</td></tr>
+                      <tr><td>la lengua</td><td>tongue</td></tr>
+                      <tr><td>la mandíbula</td><td>jaw</td></tr>
+                      <tr><td>la mejilla</td><td>cheek</td></tr>
+                      <tr><td>la melena</td><td>long hair</td></tr>
+                      <tr><td>el mostacho / bigote</td><td>mustache</td></tr>
+                      <tr><td>la nariz</td><td>nose</td></tr>
+                      <tr><td>el oído</td><td>inner ear</td></tr>
+                      <tr><td>el ojo</td><td>eye</td></tr>
+                      <tr><td>la oreja</td><td>outer ear</td></tr>
+                      <tr><td>el párpado</td><td>eyelid</td></tr>
+                      <tr><td>el pelo</td><td>hair</td></tr>
+                      <tr><td>las pestañas</td><td>eyelashes</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Upper Body & Arms</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el brazo</td><td>arm</td></tr>
+                      <tr><td>la cadera</td><td>hip</td></tr>
+                      <tr><td>la cintura</td><td>waist</td></tr>
+                      <tr><td>el codo</td><td>elbow</td></tr>
+                      <tr><td>el cuello</td><td>neck</td></tr>
+                      <tr><td>el dedo</td><td>finger</td></tr>
+                      <tr><td>el dedo pulgar</td><td>thumb</td></tr>
+                      <tr><td>la espalda</td><td>back</td></tr>
+                      <tr><td>el estómago</td><td>stomach</td></tr>
+                      <tr><td>el hombro</td><td>shoulder</td></tr>
+                      <tr><td>la mano</td><td>hand</td></tr>
+                      <tr><td>la muñeca</td><td>wrist</td></tr>
+                      <tr><td>el ombligo</td><td>belly button</td></tr>
+                      <tr><td>la palma</td><td>palm</td></tr>
+                      <tr><td>el pecho</td><td>chest</td></tr>
+                      <tr><td>la uña</td><td>nail</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Lower Body & Organs</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el dedo del pie</td><td>toe</td></tr>
+                      <tr><td>el muslo</td><td>thigh</td></tr>
+                      <tr><td>la pantorrilla</td><td>calf</td></tr>
+                      <tr><td>el pie</td><td>foot</td></tr>
+                      <tr><td>la pierna</td><td>leg</td></tr>
+                      <tr><td>la rodilla</td><td>knee</td></tr>
+                      <tr><td>el talón</td><td>heel</td></tr>
+                      <tr><td>el tobillo</td><td>ankle</td></tr>
+                      <tr><td>el cerebro</td><td>brain</td></tr>
+                      <tr><td>el corazón</td><td>heart</td></tr>
+                      <tr><td>el hígado</td><td>liver</td></tr>
+                      <tr><td>el pulmón</td><td>lung</td></tr>
+                      <tr><td>el riñón</td><td>kidney</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">General & Senses</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el cuerpo</td><td>body</td></tr>
+                      <tr><td>el esqueleto</td><td>skeleton</td></tr>
+                      <tr><td>el hueso</td><td>bone</td></tr>
+                      <tr><td>el músculo</td><td>muscle</td></tr>
+                      <tr><td>la piel</td><td>skin</td></tr>
+                      <tr><td>la sangre</td><td>blood</td></tr>
+                      <tr><td>la vena</td><td>vein</td></tr>
+                      <tr><td>el gusto</td><td>taste</td></tr>
+                      <tr><td>el oído</td><td>hearing</td></tr>
+                      <tr><td>el olfato</td><td>smell</td></tr>
+                      <tr><td>el tacto</td><td>touch</td></tr>
+                      <tr><td>la vista</td><td>sight</td></tr>
+                      <tr><td>fiebre</td><td>fever</td></tr>
+                      <tr><td>la tos / toser</td><td>cough / to cough</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

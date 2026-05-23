@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbs Like Gustar - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+  
+  <style>
+      /* --- LAYOUT STYLES (3 Columns) --- */
+      .masonry-layout {
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+          width: 100%;
+          box-sizing: border-box;
+      }
+      
+      .masonry-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 20px; 
+          min-width: 300px; 
+          max-width: 100%;
+      }
+
+      /* TEXT WRAPPING FIX */
+      .vocab-table {
+          width: 100%;
+          table-layout: fixed; 
+      }
+      
+      .vocab-table td {
+          white-space: normal !important; 
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          vertical-align: top;
+          padding: 8px 12px;
+          text-align: left;
+      }
+      
+      .vocab-table th {
+          text-align: left;
+          padding-left: 12px;
+      }
+
+      /* --- DESCRIPTION BOX STYLES --- */
+      .description-box {
+          padding: 12px;
+          font-size: 0.95em;
+          background-color: #fff;       /* Light Mode Background */
+          border: 1px solid #ddd;
+          border-bottom: none;          /* Connects visually to table */
+          color: #444;                  /* Light Mode Text */
+          line-height: 1.5;
+      }
+
+      /* Dark Mode Override */
+      body.dark-mode .description-box {
+          background-color: #1e1e1e;    /* Matches Dark Table Background */
+          border-color: #444;           /* Matches Dark Border */
+          color: #e0e0e0;               /* Light Text */
+      }
+
+      /* Responsive Rules */
+      @media (max-width: 1100px) {
+          .masonry-layout { flex-wrap: wrap; }
+          .masonry-column { flex: 1 1 45%; } /* 2 cols */
+      }
+      @media (max-width: 700px) {
+          .masonry-column { flex: 1 1 100%; } /* 1 col */
+      }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Verbs Like Gustar</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search verbs..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Spanish <-> English</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">Translate / Identify... <span id="quizWord" style="border-bottom: 2px solid #555;"></span></h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="masonry-layout" id="columnsContainer">
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">1. How it Works</div>
+                  <div class="description-box">
+                      <strong>Structure:</strong> The <em>subject</em> is what is liked. The person who likes it is the <em>indirect object</em>.<br><br>
+                      <strong>Conjugation:</strong>
+                      <ul>
+                          <li><strong>Singular (gusta):</strong> If the thing liked is singular.</li>
+                          <li><strong>Plural (gustan):</strong> If the thing liked is plural.</li>
+                      </ul>
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                      <tbody>
+                          <tr><td>Me gusta el libro.</td><td>I like the book.</td></tr>
+                          <tr><td>Me gustan los libros.</td><td>I like the books.</td></tr>
+                          <tr><td>Te gustan los perros.</td><td>You like dogs.</td></tr>
+                          <tr><td>Nos gusta bailar.</td><td>We like to dance.</td></tr>
+                          <tr><td>Les gustan las películas.</td><td>They like movies.</td></tr>
+                          <tr><td>No me gusta el café.</td><td>I don't like coffee.</td></tr>
+                          <tr><td>No les gustan las verduras.</td><td>They don't like vegetables.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">2. Other Verbs like Gustar</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Verb</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Encantar</td><td>Love / Really like</td></tr>
+                          <tr><td>Interesar</td><td>Be interested in</td></tr>
+                          <tr><td>Molestar</td><td>Bother / Annoy</td></tr>
+                          <tr><td>Fascinar</td><td>Fascinate</td></tr>
+                          <tr><td>Importar</td><td>Matter / Be important</td></tr>
+                          <tr><td>Preocupar</td><td>Worry / Concern</td></tr>
+                          <tr><td>Doler</td><td>Hurt / Ache</td></tr>
+                          <tr><td>Sorprender</td><td>Surprise</td></tr>
+                          <tr><td>Costar</td><td>Cost (money or difficulty)</td></tr>
+                          <tr><td>Parecer</td><td>Appear to be / Seem</td></tr>
+                          <tr><td>Faltar</td><td>Lack / Be missing</td></tr>
+                          <tr><td>Aburrir</td><td>Bore</td></tr>
+                          <tr><td>Picar</td><td>Itch</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">3. Examples in Context</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Sentence</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Me interesa más la clase de matemáticas.</td><td>Math class interests me more.</td></tr>
+                          <tr><td>Solo nos quedan dos semanas.</td><td>We only have two weeks left.</td></tr>
+                          <tr><td>Me cuesta mucho entender.</td><td>It’s really difficult for me to understand.</td></tr>
+                          <tr><td>¿Te parece?</td><td>Does it seem that way to you?</td></tr>
+                          <tr><td>Nos faltan jugadores fuertes.</td><td>We lack strong players.</td></tr>
+                          <tr><td>Me aburre mucho el golf.</td><td>Golf really bores me.</td></tr>
+                          <tr><td>Mi jefe no me permite tomar descansos.</td><td>My boss doesn’t allow me to take breaks.</td></tr>
+                          <tr><td>Hoy me duele mucho el estómago.</td><td>My stomach really hurts today.</td></tr>
+                          <tr><td>Me fascina la idea de la evolución.</td><td>I’m fascinated by the idea of evolution.</td></tr>
+                          <tr><td>A Sara le pican mucho los brazos.</td><td>Sara’s arms are very itchy.</td></tr>
+                          <tr><td>Me toca mucho su historia.</td><td>His/her story moves me a lot.</td></tr>
+                          <tr><td>Me toca salvar el día.</td><td>It’s up to me to save the day.</td></tr>
+                          <tr><td>Nos toca limpiar la casa.</td><td>It’s our turn to clean the house.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

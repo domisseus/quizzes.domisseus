@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future & Conditional - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Future & Conditional Irregulars (13)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search verbs..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Verb <-> Stem</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is the stem for... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">1. Drop 'e' (er &rarr; r) (5)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Stem Change</th></tr></thead>
+                  <tbody>
+                      <tr><td>Poder</td><td>podr-</td></tr>
+                      <tr><td>Querer</td><td>querr-</td></tr>
+                      <tr><td>Haber</td><td>habr-</td></tr>
+                      <tr><td>Saber</td><td>sabr-</td></tr>
+                      <tr><td>Caber</td><td>cabr-</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">2. Add 'd' (er/ir &rarr; dr) (5)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Stem Change</th></tr></thead>
+                  <tbody>
+                      <tr><td>Venir</td><td>vendr-</td></tr>
+                      <tr><td>Prevenir (prevent)</td><td>prevendr-</td></tr>
+                      <tr><td>Tener</td><td>tendr-</td></tr>
+                      <tr><td>Obtener (obtain)</td><td>obtendr-</td></tr>
+                      <tr><td>Mantener (maintain)</td><td>mantendr-</td></tr>
+                      <tr><td>Detener (detain)</td><td>detendr-</td></tr>
+                      <tr><td>Valer</td><td>valdr-</td></tr>
+                      <tr><td>Salir</td><td>saldr-</td></tr>
+                      <tr><td>Poner</td><td>pondr-</td></tr>
+                      <tr><td>Suponer (suppose)</td><td>supondr-</td></tr>
+                      <tr><td>Imponer (impose)</td><td>impondr-</td></tr>
+                      <tr><td>Componer (compose)</td><td>compondr-</td></tr>
+                      <tr><td>Disponer (dispose)</td><td>dispondr-</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">3. Short Stems (Drop ec/ce) (3)</div>
+              <table class="vocab-table no-links">
+                  <thead><tr><th>Verb</th><th>Stem Change</th></tr></thead>
+                  <tbody>
+                      <tr><td>Decir</td><td>dir-</td></tr>
+                      <tr><td>Contradecir</td><td>contradir-</td></tr>
+                      <tr><td>(Bendecir/Maldecir)</td><td>*Regular* (deciré)</td></tr>
+                      <tr><td>Hacer</td><td>har-</td></tr>
+                      <tr><td>Rehacer (redo)</td><td>rehar-</td></tr>
+                      <tr><td>Deshacer (undo)</td><td>deshar-</td></tr>
+                      <tr><td>Satisfacer</td><td>satisfar-</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

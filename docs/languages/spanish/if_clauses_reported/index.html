@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>If Clauses & Reported Speech - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+  
+  <style>
+      /* --- LAYOUT STYLES (3 Columns) --- */
+      .masonry-layout {
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+          width: 100%;
+          box-sizing: border-box;
+      }
+      
+      .masonry-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 20px; 
+          min-width: 300px; 
+          max-width: 100%;
+      }
+
+      /* TEXT WRAPPING FIX */
+      .vocab-table {
+          width: 100%;
+          table-layout: fixed; 
+      }
+      
+      .vocab-table td {
+          white-space: normal !important; 
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          vertical-align: top;
+          padding: 8px 12px;
+          text-align: left;
+      }
+      
+      .vocab-table th {
+          text-align: left;
+          padding-left: 12px;
+      }
+
+      /* --- DESCRIPTION BOX STYLES --- */
+      .description-box {
+          padding: 12px;
+          font-size: 0.95em;
+          background-color: #fff;       /* Light Mode Background */
+          border: 1px solid #ddd;
+          border-bottom: none;          /* Connects visually to table */
+          color: #444;                  /* Light Mode Text */
+          line-height: 1.5;
+      }
+
+      /* Dark Mode Override */
+      body.dark-mode .description-box {
+          background-color: #1e1e1e;    /* Matches Dark Table Background */
+          border-color: #444;           /* Matches Dark Border */
+          color: #e0e0e0;               /* Light Text */
+      }
+
+      /* Responsive Rules */
+      @media (max-width: 1100px) {
+          .masonry-layout { flex-wrap: wrap; }
+          .masonry-column { flex: 1 1 45%; } /* 2 columns */
+      }
+      @media (max-width: 700px) {
+          .masonry-column { flex: 1 1 100%; } /* 1 column */
+      }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">If Clauses & Reported Speech</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search rules..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Spanish <-> English</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">Translate / Identify... <span id="quizWord" style="border-bottom: 2px solid #555;"></span></h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="masonry-layout" id="columnsContainer">
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">1. If Clauses (Si Cláusulas)</div>
+                  <div class="description-box">
+                      <strong>Type 1 (Real):</strong> Si + Present → Present / Future / Imperative<br>
+                      <strong>Type 2 (Hypothetical):</strong> Si + Past Subjunctive → Conditional
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Structure</th><th>Example</th></tr></thead>
+                      <tbody>
+                          <tr><td>Type 1 (Present)</td><td>Si llueve, no vamos a la playa.<br><em>(If it rains, we don’t go to the beach.)</em></td></tr>
+                          <tr><td>Type 1 (Future)</td><td>Si estudias, aprobarás el examen.<br><em>(If you study, you will pass the exam.)</em></td></tr>
+                          <tr><td>Type 1 (Imp)</td><td>Si tienes hambre, come algo.<br><em>(If you’re hungry, eat something.)</em></td></tr>
+                          <tr><td>Type 2 (Cond)</td><td>Si ellos fueran más inteligentes, no comprarían esta casa.<br><em>(If they were smarter, they wouldn't buy this house.)</em></td></tr>
+                          <tr><td>Type 2 (Cond)</td><td>Ellos vendrían a mi fiesta si sus padres les permitieran.<br><em>(They would come if their parents allowed.)</em></td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">2. Reported Speech: Tense Changes</div>
+                  <div class="description-box">
+                      Change happens when the reporting verb (e.g., <em>dijo</em>) is in the <strong>Past</strong>.
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Direct Speech</th><th>Reported (Past Anchor)</th></tr></thead>
+                      <tbody>
+                          <tr><td>Present<br><em>"Estoy cansado"</em></td><td>Imperfect<br><em>Dijo que <strong>estaba</strong> cansado.</em></td></tr>
+                          <tr><td>Preterite<br><em>"Fui al cine"</em></td><td>Past Perfect<br><em>Dijo que <strong>había ido</strong> al cine.</em></td></tr>
+                          <tr><td>Present Perfect<br><em>"He comido"</em></td><td>Past Perfect<br><em>Dijo que <strong>había comido</strong>.</em></td></tr>
+                          <tr><td>Future<br><em>"Iré al mercado"</em></td><td>Conditional<br><em>Dijo que <strong>iría</strong> al mercado.</em></td></tr>
+                          <tr><td>Subj. Present<br><em>"Quiero que vengas"</em></td><td>Subj. Imperfect<br><em>Dijo que quería que <strong>viniera</strong>.</em></td></tr>
+                          <tr><td>Subj. Pres. Perf.<br><em>"Espero que hayas ido"</em></td><td>Subj. Past Perfect<br><em>Dijo que esperaba que <strong>hubiera ido</strong>.</em></td></tr>
+                          <tr><td>Imperfect</td><td>Stays the same</td></tr>
+                          <tr><td>Conditional</td><td>Stays the same</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">3. Reporting Questions</div>
+                  <div class="description-box">
+                      <strong>Yes/No:</strong> Use "si".<br>
+                      <strong>Open:</strong> Use question word.
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Direct</th><th>Reported</th></tr></thead>
+                      <tbody>
+                          <tr><td>¿Vendrás mañana?</td><td>Me preguntó <strong>si</strong> vendría mañana.<br><em>(Asked if I would come.)</em></td></tr>
+                          <tr><td>¿Dónde vives?</td><td>Me preguntó <strong>dónde</strong> vivía.<br><em>(Asked where I lived.)</em></td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">4. Reporting Commands</div>
+                  <div class="description-box">
+                      Use the <strong>Subjunctive</strong> mood.
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Direct</th><th>Reported</th></tr></thead>
+                      <tbody>
+                          <tr><td>"Haz tu tarea."</td><td>Me dijo <strong>que hiciera</strong> mi tarea.</td></tr>
+                          <tr><td>"No salgas tarde."</td><td>Me dijo <strong>que no saliera</strong> tarde.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">5. Changes in Pronouns</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Direct Sentence</th><th>Reported Change</th></tr></thead>
+                      <tbody>
+                          <tr><td>Yo quiero ir...</td><td>Ella dijo que <strong>quería</strong> ir...</td></tr>
+                          <tr><td>Ellos me invitaron...</td><td>Dijo que <strong>la</strong> habían invitado...</td></tr>
+                          <tr><td>Te daré el libro...</td><td>Dijo que <strong>me</strong> daría el libro...</td></tr>
+                          <tr><td>Me estoy preparando...</td><td>Dijo que <strong>se</strong> estaba preparando...</td></tr>
+                          <tr><td>Es mi libro.</td><td>Dijo que era <strong>su</strong> libro.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">6. Time and Place Changes</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Direct</th><th>Reported</th></tr></thead>
+                      <tbody>
+                          <tr><td>Hoy</td><td>Ese día</td></tr>
+                          <tr><td>Mañana</td><td>Al día siguiente</td></tr>
+                          <tr><td>Ayer</td><td>El día anterior</td></tr>
+                          <tr><td>Aquí</td><td>Allí</td></tr>
+                          <tr><td>Este / Esta</td><td>Ese / Esa</td></tr>
+                          <tr><td>Ahora</td><td>Entonces / En ese momento</td></tr>
+                          <tr><td>Hace un rato</td><td>Hacía un rato</td></tr>
+                          <tr><td>Pasado mañana</td><td>Dos días después</td></tr>
+                          <tr><td>Dentro de...</td><td>Después de...</td></tr>
+                          <tr><td>Hace (dos días)</td><td>Dos días antes</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

@@ -5,38 +5,38 @@ const regions = {
   "Misc":["World", "Small_Nations", "Territories"], // 100 x
 
   "Americas":["Antigua_and_Barbuda", "Argentina", "Bahamas", "Barbados", "Belize", // 1 x 1 1 x
-    "Bolivia", "Brazil", "Canada", "Chile", "Colombia", "Costa_Rica", "Cuba",
-    "Dominica", "Dominican_Republic", "Ecuador", "El_Salvador", "Grenada", // 1 -1
+    "Bolivia", "Brazil", "Canada", "Chile", "Colombia", "Costa_Rica", "Cuba", // 12 x x 29 x 3 8
+    "Dominica", "Dominican_Republic", "Ecuador", "El_Salvador", "Grenada", // 1 3 x x 1
     "Guatemala", "Guyana", "Haiti", "Honduras", "Jamaica", "Mexico", "Nicaragua",
     "Panama", "Paraguay", "Peru", "Saint_Kitts_and_Nevis", "Saint_Lucia", // -1 -1
     "Saint_Vincent_and_the_Grenadines", "Suriname", "Trinidad_and_Tobago", // 1
     "Uruguay", "USA", "Venezuela"],
 
   "Europe":["Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia_and_Herzegovina", // 9 10 14 12 23 6
-    "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", // fi: 34
-    "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia",    // kosovo: 4
-    "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", // 9 malta:2 monaco:1 
-    "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", 
-    "San_Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "UK", // 4
+    "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", // 18 15 6 17 10 18 34 77
+    "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia",    // 75 36 85 12 22 94 4 7
+    "Liechtenstein", "Lithuania", "Luxembourg", "North_Macedonia", "Malta", "Moldova", "Monaco", // 9 12 8 15 2 6 1 
+    "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", // 11 21 15 52 24 37 111
+    "San_Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "UK", // 4 12 10 17 91 28 13 100
     "Ukraine", "Vatican_City"], // 33 1
     
-  "Asia":["Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan", // x x x 2 x 13 
-    "Brunei", "Cambodia", "China", "Georgia", "India", "Indonesia", "Iran", "Iraq", // 1
+  "Asia":["Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan", // 5 3 3 2 x 13 
+    "Brunei", "Cambodia", "China", "Georgia", "India", "Indonesia", "Iran", "Iraq", // 1 5 x 6 x x 54 14
     "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan", "Laos",
     "Lebanon", "Malaysia", "Maldives", "Mongolia", "Myanmar", "Nepal", "North_Korea", // x x 2
-    "Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Saudi_Arabia", "Singapore", // -1 pal: 10
-    "South_Korea", "Sri_Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand", "Timor_Leste", // -1 taiwan: 12
-    "Turkey", "Turkmenistan", "UAE", "Uzbekistan", "Vietnam", "Yemen"],
+    "Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Saudi_Arabia", "Singapore", // 10 38 10 x 3 x 1
+    "South_Korea", "Sri_Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand", "Timor_Leste", // x x 7 12 x x 1
+    "Turkey", "Turkmenistan", "UAE", "Uzbekistan", "Vietnam", "Yemen"], // x 6 8
 
-  "Africa":["Algeria", "Angola", "Benin", "Botswana", "Burkina_Faso", "Burundi",
-    "Cabo_Verde", "Cameroon", "Central_African_Republic", "Chad", "Comoros", // 6 -3
-    "Congo", "Djibouti", "DR_Congo", "Egypt", "Equatorial_Guinea", "Eritrea", // x 1 x x 2
-    "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea_Bissau", // 6 x x 2 x x 1
-    "Ivory_Coast", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", // x x 7
-    "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", // x x x 1
-    "Niger", "Nigeria", "Rwanda", "Sao_Tome_and_Principe", "Senegal", "Seychelles", // x x x 2 x 1
+  "Africa":["Algeria", "Angola", "Benin", "Botswana", "Burkina_Faso", "Burundi", // 4 4 x 11 x 2
+    "Cabo_Verde", "Cameroon", "Central_African_Republic", "Chad", "Comoros", // 6 -3 x x x
+    "Congo", "Djibouti", "DR_Congo", "Egypt", "Equatorial_Guinea", "Eritrea", // x 1 10 16 2 x
+    "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea_Bissau", // 6 x x 3 14 x 1
+    "Ivory_Coast", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", // x 38 7 x 6 x
+    "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", // x x x 1 12 x x
+    "Niger", "Nigeria", "Rwanda", "Sao_Tome_and_Principe", "Senegal", "Seychelles", // x x 6 2 x 1
     "Sierra_Leone", "Somalia", "South_Africa", "South_Sudan", "Sudan", "Tanzania",
-    "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"],
+    "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"], // x 7 5 x x
 
   "Oceania": ["Australia", "Fiji", "Kiribati", "Marshall_Islands", "Micronesia", // 65 1 1 1 1
     "Nauru", "New_Zealand", "Palau", "Papua_New_Guinea", "Samoa", // 1 38 1 3 1

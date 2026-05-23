@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Tenses - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+
+  <style>
+      /* --- QUIZ SPECIFIC STYLES --- */
+      
+      #quizContainer {
+          max-width: 700px;
+          margin: 0 auto;
+          text-align: center;
+          background-color: #fff;
+          border-radius: 12px;
+          padding: 30px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+          border: 1px solid #ddd;
+      }
+
+      /* Header Layout */
+      .header-grid-container {
+          text-align: center;
+          position: relative;
+          margin-bottom: 15px;
+          width: 95%;
+          max-width: 1400px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .back-link-wrapper {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+
+      /* Mode Switcher Buttons */
+      .mode-toggle-container {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 30px;
+      }
+      
+      .mode-btn {
+          padding: 10px 20px;
+          border: 2px solid #ccc;
+          background: #f9f9f9;
+          border-radius: 25px;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: 16px;
+          transition: all 0.2s;
+          color: #555;
+      }
+      
+      .mode-btn.active {
+          border-color: #1a73e8;
+          background: #e8f0fe;
+          color: #1a73e8;
+      }
+
+      /* Question Area */
+      .question-box {
+          margin-bottom: 25px;
+      }
+
+      .prompt-label {
+          font-size: 18px;
+          color: #666;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: bold;
+      }
+
+      .main-question {
+          font-size: 32px;
+          font-weight: bold;
+          color: #333;
+          margin: 10px 0 20px 0;
+      }
+      
+      /* Input Styling */
+      input.answer-input {
+          font-size: 24px;
+          padding: 10px;
+          width: 80%;
+          max-width: 300px;
+          text-align: center;
+          border: 2px solid #ccc;
+          border-radius: 8px;
+          outline: none;
+          font-family: inherit;
+      }
+
+      input.answer-input:focus {
+          border-color: #1a73e8;
+      }
+
+      input.answer-input.correct {
+          border-color: #2e7d32;
+          background-color: #e8f5e9;
+          color: #2e7d32;
+      }
+
+      input.answer-input.incorrect {
+          border-color: #c62828;
+          background-color: #ffebee;
+          color: #c62828;
+      }
+
+      /* Feedback & Controls */
+      .feedback-msg {
+          min-height: 24px;
+          margin-top: 15px;
+          font-weight: bold;
+          font-size: 18px;
+      }
+      
+      .check-btn {
+          margin-top: 20px;
+          padding: 12px 30px;
+          font-size: 18px;
+          background-color: #333;
+          color: white;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: transform 0.1s;
+      }
+      
+      .check-btn:hover {
+          transform: scale(1.05);
+          background-color: #555;
+      }
+      
+      /* Stats */
+      .stats-bar {
+          margin-top: 30px;
+          font-size: 14px;
+          color: #888;
+          border-top: 1px solid #eee;
+          padding-top: 15px;
+          display: flex;
+          justify-content: space-between;
+      }
+
+      /* --- DARK MODE OVERRIDES --- */
+      body.dark-mode #quizContainer {
+          background-color: #1e1e1e;
+          border-color: #444;
+      }
+      
+      body.dark-mode .main-question { color: #f0f0f0; }
+      body.dark-mode .prompt-label { color: #aaa; }
+      
+      body.dark-mode input.answer-input {
+          background-color: #2c2c2c;
+          border-color: #555;
+          color: #fff;
+      }
+      
+      body.dark-mode .mode-btn {
+          background-color: #2c2c2c;
+          border-color: #555;
+          color: #aaa;
+      }
+      
+      body.dark-mode .mode-btn.active {
+          background-color: #3d3d3d;
+          border-color: #8ab4f8;
+          color: #8ab4f8;
+      }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" class="header-grid-container">
+    <div id="otherQuizzes" class="back-link-wrapper">
+        <a href="../" class="back-link">&larr; Spanish Course</a>
+    </div>
+    <h1 style="margin: 0;">Conjugation Training</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          <button id="resetStats" class="toolbar-btn" onclick="resetGame()">Reset Score</button>
+      </div>
+
+      <div id="quizContainer">
+          
+          <div class="mode-toggle-container">
+              <button class="mode-btn active" onclick="setMode('drill')">Drill Mode</button>
+              <button class="mode-btn" onclick="setMode('sentence')">Sentence Mode</button>
+          </div>
+
+          <div class="question-box">
+              <div id="promptLabel" class="prompt-label">Conjugate: Present Tense</div>
+              <div id="questionText" class="main-question">Loading...</div>
+          </div>
+
+          <div class="input-area">
+              <input type="text" id="userAnswer" class="answer-input" placeholder="Type answer..." autocomplete="off">
+              <div id="feedback" class="feedback-msg"></div>
+              <button id="actionBtn" class="check-btn" onclick="handleAction()">Check</button>
+          </div>
+
+          <div class="stats-bar">
+              <span id="streakDisplay">Streak: 0</span>
+              <span id="scoreDisplay">Correct: 0/0</span>
+          </div>
+
+      </div>
+
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+
+<script>
+    /* --- DATA SETS --- */
+
+    // 1. DRILL DATA: 18 Categories (Verb + Pronoun Prompt)
+    const drillData = [
+        { pronoun: "Yo", verb: "Hablar", tense: "Present", answer: "Hablo" },
+        { pronoun: "Tú", verb: "Comer", tense: "Present", answer: "Comes" },
+        { pronoun: "Nosotros", verb: "Vivir", tense: "Present", answer: "Vivimos" },
+        { pronoun: "Ellos", verb: "Tener", tense: "Present", answer: "Tienen" },
+        { pronoun: "Yo", verb: "Hablar", tense: "Preterite", answer: "Hablé" },
+        { pronoun: "Nosotros", verb: "Ir", tense: "Preterite", answer: "Fuimos" },
+        { pronoun: "Ella", verb: "Comer", tense: "Preterite", answer: "Comió" },
+        { pronoun: "Tú", verb: "Estar", tense: "Preterite", answer: "Estuviste" },
+        { pronoun: "Yo", verb: "Hablar", tense: "Imperfect", answer: "Hablaba" },
+        { pronoun: "Ella", verb: "Ser", tense: "Imperfect", answer: "Era" },
+        { pronoun: "Nosotros", verb: "Ver", tense: "Imperfect", answer: "Veíamos" },
+        { pronoun: "Tú", verb: "Ir", tense: "Imperfect", answer: "Ibas" },
+        { pronoun: "Yo", verb: "Comer", tense: "Future", answer: "Comeré" },
+        { pronoun: "Él", verb: "Tener", tense: "Future", answer: "Tendrá" },
+        { pronoun: "Nosotros", verb: "Hacer", tense: "Future", answer: "Haremos" },
+        { pronoun: "Ellas", verb: "Salir", tense: "Future", answer: "Saldrán" },
+        { pronoun: "Yo", verb: "Comer", tense: "Future Prox. (Ir+a)", answer: "Voy a comer" },
+        { pronoun: "Nosotros", verb: "Salir", tense: "Future Prox. (Ir+a)", answer: "Vamos a salir" },
+        { pronoun: "Yo", verb: "Vivir", tense: "Conditional", answer: "Viviría" },
+        { pronoun: "Tú", verb: "Poner", tense: "Conditional", answer: "Pondrías" },
+        { pronoun: "Nosotros", verb: "Querer", tense: "Conditional", answer: "Querríamos" },
+        { pronoun: "Yo", verb: "Ver", tense: "Present Perfect", answer: "He visto" },
+        { pronoun: "Ellos", verb: "Hacer", tense: "Present Perfect", answer: "Han hecho" },
+        { pronoun: "Tú", verb: "Escribir", tense: "Present Perfect", answer: "Has escrito" },
+        { pronoun: "Ella", verb: "Salir", tense: "Past Perfect", answer: "Había salido" },
+        { pronoun: "Nosotros", verb: "Terminar", tense: "Past Perfect", answer: "Habíamos terminado" },
+        { pronoun: "Yo", verb: "Llegar", tense: "Future Perfect", answer: "Habré llegado" },
+        { pronoun: "Tú", verb: "Acabar", tense: "Future Perfect", answer: "Habrás acabado" },
+        { pronoun: "Yo", verb: "Comprar", tense: "Cond. Perfect", answer: "Habría comprado" },
+        { pronoun: "Ustedes", verb: "Ver", tense: "Cond. Perfect", answer: "Habrían visto" },
+        { pronoun: "Yo", verb: "Terminar", tense: "Pret. Anterior", answer: "Hube terminado" },
+        { pronoun: "Tú (Affirmative)", verb: "Hablar", tense: "Command", answer: "Habla" },
+        { pronoun: "Usted (Affirmative)", verb: "Comer", tense: "Command", answer: "Coma" },
+        { pronoun: "Tú (Negative)", verb: "Ir", tense: "Command", answer: "No vayas" },
+        { pronoun: "Ustedes (Affirmative)", verb: "Escribir", tense: "Command", answer: "Escriban" },
+        { pronoun: "Yo", verb: "Estudiar", tense: "Progressive", answer: "Estoy estudiando" },
+        { pronoun: "Ellos", verb: "Leer", tense: "Progressive", answer: "Están leyendo" },
+        { pronoun: "Ella", verb: "Dormir", tense: "Progressive", answer: "Está durmiendo" },
+        { pronoun: "Yo", verb: "Hablar", tense: "Subj. Present", answer: "Hable" },
+        { pronoun: "Tú", verb: "Tener", tense: "Subj. Present", answer: "Tengas" },
+        { pronoun: "Él", verb: "Ser", tense: "Subj. Present", answer: "Sea" },
+        { pronoun: "Yo", verb: "Hablar", tense: "Subj. Imperfect", answer: "Hablara" },
+        { pronoun: "Nosotros", verb: "Comer", tense: "Subj. Imperfect", answer: "Comiéramos" },
+        { pronoun: "Ellos", verb: "Estar", tense: "Subj. Imperfect", answer: "Estuvieran" },
+        { pronoun: "Yo", verb: "Ver", tense: "Subj. Perfect", answer: "Haya visto" },
+        { pronoun: "Tú", verb: "Hacer", tense: "Subj. Perfect", answer: "Hayas hecho" },
+        { pronoun: "Yo", verb: "Saber", tense: "Subj. Pluperfect", answer: "Hubiera sabido" },
+        { pronoun: "Yo", verb: "Hablar", tense: "Subj. Future", answer: "Hablare" },
+        { pronoun: "Si (Tú)", verb: "Ver", tense: "Subj. Future", answer: "Vieres" }
+    ];
+
+    // 2. SENTENCE DATA: 500 Unique Sentences (Grouped by Tense)
+    const sentenceData = [
+        
+        // --- 1. PRESENT INDICATIVE ---
+        { text: "Ahora mismo ella ___ (leer - Present) un libro.", answer: "lee" },
+        { text: "Nosotros ___ (vivir - Present) en España.", answer: "vivimos" },
+        { text: "Ella ___ (querer - Present) un coche nuevo.", answer: "quiere" },
+        { text: "Yo no ___ (entender - Present) la pregunta.", answer: "entiendo" },
+        { text: "Nosotros ___ (ser - Present) estudiantes.", answer: "somos" },
+        { text: "Tú ___ (pensar - Present) mucho en el futuro.", answer: "piensas" },
+        { text: "El perro ___ (dormir - Present) en el sofá.", answer: "duerme" },
+        { text: "Ustedes ___ (jugar - Present) muy bien.", answer: "juegan" },
+        { text: "Yo ___ (conocer - Present) a tu hermano.", answer: "conozco" },
+        { text: "La clase ___ (empezar - Present) a las ocho.", answer: "empieza" },
+        { text: "Yo me ___ (lavar - Present) las manos.", answer: "lavo" },
+        { text: "Ellos no ___ (creer - Present) en fantasmas.", answer: "creen" },
+        { text: "A mí me ___ (encantar - Present) el chocolate.", answer: "encanta" },
+        { text: "Nosotros ___ (seguir - Present) las instrucciones.", answer: "seguimos" },
+        { text: "El bebé ___ (llorar - Present) mucho.", answer: "llora" },
+        { text: "Yo ___ (oír - Present) un ruido extraño.", answer: "oigo" },
+        { text: "La planta ___ (morir - Present) si no la riegas.", answer: "muere" },
+        { text: "Tú ___ (parecer - Present) cansado.", answer: "pareces" },
+        { text: "Yo ___ (caber - Present) en este asiento.", answer: "quepo" },
+        { text: "Las flores ___ (oler - Present) muy bien.", answer: "huelen" },
+        { text: "Yo me ___ (duchar - Present) todas las mañanas.", answer: "ducho" },
+        { text: "Tú ___ (merecer - Present) un descanso.", answer: "mereces" },
+        { text: "El agua ___ (hervir - Present) a cien grados.", answer: "hierve" },
+        { text: "Nosotros ___ (oír - Present) música en la calle.", answer: "oímos" },
+        { text: "Yo ___ (conseguir - Present) lo que quiero.", answer: "consigo" },
+        { text: "La película ___ (empezar - Present) pronto.", answer: "empieza" },
+        { text: "Tú ___ (seguir - Present) las instrucciones.", answer: "sigues" },
+        { text: "Yo ___ (caber - Present) por la puerta.", answer: "quepo" },
+        { text: "Nosotros ___ (servir - Present) la comida.", answer: "servimos" },
+        { text: "La nieve ___ (cubrir - Present) la montaña.", answer: "cubre" },
+        { text: "Yo ___ (escoger - Present) este libro.", answer: "escojo" },
+        { text: "Nosotros ___ (corregir - Present) los errores.", answer: "corregimos" },
+        { text: "El zapato no me ___ (caber - Present).", answer: "cabe" },
+        { text: "Yo ___ (conducir - Present) con cuidado.", answer: "conduzco" },
+        { text: "Las flores ___ (morir - Present) sin agua.", answer: "mueren" },
+        { text: "Yo ___ (parecer - Present) cansado hoy.", answer: "parezco" },
+        { text: "Nosotros ___ (jugar - Present) al fútbol.", answer: "jugamos" },
+        { text: "Yo ___ (traducir - Present) documentos.", answer: "traduzco" },
+        { text: "El niño ___ (pedir - Present) agua.", answer: "pide" },
+        { text: "Yo ___ (oír - Present) pasos.", answer: "oigo" },
+        { text: "El ladrón ___ (huir - Present) de la policía.", answer: "huye" },
+        { text: "Yo ___ (coger - Present) el autobús a las ocho.", answer: "cojo" },
+        { text: "Yo ___ (fingir - Present) que no escucho.", answer: "finjo" },
+        { text: "Yo ___ (distinguir - Present) los colores.", answer: "distingo" },
+        { text: "Yo ___ (exigir - Present) una explicación.", answer: "exijo" },
+        { text: "El hielo se ___ (derretir - Present) al sol.", answer: "derrite" },
+        { text: "Yo ___ (caber - Present) en el coche.", answer: "quepo" },
+        { text: "Yo ___ (merecer - Present) un premio.", answer: "merezco" },
+        { text: "Ella ___ (servir - Present) el café.", answer: "sirve" },
+        { text: "Yo ___ (obedecer - Present) las reglas.", answer: "obedezco" },
+
+        // --- 2. PRETERITE ---
+        { text: "Ayer, yo ___ (caminar - Preterite) al parque.", answer: "caminé" },
+        { text: "Ellos ___ (ir - Preterite) a la playa el sábado.", answer: "fueron" },
+        { text: "Anoche nosotros ___ (ver - Preterite) una película.", answer: "vimos" },
+        { text: "Tú ___ (decir - Preterite) la verdad.", answer: "dijiste" },
+        { text: "El año pasado ___ (haber - Preterite) una gran fiesta.", answer: "hubo" },
+        { text: "Ellos ___ (venir - Preterite) tarde a la clase.", answer: "vinieron" },
+        { text: "Yo ___ (conducir - Preterite) hasta la ciudad.", answer: "conduje" },
+        { text: "Ella ___ (traer - Preterite) el postre.", answer: "trajo" },
+        { text: "Tú ___ (poder - Preterite) hacerlo.", answer: "pudiste" },
+        { text: "Yo ___ (querer - Preterite) comprarlo.", answer: "quise" },
+        { text: "El ladrón ___ (huir - Preterite) por la ventana.", answer: "huyó" },
+        { text: "Tú ___ (traducir - Preterite) el texto perfectamente.", answer: "tradujiste" },
+        { text: "El edificio ___ (construir - Preterite) el año pasado.", answer: "se construyó" },
+        { text: "Yo ___ (apagar - Preterite) la luz.", answer: "apagué" },
+        { text: "Anoche ___ (nevar - Preterite) en la ciudad.", answer: "nevó" },
+        { text: "Tú ___ (andar - Preterite) por todo el parque.", answer: "anduviste" },
+        { text: "Yo ___ (buscar - Preterite) las llaves ayer.", answer: "busqué" },
+        { text: "Ellos ___ (reír - Preterite) mucho con el chiste.", answer: "rieron" },
+        { text: "El profesor ___ (explicar - Preterite) la lección.", answer: "explicó" },
+        { text: "Yo ___ (llegar - Preterite) tarde por el tráfico.", answer: "llegué" },
+        { text: "El gato ___ (saltar - Preterite) desde el tejado.", answer: "saltó" },
+        { text: "Nosotros ___ (andar - Preterite) cinco kilómetros.", answer: "anduvimos" },
+        { text: "Yo ___ (apagar - Preterite) el televisor.", answer: "apagué" },
+        { text: "Ella ___ (mentir - Preterite) sobre su edad.", answer: "mintió" },
+        { text: "Tú ___ (traducir - Preterite) la carta.", answer: "tradujiste" },
+        { text: "Nosotros ___ (pedir - Preterite) una pizza.", answer: "pedimos" },
+        { text: "El árbol ___ (caer - Preterite) durante la tormenta.", answer: "cayó" },
+        { text: "Ellos ___ (reír - Preterite) del chiste.", answer: "rieron" },
+        { text: "Yo ___ (buscar - Preterite) mis gafas.", answer: "busqué" },
+        { text: "Tú ___ (oír - Preterite) el ruido anoche.", answer: "oíste" },
+        { text: "El edificio ___ (destruir - Preterite) por el terremoto.", answer: "se destruyó" },
+        { text: "Yo ___ (almorzar - Preterite) con mi abuela.", answer: "almorcé" },
+        { text: "Ellos ___ (leer - Preterite) el libro en un día.", answer: "leyeron" },
+        { text: "Tú ___ (traer - Preterite) las bebidas.", answer: "trajiste" },
+        { text: "Yo ___ (llegar - Preterite) tarde.", answer: "llegué" },
+        { text: "La bomba ___ (explotar - Preterite) ayer.", answer: "explotó" },
+        { text: "Yo ___ (comenzar - Preterite) a estudiar.", answer: "comencé" },
+        { text: "Ellos ___ (andar - Preterite) por el bosque.", answer: "anduvieron" },
+        { text: "Yo ___ (querer - Preterite) ayudarte.", answer: "quise" },
+        { text: "Ellos ___ (producir - Preterite) una gran película.", answer: "produjeron" },
+        { text: "Yo ___ (averiguar - Preterite) la dirección.", answer: "averigüé" },
+        { text: "Tú ___ (distraer - Preterite) al guardia.", answer: "distrajiste" },
+        { text: "El niño ___ (caer - Preterite) del columpio.", answer: "cayó" },
+        { text: "Nosotros ___ (andar - Preterite) todo el día.", answer: "anduvimos" },
+        { text: "La bomba ___ (destruir - Preterite) el puente.", answer: "destruyó" },
+        { text: "Yo ___ (tocar - Preterite) el piano en la fiesta.", answer: "toqué" },
+        { text: "Ellos ___ (saber - Preterite) la noticia ayer.", answer: "supieron" },
+        { text: "La película ___ (producir - Preterite) mucho dinero.", answer: "produjo" },
+        { text: "Yo ___ (jugar - Preterite) al ajedrez.", answer: "jugué" },
+        { text: "El perro ___ (traer - Preterite) el periódico.", answer: "trajo" },
+
+        // --- 3. IMPERFECT ---
+        { text: "Siempre ___ (jugar - Imperfect) fútbol de niño.", answer: "jugaba" },
+        { text: "Tú ___ (ser - Imperfect) muy travieso de pequeño.", answer: "eras" },
+        { text: "Todos los días yo ___ (ir - Imperfect) al gimnasio.", answer: "iba" },
+        { text: "Mientras yo cocinaba, él ___ (leer - Imperfect).", answer: "leía" },
+        { text: "De niño, me ___ (gustar - Imperfect) los dulces.", answer: "gustaban" },
+        { text: "Antes no ___ (haber - Imperfect) tantos coches.", answer: "había" },
+        { text: "Ella siempre ___ (llevar - Imperfect) sombrero.", answer: "llevaba" },
+        { text: "Nosotros ___ (ver - Imperfect) la tele cada noche.", answer: "veíamos" },
+        { text: "Mi abuela ___ (cocinar - Imperfect) muy bien.", answer: "cocinaba" },
+        { text: "Tú ___ (tener - Imperfect) razón.", answer: "tenías" },
+        { text: "Nosotros ___ (soler - Imperfect) ir al cine los viernes.", answer: "solíamos" },
+        { text: "El cielo ___ (estar - Imperfect) muy nublado.", answer: "estaba" },
+        { text: "Tú siempre me ___ (dar - Imperfect) buenos consejos.", answer: "dabas" },
+        { text: "Mientras leía, me ___ (quedar - Imperfect) dormido.", answer: "quedaba" },
+        { text: "Antes yo no ___ (conocer - Imperfect) a nadie aquí.", answer: "conocía" },
+        { text: "El reloj ___ (dar - Imperfect) la una.", answer: "daba" },
+        { text: "De joven, ella ___ (ser - Imperfect) muy tímida.", answer: "era" },
+        { text: "Nosotros ___ (ver - Imperfect) dibujos animados.", answer: "veíamos" },
+        { text: "Tú ___ (tener - Imperfect) un perro blanco.", answer: "tenías" },
+        { text: "Siempre ___ (haber - Imperfect) mucha gente allí.", answer: "había" },
+        { text: "De niña, tú ___ (odiar - Imperfect) las espinacas.", answer: "odiabas" },
+        { text: "El mar ___ (estar - Imperfect) muy tranquilo ayer.", answer: "estaba" },
+        { text: "Tú siempre ___ (perder - Imperfect) tus lápices.", answer: "perdías" },
+        { text: "Yo ___ (soñar - Imperfect) con ser astronauta.", answer: "soñaba" },
+        { text: "Los pájaros ___ (cantar - Imperfect) cada mañana.", answer: "cantaban" },
+        { text: "Tú ___ (vivir - Imperfect) en esa casa amarilla.", answer: "vivías" },
+        { text: "Yo siempre ___ (compartir - Imperfect) mis juguetes.", answer: "compartía" },
+        { text: "Mi abuelo ___ (contar - Imperfect) historias increíbles.", answer: "contaba" },
+        { text: "Tú ___ (jugar - Imperfect) en el parque.", answer: "jugabas" },
+        { text: "Yo ___ (tener - Imperfect) miedo de la oscuridad.", answer: "tenía" },
+        { text: "Tú ___ (ser - Imperfect) el mejor de la clase.", answer: "eras" },
+        { text: "Antes, la gente ___ (escribir - Imperfect) cartas.", answer: "escribía" },
+        { text: "Siempre ___ (nevar - Imperfect) en invierno aquí.", answer: "nevaba" },
+        { text: "Nosotros ___ (ver - Imperfect) a tus padres a menudo.", answer: "veíamos" },
+        { text: "El perro ___ (seguir - Imperfect) al gato.", answer: "seguía" },
+        { text: "Tú ___ (ir - Imperfect) a la escuela en autobús.", answer: "ibas" },
+        { text: "Ella ___ (tener - Imperfect) el pelo largo.", answer: "tenía" },
+        { text: "La casa ___ (oler - Imperfect) a pan fresco.", answer: "olía" },
+        { text: "Tú ___ (ver - Imperfect) mucha televisión.", answer: "veías" },
+        { text: "Nosotros ___ (ser - Imperfect) muy amigos.", answer: "éramos" },
+        { text: "Tú me ___ (mentir - Imperfect) todo el tiempo.", answer: "mentías" },
+        { text: "Las olas ___ (romper - Imperfect) contra las rocas.", answer: "rompían" },
+        { text: "Nosotros ___ (ir - Imperfect) al cine los domingos.", answer: "íbamos" },
+        { text: "Tú siempre ___ (querer - Imperfect) ser médico.", answer: "querías" },
+        { text: "Vosotros ___ (ver - Imperfect) la televisión mucho.", answer: "veíais" },
+        { text: "Ella ___ (oler - Imperfect) las flores.", answer: "olía" },
+        { text: "Tú ___ (soler - Imperfect) visitar a tus abuelos.", answer: "solías" },
+        { text: "El cielo ___ (estar - Imperfect) azul.", answer: "estaba" },
+        { text: "Tú ___ (parecer - Imperfect) triste.", answer: "parecías" },
+        { text: "Nosotros ___ (vivir - Imperfect) en París.", answer: "vivíamos" },
+
+        // --- 4. FUTURE SIMPLE ---
+        { text: "Mañana nosotros ___ (comer - Future) pizza.", answer: "comeremos" },
+        { text: "El año que viene, yo ___ (viajar - Future) a Japón.", answer: "viajaré" },
+        { text: "Pronto ellos ___ (saber - Future) la verdad.", answer: "sabrán" },
+        { text: "Nosotros ___ (tener - Future) mucho éxito.", answer: "tendremos" },
+        { text: "¿Quién ___ (poder - Future) ayudarme?", answer: "podrá" },
+        { text: "Yo ___ (poner - Future) la mesa.", answer: "pondré" },
+        { text: "Tú ___ (valer - Future) mucho para mí.", answer: "valdrás" },
+        { text: "El tren ___ (salir - Future) a las cinco.", answer: "saldrá" },
+        { text: "Nosotros ___ (caber - Future) en el coche.", answer: "cabremos" },
+        { text: "Ella ___ (decir - Future) que no.", answer: "dirá" },
+        { text: "Mañana ___ (nevar - Future) en la montaña.", answer: "nevará" },
+        { text: "Pronto nosotros ___ (resolver - Future) el problema.", answer: "resolveremos" },
+        { text: "Yo ___ (mantener - Future) mi promesa.", answer: "mantendré" },
+        { text: "Los precios ___ (subir - Future) el próximo mes.", answer: "subirán" },
+        { text: "Tú ___ (obtener - Future) buenas notas.", answer: "obtendrás" },
+        { text: "Nosotros ___ (componer - Future) una canción.", answer: "compondremos" },
+        { text: "El examen ___ (valer - Future) el 50% de la nota.", answer: "valdrá" },
+        { text: "La reunión ___ (ser - Future) a las tres.", answer: "será" },
+        { text: "Nosotros ___ (salir - Future) temprano.", answer: "saldremos" },
+        { text: "Tú ___ (querer - Future) volver algún día.", answer: "querrás" },
+        { text: "Nosotros ___ (bailar - Future) toda la noche.", answer: "bailaremos" },
+        { text: "Ellas ___ (construir - Future) un puente nuevo.", answer: "construirán" },
+        { text: "El profesor ___ (corregir - Future) los exámenes.", answer: "corregirá" },
+        { text: "Tú ___ (caber - Future) en mi maleta.", answer: "cabrás" },
+        { text: "Nosotros ___ (poner - Future) las reglas.", answer: "pondremos" },
+        { text: "El precio ___ (valer - Future) la pena.", answer: "valdrá" },
+        { text: "Ellos ___ (tener - Future) que estudiar.", answer: "tendrán" },
+        { text: "Yo te ___ (decir - Future) un secreto.", answer: "diré" },
+        { text: "Ella ___ (saber - Future) qué hacer.", answer: "sabrá" },
+        { text: "Tú ___ (decir - Future) que sí.", answer: "dirás" },
+        { text: "El avión ___ (salir - Future) a tiempo.", answer: "saldrá" },
+        { text: "Tú ___ (saber - Future) la respuesta mañana.", answer: "sabrás" },
+        { text: "Nosotros ___ (hacer - Future) una fiesta.", answer: "haremos" },
+        { text: "Ella ___ (poner - Future) la mesa.", answer: "pondrá" },
+        { text: "Tú ___ (querer - Future) ver esto.", answer: "querrás" },
+        { text: "Nosotros ___ (venir - Future) mañana.", answer: "vendremos" },
+        { text: "Los precios ___ (valer - Future) más el próximo año.", answer: "valdrán" },
+        { text: "Tú ___ (tener - Future) suerte.", answer: "tendrás" },
+        { text: "El tren ___ (salir - Future) pronto.", answer: "saldrá" },
+        { text: "Nosotros ___ (escoger - Future) el mejor camino.", answer: "escogeremos" },
+        { text: "Ellos ___ (suponer - Future) que estamos aquí.", answer: "supondrán" },
+        { text: "La planta ___ (crecer - Future) muy alto.", answer: "crecerá" },
+        { text: "El jefe ___ (decir - Future) quién ganó.", answer: "dirá" },
+        { text: "Tú ___ (tener - Future) frío sin abrigo.", answer: "tendrás" },
+        { text: "El tren ___ (salir - Future) en cinco minutos.", answer: "saldrá" },
+        { text: "Nosotros ___ (poder - Future) hacerlo.", answer: "podremos" },
+        { text: "Tú ___ (valer - Future) mucho más.", answer: "valdrás" },
+        { text: "Ellos ___ (poner - Future) música.", answer: "pondrán" },
+        { text: "Tú ___ (querer - Future) venir con nosotros.", answer: "querrás" },
+
+        // --- 5. CONDITIONAL ---
+        { text: "Si yo fuera rico, ___ (comprar - Conditional) un barco.", answer: "compraría" },
+        { text: "¿Qué ___ (hacer - Conditional) tú en mi lugar?", answer: "harías" },
+        { text: "Si tuviera tiempo, ___ (aprender - Conditional) italiano.", answer: "aprendería" },
+        { text: "Yo en tu lugar ___ (pedir - Conditional) perdón.", answer: "pediría" },
+        { text: "Nosotros ___ (salir - Conditional) si no lloviera.", answer: "saldríamos" },
+        { text: "Me ___ (gustar - Conditional) viajar por el mundo.", answer: "gustaría" },
+        { text: "Si pudiera, yo ___ (volar - Conditional) .", answer: "volaría" },
+        { text: "Ellos ___ (venir - Conditional) si los invitaras.", answer: "vendrían" },
+        { text: "Tú ___ (deber - Conditional) estudiar más.", answer: "deberías" },
+        { text: "Nosotros ___ (poder - Conditional) ir mañana.", answer: "podríamos" },
+        { text: "Si ganara la lotería, ___ (comprar - Conditional) una isla.", answer: "compraría" },
+        { text: "¿Te ___ (importar - Conditional) cerrar la puerta?", answer: "importaría" },
+        { text: "Nosotros ___ (preferir - Conditional) comer fuera.", answer: "preferiríamos" },
+        { text: "Yo ___ (caber - Conditional) en esa caja si fuera más pequeño.", answer: "cabría" },
+        { text: "¿Qué ___ (decir - Conditional) tu madre?", answer: "diría" },
+        { text: "Ellas ___ (poder - Conditional) ganar el partido.", answer: "podrían" },
+        { text: "Yo no ___ (salir - Conditional) con este frío.", answer: "saldría" },
+        { text: "¿Te ___ (gustar - Conditional) venir con nosotros?", answer: "gustaría" },
+        { text: "En tu caso, yo no ___ (hacer - Conditional) nada.", answer: "haría" },
+        { text: "Yo en tu lugar, ___ (decir - Conditional) que no.", answer: "diría" },
+        { text: "Yo no ___ (gastar - Conditional) tanto dinero en ropa.", answer: "gastaría" },
+        { text: "Si tuviera hambre, ___ (comer - Conditional) una manzana.", answer: "comería" },
+        { text: "¿___ (poder - Conditional) usted ayudarme?", answer: "podría" },
+        { text: "Yo ___ (preferir - Conditional) ir al cine.", answer: "preferiría" },
+        { text: "Si fuera tú, no lo ___ (hacer - Conditional).", answer: "haría" },
+        { text: "Nosotros ___ (deber - Conditional) practicar más.", answer: "deberíamos" },
+        { text: "¿Te ___ (gustar - Conditional) vivir aquí?", answer: "gustaría" },
+        { text: "Yo ___ (salir - Conditional) si tuviera dinero.", answer: "saldría" },
+        { text: "Ustedes ___ (poder - Conditional) ganar.", answer: "podrían" },
+        { text: "Yo no ___ (poder - Conditional) levantar eso.", answer: "podría" },
+        { text: "En tu lugar, yo ___ (huir - Conditional) lejos.", answer: "huiría" },
+        { text: "Ellas ___ (querer - Conditional) helado.", answer: "querrían" },
+        { text: "Yo ___ (salir - Conditional) si no lloviera.", answer: "saldría" },
+        { text: "Nosotros ___ (venir - Conditional) si nos invitaran.", answer: "vendríamos" },
+        { text: "¿Te ___ (poner - Conditional) ese vestido?", answer: "pondrías" },
+        { text: "Yo ___ (saber - Conditional) qué hacer.", answer: "sabría" },
+        { text: "Nosotros ___ (tener - Conditional) miedo.", answer: "tendríamos" },
+        { text: "Yo en tu lugar, lo ___ (decir - Conditional).", answer: "diría" },
+        { text: "Ellas ___ (caber - Conditional) en el sofá.", answer: "cabrían" },
+        { text: "Nosotros ___ (tener - Conditional) más cuidado.", answer: "tendríamos" },
+        { text: "Yo no ___ (poder - Conditional) vivir sin música.", answer: "podría" },
+        { text: "Si fuera rico, ___ (viajar - Conditional) por el mundo.", answer: "viajaría" },
+        { text: "Me ___ (gustar - Conditional) probar ese plato.", answer: "gustaría" },
+        { text: "Tú ___ (caber - Conditional) si te movieras.", answer: "cabrías" },
+        { text: "Nosotros ___ (deber - Conditional) irnos ya.", answer: "deberíamos" },
+        { text: "Yo ___ (poner - Conditional) más sal.", answer: "pondría" },
+        { text: "Ellas ___ (saber - Conditional) qué hacer.", answer: "sabrían" },
+
+        // --- 6. SUBJUNCTIVE PRESENT ---
+        { text: "No creo que él ___ (tener - Subj. Present) tiempo.", answer: "tenga" },
+        { text: "Es importante que ustedes ___ (estudiar - Subj. Present) más.", answer: "estudien" },
+        { text: "Ojalá que ___ (llover - Subj. Present) mañana.", answer: "llueva" },
+        { text: "Dudo que ella ___ (saber - Subj. Present) la respuesta.", answer: "sepa" },
+        { text: "Te recomiendo que ___ (ir - Subj. Present) al médico.", answer: "vayas" },
+        { text: "Es necesario que nosotros ___ (comer - Subj. Present) sano.", answer: "comamos" },
+        { text: "Quiero que tú me ___ (dar - Subj. Present) el libro.", answer: "des" },
+        { text: "Es triste que él ___ (estar - Subj. Present) enfermo.", answer: "esté" },
+        { text: "Busco a alguien que ___ (hablar - Subj. Present) francés.", answer: "hable" },
+        { text: "Es raro que tú ___ (mentir - Subj. Present) así.", answer: "mientas" },
+        { text: "Espero que no ___ (haber - Subj. Present) tráfico.", answer: "haya" },
+        { text: "No es verdad que él ___ (ser - Subj. Present) el culpable.", answer: "sea" },
+        { text: "Ojalá que tú me ___ (entender - Subj. Present).", answer: "entiendas" },
+        { text: "Es urgente que nosotros ___ (salir - Subj. Present) ya.", answer: "salgamos" },
+        { text: "Quiero que tú te ___ (poner - Subj. Present) el abrigo.", answer: "pongas" },
+        { text: "Te pido que ___ (volver - Subj. Present) pronto.", answer: "vuelvas" },
+        { text: "Es mejor que ella ___ (dormir - Subj. Present) más.", answer: "duerma" },
+        { text: "Sugiero que tú ___ (buscar - Subj. Present) ayuda.", answer: "busques" },
+        { text: "Es probable que ___ (llover - Subj. Present) esta tarde.", answer: "llueva" },
+        { text: "Es importante que ellos ___ (respetar - Subj. Present) las normas.", answer: "respeten" },
+        { text: "Ojalá que el equipo ___ (ganar - Subj. Present) el partido.", answer: "gane" },
+        { text: "Te prohíbo que ___ (fumar - Subj. Present) aquí.", answer: "fumes" },
+        { text: "Es posible que ellos ___ (venir - Subj. Present) mañana.", answer: "vengan" },
+        { text: "Quiero que tú ___ (limpiar - Subj. Present) tu cuarto.", answer: "limpies" },
+        { text: "Es una lástima que ___ (llover - Subj. Present).", answer: "llueva" },
+        { text: "Recomiendo que usted ___ (beber - Subj. Present) agua.", answer: "beba" },
+        { text: "Dudo que eso ___ (ser - Subj. Present) verdad.", answer: "sea" },
+        { text: "Es necesario que nosotros ___ (ir - Subj. Present) ahora.", answer: "vayamos" },
+        { text: "No creo que él ___ (poder - Subj. Present) venir.", answer: "pueda" },
+        { text: "Es importante que ella ___ (ir - Subj. Present) al dentista.", answer: "vaya" },
+        { text: "Dudo que tú ___ (conocer - Subj. Present) al alcalde.", answer: "conozcas" },
+        { text: "Es necesario que tú ___ (empezar - Subj. Present) ahora.", answer: "empieces" },
+        { text: "Ojalá que el bebé ___ (dormir - Subj. Present) toda la noche.", answer: "duerma" },
+        { text: "Es probable que ellos ___ (pedir - Subj. Present) dinero.", answer: "pidan" },
+        { text: "Quiero que tú me ___ (dar - Subj. Present) la mano.", answer: "des" },
+        { text: "Te sugiero que ___ (buscar - Subj. Present) un abogado.", answer: "busques" },
+        { text: "Es urgente que nosotros ___ (huir - Subj. Present).", answer: "huyamos" },
+        { text: "Espero que no ___ (llover - Subj. Present).", answer: "llueva" },
+        { text: "Busco a alguien que ___ (traducir - Subj. Present) esto.", answer: "traduzca" },
+        { text: "Es horrible que ___ (haber - Subj. Present) tanta basura.", answer: "haya" },
+        { text: "Quiero que usted ___ (venir - Subj. Present) a mi oficina.", answer: "venga" },
+        { text: "Dudo que ellos ___ (estar - Subj. Present) listos.", answer: "estén" },
+        { text: "Te aconsejo que ___ (dormir - Subj. Present) ocho horas.", answer: "duermas" },
+        { text: "Es necesario que nosotros ___ (pedir - Subj. Present) ayuda.", answer: "pidamos" },
+        { text: "Es posible que ella ___ (perder - Subj. Present) el bus.", answer: "pierda" },
+        { text: "Busco un amigo que ___ (ser - Subj. Present) leal.", answer: "sea" },
+        { text: "Es probable que ___ (llover - Subj. Present) mañana.", answer: "llueva" },
+        { text: "No creo que eso ___ (funcionar - Subj. Present).", answer: "funcione" },
+        { text: "Es mejor que tú ___ (ir - Subj. Present) solo.", answer: "vayas" },
+
+        // --- 7. PRESENT PERFECT ---
+        { text: "Nosotros ya ___ (terminar - Present Perfect) la tarea.", answer: "hemos terminado" },
+        { text: "¿Alguna vez ___ (estar - Present Perfect) en París?", answer: "has estado" },
+        { text: "Ellas ___ (abrir - Present Perfect) la tienda.", answer: "han abierto" },
+        { text: "Yo nunca ___ (romper - Present Perfect) un hueso.", answer: "he roto" },
+        { text: "¿___ (escribir - Present Perfect) tú el correo?", answer: "has escrito" },
+        { text: "Nosotros ___ (decir - Present Perfect) la verdad.", answer: "hemos dicho" },
+        { text: "¿Dónde ___ (poner - Present Perfect) las llaves?", answer: "has puesto" },
+        { text: "Ellos ___ (volver - Present Perfect) a casa.", answer: "han vuelto" },
+        { text: "Yo ___ (morir - Present Perfect) de risa.", answer: "he muerto" },
+        { text: "¿Ya ___ (descubrir - Present Perfect) el secreto?", answer: "has descubierto" },
+        { text: "Nosotros nunca ___ (ir - Present Perfect) a China.", answer: "hemos ido" },
+        { text: "¿Quién ___ (romper - Present Perfect) el vaso?", answer: "ha roto" },
+        { text: "Ellos ___ (volver - Present Perfect) a intentar.", answer: "han vuelto" },
+        { text: "Yo ___ (imprimir - Present Perfect) el documento.", answer: "he impreso" },
+        { text: "¿Dónde ___ (poner - Present Perfect) mis gafas?", answer: "has puesto" },
+        { text: "Nosotros ___ (cubrir - Present Perfect) la piscina.", answer: "hemos cubierto" },
+        { text: "Ellos ___ (resolver - Present Perfect) el misterio.", answer: "han resuelto" },
+        { text: "¿Quién ___ (escribir - Present Perfect) esta nota?", answer: "ha escrito" },
+        { text: "Yo ___ (freír - Present Perfect) las patatas.", answer: "he frito" },
+        { text: "¿___ (ver - Present Perfect) tú mis llaves?", answer: "has visto" },
+        { text: "Nosotros ___ (imprimir - Present Perfect) las fotos.", answer: "hemos impreso" },
+        { text: "Ellos ___ (descubrir - Present Perfect) una cueva.", answer: "han descubierto" },
+        { text: "¿Quién ___ (abrir - Present Perfect) la ventana?", answer: "ha abierto" },
+        { text: "Ellas ___ (volver - Present Perfect) del viaje.", answer: "han vuelto" },
+        { text: "Yo nunca ___ (montar - Present Perfect) a caballo.", answer: "he montado" },
+        { text: "Nosotros ___ (escribir - Present Perfect) un libro.", answer: "hemos escrito" },
+        { text: "¿Dónde ___ (poner - Present Perfect) tú el móvil?", answer: "has puesto" },
+        { text: "Yo ___ (hacer - Present Perfect) la cama.", answer: "he hecho" },
+        { text: "Ellas ___ (morir - Present Perfect) de risa.", answer: "han muerto" },
+        { text: "El perro ___ (morder - Present Perfect) el zapato.", answer: "ha mordido" },
+        { text: "Nosotros ___ (resolver - Present Perfect) el conflicto.", answer: "hemos resuelto" },
+        { text: "¿Quién ___ (escribir - Present Perfect) este poema?", answer: "ha escrito" },
+        { text: "Ellos ___ (poner - Present Perfect) la mesa.", answer: "han puesto" },
+        { text: "Yo nunca ___ (ver - Present Perfect) un fantasma.", answer: "he visto" },
+        { text: "Nosotros ___ (abrir - Present Perfect) el regalo.", answer: "hemos abierto" },
+        { text: "El jarrón se ___ (romper - Present Perfect).", answer: "ha roto" },
+        { text: "Yo ___ (volver - Present Perfect) al trabajo.", answer: "he vuelto" },
+        { text: "Nosotros ___ (morir - Present Perfect) de hambre.", answer: "hemos muerto" },
+        { text: "Yo ___ (hacer - Present Perfect) un pastel.", answer: "he hecho" },
+        { text: "¿___ (ver - Present Perfect) tú a María?", answer: "has visto" },
+        { text: "Ellas ___ (romper - Present Perfect) el silencio.", answer: "han roto" },
+        { text: "Yo nunca ___ (decir - Present Perfect) eso.", answer: "he dicho" },
+        { text: "Nosotros ___ (cubrir - Present Perfect) los muebles.", answer: "hemos cubierto" },
+        { text: "¿Dónde ___ (poner - Present Perfect) mis llaves?", answer: "has puesto" },
+        { text: "Ellos ___ (satisfacer - Present Perfect) los requisitos.", answer: "han satisfecho" },
+        { text: "Yo ___ (volver - Present Perfect) para quedarme.", answer: "he vuelto" },
+        { text: "¿Quién ___ (abrir - Present Perfect) la puerta?", answer: "ha abierto" },
+        { text: "Nosotros ___ (imprimir - Present Perfect) el boleto.", answer: "hemos impreso" },
+        { text: "Yo ___ (freír - Present Perfect) el pescado.", answer: "he frito" },
+
+        // --- 8. PAST PERFECT ---
+        { text: "Cuando llegué, ella ya ___ (salir - Past Perfect).", answer: "había salido" },
+        { text: "Cuando me llamaste, yo ya ___ (comer - Past Perfect).", answer: "había comido" },
+        { text: "Cuando desperté, el sol ya ___ (salir - Past Perfect).", answer: "había salido" },
+        { text: "Ellos ya ___ (volver - Past Perfect) cuando llamé.", answer: "habían vuelto" },
+        { text: "Antes de los 20, ella ___ (viajar - Past Perfect) a cinco países.", answer: "había viajado" },
+        { text: "Cuando llegamos, la película ya ___ (empezar - Past Perfect).", answer: "había empezado" },
+        { text: "Ella me aseguró que ya ___ (pagar - Past Perfect) la cuenta.", answer: "había pagado" },
+        { text: "Cuando llegaste, yo ya ___ (hacer - Past Perfect) la cena.", answer: "había hecho" },
+        { text: "Ellas ___ (abrir - Past Perfect) los regalos antes de tiempo.", answer: "habían abierto" },
+        { text: "Cuando entré, ellos ya ___ (empezar - Past Perfect) a comer.", answer: "habían empezado" },
+        { text: "Antes de cenar, yo ___ (lavarse - Past Perfect) las manos.", answer: "me había lavado" },
+        { text: "Cuando llegué, la tienda ya ___ (cerrar - Past Perfect).", answer: "había cerrado" },
+        { text: "Antes de los 30, él ___ (escribir - Past Perfect) dos novelas.", answer: "había escrito" },
+        { text: "Cuando llegaste, nosotros ya ___ (comer - Past Perfect).", answer: "habíamos comido" },
+        { text: "Cuando llegué, el tren ya ___ (partir - Past Perfect).", answer: "había partido" },
+        { text: "Antes del examen, yo ___ (leer - Past Perfect) el libro.", answer: "había leído" },
+        { text: "Cuando llegaste, nosotros ya ___ (salir - Past Perfect).", answer: "habíamos salido" },
+        { text: "Antes de los 20, él ya ___ (viajar - Past Perfect) mucho.", answer: "había viajado" },
+        { text: "Cuando desperté, la nieve ___ (cubrir - Past Perfect) todo.", answer: "había cubierto" },
+        { text: "Antes de salir, ellos ya ___ (comer - Past Perfect).", answer: "habían comido" },
+        { text: "Ellos ya ___ (descubrir - Past Perfect) la verdad.", answer: "habían descubierto" },
+        { text: "Cuando llegué, el sol ya se ___ (poner - Past Perfect).", answer: "había puesto" },
+        { text: "Antes de los 10 años, yo ya ___ (leer - Past Perfect) ese libro.", answer: "había leído" },
+        { text: "Cuando desperté, la lluvia ya ___ (parar - Past Perfect).", answer: "había parado" },
+        { text: "Antes del examen, yo ya ___ (repasar - Past Perfect) los apuntes.", answer: "había repasado" },
+
+        // --- 9. FUTURE PERFECT ---
+        { text: "Para mañana, yo ___ (escribir - Future Perfect) el informe.", answer: "habré escrito" },
+        { text: "Para el lunes, tú ___ (leer - Future Perfect) el libro.", answer: "habrás leído" },
+        { text: "Para entonces, nosotros ___ (terminar - Future Perfect).", answer: "habremos terminado" },
+        { text: "En un año, yo ___ (ahorrar - Future Perfect) suficiente dinero.", answer: "habré ahorrado" },
+        { text: "Para junio, tú ___ (graduarse - Future Perfect).", answer: "te habrás graduado" },
+        { text: "Para el 2030, los coches ___ (volar - Future Perfect).", answer: "habrán volado" },
+        { text: "Para entonces, nosotros ___ (terminar - Future Perfect).", answer: "habremos terminado" },
+        { text: "Para mañana, la lluvia ___ (parar - Future Perfect).", answer: "habrá parado" },
+        { text: "Para el viernes, tú ___ (terminar - Future Perfect) el proyecto.", answer: "habrás terminado" },
+        { text: "Para junio, yo ___ (terminar - Future Perfect) las clases.", answer: "habré terminado" },
+        { text: "Para diciembre, nosotros ___ (ahorrar - Future Perfect) mucho.", answer: "habremos ahorrado" },
+        { text: "Para el 2030, yo ___ (escribir - Future Perfect) mi libro.", answer: "habré escrito" },
+        { text: "Para el lunes, yo ___ (arreglar - Future Perfect) el coche.", answer: "habré arreglado" },
+        { text: "Para entonces, tú ya ___ (aprender - Future Perfect) español.", answer: "habrás aprendido" },
+        { text: "Para el 2040, nosotros ___ (descubrir - Future Perfect) vida en Marte.", answer: "habremos descubierto" },
+        { text: "Para mañana, tú ___ (hacer - Future Perfect) la tarea.", answer: "habrás hecho" },
+        { text: "Para entonces, nosotros ___ (terminar - Future Perfect).", answer: "habremos terminado" },
+        { text: "Para el 2050, la tecnología ___ (avanzar - Future Perfect) mucho.", answer: "habrá avanzado" },
+        { text: "Para julio, tú ___ (graduarse - Future Perfect).", answer: "te habrás graduado" },
+        { text: "Para la boda, ella ___ (adelgazar - Future Perfect).", answer: "habrá adelgazado" },
+        { text: "En diez años, la ciudad ___ (cambiar - Future Perfect).", answer: "habrá cambiado" },
+        { text: "Para mañana, yo ___ (resolver - Future Perfect) el caso.", answer: "habré resuelto" },
+
+        // --- 10. CONDITIONAL PERFECT ---
+        { text: "Ella me dijo que ___ (visitar - Cond. Perfect) el museo, pero estaba cerrado.", answer: "habría visitado" },
+        { text: "Si hubiera sabido, te ___ (llamar - Cond. Perfect).", answer: "habría llamado" },
+        { text: "Si hubieras estudiado, ___ (aprobar - Cond. Perfect) el examen.", answer: "habrías aprobado" },
+        { text: "Si me hubieras dicho, yo te ___ (ayudar - Cond. Perfect).", answer: "habría ayudado" },
+        { text: "Si hubieras venido, te ___ (divertir - Cond. Perfect).", answer: "habrías divertido" },
+        { text: "Si hubieras preguntado, yo ___ (saber - Cond. Perfect) la respuesta.", answer: "habría sabido" },
+        { text: "Si hubiera tenido dinero, ___ (viajar - Cond. Perfect) más.", answer: "habría viajado" },
+        { text: "Si hubiera sabido la verdad, no ___ (venir - Cond. Perfect).", answer: "habría venido" },
+        { text: "Si hubieras llegado antes, lo ___ (conocer - Cond. Perfect).", answer: "habrías conocido" },
+        { text: "Si hubiera tenido tiempo, te ___ (llamar - Cond. Perfect).", answer: "habría llamado" },
+        { text: "Si hubiera tenido dinero, lo ___ (comprar - Cond. Perfect).", answer: "habría comprado" },
+        { text: "Si hubieras escuchado, ___ (entender - Cond. Perfect).", answer: "habrías entendido" },
+        { text: "Si hubieras estado aquí, lo ___ (ver - Cond. Perfect).", answer: "habrías visto" },
+        { text: "Si hubieras estudiado, ___ (aprobar - Cond. Perfect).", answer: "habrías aprobado" },
+        { text: "Si me hubieras escuchado, no ___ (perderse - Cond. Perfect).", answer: "te habrías perdido" },
+        { text: "Si hubieras venido, ___ (ver - Cond. Perfect) el espectáculo.", answer: "habrías visto" },
+        { text: "Si me hubieras dicho, yo ___ (ir - Cond. Perfect).", answer: "habría ido" },
+        { text: "Si hubieras estudiado, ___ (saber - Cond. Perfect) la respuesta.", answer: "habrías sabido" },
+        { text: "Si me hubieras llamado, yo ___ (venir - Cond. Perfect).", answer: "habría venido" },
+
+        // --- 11. SUBJUNCTIVE PERFECT ---
+        { text: "Espero que tú ___ (llegar - Subj. Perfect) bien.", answer: "hayas llegado" },
+        { text: "Espero que ellos ___ (volver - Subj. Perfect) pronto.", answer: "hayan vuelto" },
+        { text: "Es posible que nosotros ___ (perder - Subj. Perfect) las llaves.", answer: "hayamos perdido" },
+        { text: "Me alegro de que tú ___ (conseguir - Subj. Perfect) el trabajo.", answer: "hayas conseguido" },
+        { text: "Dudo que ellos ___ (terminar - Subj. Perfect) a tiempo.", answer: "hayan terminado" },
+        { text: "Espero que tú no ___ (perder - Subj. Perfect) el tren.", answer: "hayas perdido" },
+        { text: "Me sorprende que él ___ (llegar - Subj. Perfect) tan temprano.", answer: "haya llegado" },
+        { text: "Dudo que tú ___ (leer - Subj. Perfect) todo el libro.", answer: "hayas leído" },
+        { text: "Me alegra que ustedes ___ (llegar - Subj. Perfect) bien.", answer: "hayan llegado" },
+        { text: "Espero que el jefe ___ (leer - Subj. Perfect) mi informe.", answer: "haya leído" },
+        { text: "Me sorprende que tú ___ (venir - Subj. Perfect).", answer: "hayas venido" },
+        { text: "Espero que no ___ (haber - Subj. Perfect) problemas.", answer: "haya habido" },
+        { text: "Espero que tú te ___ (divertir - Subj. Perfect) en el viaje.", answer: "hayas divertido" },
+        { text: "No creo que tú ___ (entender - Subj. Perfect) la lección.", answer: "hayas entendido" },
+        { text: "Espero que nosotros no ___ (cometer - Subj. Perfect) un error.", answer: "hayamos cometido" },
+        { text: "Dudo que ella ___ (decir - Subj. Perfect) la verdad.", answer: "haya dicho" },
+        { text: "Espero que no ___ (haber - Subj. Perfect) heridos.", answer: "haya habido" },
+        { text: "No creo que tú ___ (perder - Subj. Perfect) las llaves.", answer: "hayas perdido" },
+        { text: "Espero que ella ___ (volver - Subj. Perfect) a casa.", answer: "haya vuelto" },
+        { text: "No creo que ellos ___ (llegar - Subj. Perfect) tarde.", answer: "hayan llegado" },
+        { text: "Dudo que tú ___ (leer - Subj. Perfect) las instrucciones.", answer: "hayas leído" },
+        { text: "Dudo que tú ___ (escribir - Subj. Perfect) todo eso.", answer: "hayas escrito" },
+        { text: "Espero que ustedes se ___ (divertir - Subj. Perfect).", answer: "hayan divertido" },
+        { text: "Espero que tú ___ (volver - Subj. Perfect) pronto.", answer: "hayas vuelto" },
+        { text: "Me alegro de que ___ (hacer - Subj. Perfect) sol.", answer: "haya hecho" },
+        { text: "No creo que la carta ___ (llegar - Subj. Perfect).", answer: "haya llegado" },
+
+        // --- 12. IMPERATIVE (COMMANDS) ---
+        { text: "¡___ (comer - Command/Tú) tus vegetales!", answer: "come" },
+        { text: "¡No ___ (hablar - Command/Tú/Neg) tan alto!", answer: "no hables" },
+        { text: "¡___ (limpiar - Command/Usted) su habitación!", answer: "limpie" },
+        { text: "¡___ (tener - Command/Tú) cuidado!", answer: "ten" },
+        { text: "¡___ (ir - Command/Ustedes) a la escuela ahora!", answer: "vayan" },
+        { text: "¡No ___ (ser - Command/Tú/Neg) tonto!", answer: "no seas" },
+        { text: "¡___ (hacer - Command/Tú) la cama!", answer: "haz" },
+        { text: "¡___ (venir - Command/Tú) aquí!", answer: "ven" },
+        { text: "¡___ (salir - Command/Usted) de aquí!", answer: "salga" },
+        { text: "¡___ (poner - Command/Tú) la mesa!", answer: "pon" },
+        { text: "¡___ (escuchar - Command/Tú) la música!", answer: "escucha" },
+        { text: "¡No ___ (olvidar - Command/Tú/Neg) las llaves!", answer: "no olvides" },
+        { text: "¡___ (sentarse - Command/Usted) aquí, por favor!", answer: "siéntese" },
+        { text: "¡___ (callarse - Command/Tú) un momento!", answer: "cállate" },
+        { text: "¡___ (correr - Command/Ustedes) más rápido!", answer: "corran" },
+        { text: "¡No ___ (tocar - Command/Tú/Neg) eso!", answer: "no toques" },
+        { text: "¡___ (empezar - Command/Tú) ahora mismo!", answer: "empieza" },
+        { text: "¡___ (beber - Command/Usted) agua!", answer: "beba" },
+        { text: "¡___ (despertarse - Command/Tú) ya!", answer: "despiértate" },
+        { text: "¡___ (mirar - Command/Ustedes) la pizarra!", answer: "miren" },
+        { text: "¡___ (cantar - Command/Ustedes) más fuerte!", answer: "canten" },
+        { text: "¡___ (escribir - Command/Tú) tu nombre aquí!", answer: "escribe" },
+        { text: "¡___ (tener - Command/Usted) paciencia!", answer: "tenga" },
+        { text: "¡No ___ (correr - Command/Tú/Neg) en el pasillo!", answer: "no corras" },
+        { text: "¡___ (venir - Command/Ustedes) rápido!", answer: "vengan" },
+        { text: "¡___ (dar - Command/Tú) las gracias!", answer: "da" },
+        { text: "¡___ (ponerse - Command/Tú) el abrigo!", answer: "ponte" },
+        { text: "¡No ___ (tocar - Command/Usted) el arte!", answer: "no toque" },
+        { text: "¡___ (levantarse - Command/Tú) temprano!", answer: "levántate" },
+        { text: "¡___ (hacer - Command/Ustedes) la tarea!", answer: "hagan" },
+        { text: "¡___ (divertirse - Command/Ustedes) en la fiesta!", answer: "diviértanse" },
+        { text: "¡___ (vestirse - Command/Tú) rápido!", answer: "vístete" },
+        { text: "¡No ___ (mentir - Command/Tú/Neg) a tu madre!", answer: "no mientas" },
+        { text: "¡___ (sentarse - Command/Ustedes) por favor!", answer: "siéntense" },
+        { text: "¡___ (callarse - Command/Tú) la boca!", answer: "cállate" },
+        { text: "¡___ (seguir - Command/Usted) derecho!", answer: "siga" },
+        { text: "¡___ (tener - Command/Tú) cuidado!", answer: "ten" },
+        { text: "¡No ___ (conducir - Command/Tú/Neg) rápido!", answer: "no conduzcas" },
+        { text: "¡___ (hacer - Command/Ustedes) silencio!", answer: "hagan" },
+        { text: "¡___ (venir - Command/Tú) aquí ahora!", answer: "ven" },
+
+        // --- 13. PROGRESSIVE & SUBJUNCTIVE IMPERFECT ---
+        { text: "Yo ___ (mirar - Progressive) la televisión ahora.", answer: "estoy mirando" },
+        { text: "Me gustaría que tú ___ (venir - Subj. Imperfect) a la fiesta.", answer: "vinieras" }
+    ];
+
+    /* --- GAME STATE --- */
+    let currentMode = 'drill'; 
+    let currentItem = null;
+    let isChecking = true; 
+    let score = 0;
+    let total = 0;
+    let streak = 0;
+
+    // Elements
+    const qText = document.getElementById('questionText');
+    const pLabel = document.getElementById('promptLabel');
+    const input = document.getElementById('userAnswer');
+    const feedback = document.getElementById('feedback');
+    const btn = document.getElementById('actionBtn');
+    const streakDisplay = document.getElementById('streakDisplay');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    const modeBtns = document.querySelectorAll('.mode-btn');
+
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+        nextQuestion();
+        
+        input.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') handleAction();
+        });
+    });
+
+    function setMode(mode) {
+        currentMode = mode;
+        modeBtns.forEach(b => b.classList.remove('active'));
+        if(mode === 'drill') modeBtns[0].classList.add('active');
+        else modeBtns[1].classList.add('active');
+        resetGame();
+    }
+
+    function resetGame() {
+        score = 0;
+        total = 0;
+        streak = 0;
+        updateStats();
+        nextQuestion();
+    }
+
+    function nextQuestion() {
+        // Reset UI
+        input.value = "";
+        input.className = "answer-input";
+        input.disabled = false;
+        input.focus();
+        feedback.textContent = "";
+        btn.textContent = "Check";
+        isChecking = true;
+
+        if (currentMode === 'drill') {
+            currentItem = drillData[Math.floor(Math.random() * drillData.length)];
+            
+            // DYNAMIC PROMPT: Tells user which tense to use
+            pLabel.textContent = `Conjugate: ${currentItem.tense}`;
+            
+            // Display: "Yo / Hablar"
+            qText.textContent = `${currentItem.pronoun} / ${currentItem.verb}`;
+            
+        } else {
+            pLabel.textContent = "Complete the Sentence";
+            currentItem = sentenceData[Math.floor(Math.random() * sentenceData.length)];
+            qText.textContent = currentItem.text;
+        }
+    }
+
+    function handleAction() {
+        if (isChecking) checkAnswer();
+        else nextQuestion();
+    }
+
+    function checkAnswer() {
+        const userVal = input.value.trim().toLowerCase();
+        const correctVal = currentItem.answer.toLowerCase();
+
+        if (userVal === correctVal) {
+            input.classList.add('correct');
+            feedback.textContent = "✅ Correct!";
+            feedback.style.color = "green";
+            score++;
+            streak++;
+        } else {
+            input.classList.add('incorrect');
+            feedback.textContent = `❌ Incorrect. Answer: ${currentItem.answer}`;
+            feedback.style.color = "#d32f2f";
+            streak = 0;
+        }
+
+        total++;
+        updateStats();
+        
+        btn.textContent = "Next ->";
+        isChecking = false;
+        input.disabled = true; 
+    }
+
+    function updateStats() {
+        streakDisplay.textContent = `Streak: ${streak}`;
+        scoreDisplay.textContent = `Correct: ${score}/${total}`;
+    }
+</script>
+</body>
+</html>

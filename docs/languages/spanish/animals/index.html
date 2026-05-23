@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animals - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Animals (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Pets, Farm & Rodents</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la mascota</td><td>pet</td></tr>
+                      <tr><td>gato/a</td><td>cat</td></tr>
+                      <tr><td>gatito/a</td><td>kitten</td></tr>
+                      <tr><td>perro/a</td><td>dog</td></tr>
+                      <tr><td>cachorro/a</td><td>puppy</td></tr>
+                      <tr><td>conejo/a</td><td>rabbit</td></tr>
+                      <tr><td>el hámster</td><td>hamster</td></tr>
+                      <tr><td>la cobaya</td><td>guinea pig</td></tr>
+                      <tr><td>el pez</td><td>fish (pet/alive)</td></tr>
+                      <tr><td>loro/a</td><td>parrot</td></tr>
+                      <tr><td>el animal de granja</td><td>farm animal</td></tr>
+                      <tr><td>el toro / la vaca</td><td>bull / cow</td></tr>
+                      <tr><td>cerdo/a</td><td>pig</td></tr>
+                      <tr><td>el carnero / la oveja</td><td>ram / sheep</td></tr>
+                      <tr><td>el chivo / la cabra</td><td>goat</td></tr>
+                      <tr><td>el caballo / la yegua</td><td>horse / mare</td></tr>
+                      <tr><td>burro/a</td><td>donkey</td></tr>
+                      <tr><td>el gallo / la gallina</td><td>rooster / hen</td></tr>
+                      <tr><td>el roedor</td><td>rodent</td></tr>
+                      <tr><td>el ratón / la ratona</td><td>mouse</td></tr>
+                      <tr><td>la rata</td><td>rat</td></tr>
+                      <tr><td>el topo</td><td>mole</td></tr>
+                      <tr><td>el erizo</td><td>hedgehog</td></tr>
+                      <tr><td>la ardilla</td><td>squirrel</td></tr>
+                      <tr><td>el mapache</td><td>raccoon</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Birds & Insects</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el pájaro / el ave</td><td>bird</td></tr>
+                      <tr><td>el pato</td><td>duck</td></tr>
+                      <tr><td>el ganso</td><td>goose</td></tr>
+                      <tr><td>el cisne</td><td>swan</td></tr>
+                      <tr><td>el pavo</td><td>turkey</td></tr>
+                      <tr><td>el pavo real</td><td>peacock</td></tr>
+                      <tr><td>el flamenco</td><td>flamingo</td></tr>
+                      <tr><td>la paloma</td><td>pigeon / dove</td></tr>
+                      <tr><td>la grulla</td><td>crane</td></tr>
+                      <tr><td>el cuervo</td><td>crow</td></tr>
+                      <tr><td>el búho</td><td>owl</td></tr>
+                      <tr><td>el águila</td><td>eagle</td></tr>
+                      <tr><td>el halcón</td><td>falcon</td></tr>
+                      <tr><td>el buitre</td><td>vulture</td></tr>
+                      <tr><td>el avestruz</td><td>ostrich</td></tr>
+                      <tr><td>el pingüino</td><td>penguin</td></tr>
+                      <tr><td>el insecto</td><td>insect</td></tr>
+                      <tr><td>la hormiga</td><td>ant</td></tr>
+                      <tr><td>la araña</td><td>spider</td></tr>
+                      <tr><td>la abeja</td><td>bee</td></tr>
+                      <tr><td>la mosca</td><td>fly</td></tr>
+                      <tr><td>el mosquito</td><td>mosquito</td></tr>
+                      <tr><td>la oruga</td><td>caterpillar</td></tr>
+                      <tr><td>la mariposa</td><td>butterfly</td></tr>
+                      <tr><td>la libélula</td><td>dragonfly</td></tr>
+                      <tr><td>el escarabajo</td><td>beetle</td></tr>
+                      <tr><td>la cucaracha</td><td>cockroach</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Wild, Reptiles & Amphibians</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el animal salvaje</td><td>wild animal</td></tr>
+                      <tr><td>ciervo/a</td><td>deer</td></tr>
+                      <tr><td>zorro/a</td><td>fox</td></tr>
+                      <tr><td>lobo/a</td><td>wolf</td></tr>
+                      <tr><td>oso/a</td><td>bear</td></tr>
+                      <tr><td>la cebra</td><td>zebra</td></tr>
+                      <tr><td>la jirafa</td><td>giraffe</td></tr>
+                      <tr><td>camello/a</td><td>camel</td></tr>
+                      <tr><td>canguro/a</td><td>kangaroo</td></tr>
+                      <tr><td>el elefante / la elefanta</td><td>elephant</td></tr>
+                      <tr><td>el rinoceronte</td><td>rhinoceros</td></tr>
+                      <tr><td>mono/a</td><td>monkey</td></tr>
+                      <tr><td>el león / la leona</td><td>lion / lioness</td></tr>
+                      <tr><td>el tigre / la tigresa</td><td>tiger / tigress</td></tr>
+                      <tr><td>el reptil</td><td>reptile</td></tr>
+                      <tr><td>el anfibio</td><td>amphibian</td></tr>
+                      <tr><td>la tortuga</td><td>turtle / tortoise</td></tr>
+                      <tr><td>la rana</td><td>frog</td></tr>
+                      <tr><td>el sapo</td><td>toad</td></tr>
+                      <tr><td>lagarto/a</td><td>lizard</td></tr>
+                      <tr><td>la iguana</td><td>iguana</td></tr>
+                      <tr><td>el cocodrilo</td><td>crocodile</td></tr>
+                      <tr><td>la serpiente</td><td>snake</td></tr>
+                      <tr><td>la culebra</td><td>snake (long/thin)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Sea Life & General Terms</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la criatura marina</td><td>sea creature</td></tr>
+                      <tr><td>el tiburón</td><td>shark</td></tr>
+                      <tr><td>la ballena</td><td>whale</td></tr>
+                      <tr><td>el delfín</td><td>dolphin</td></tr>
+                      <tr><td>la foca</td><td>seal</td></tr>
+                      <tr><td>el calamar</td><td>squid</td></tr>
+                      <tr><td>la medusa</td><td>jellyfish</td></tr>
+                      <tr><td>el pulpo</td><td>octopus</td></tr>
+                      <tr><td>el cangrejo</td><td>crab</td></tr>
+                      <tr><td>el caracol</td><td>snail</td></tr>
+                      <tr><td>la almeja</td><td>clam</td></tr>
+                      <tr><td>la estrella de mar</td><td>starfish</td></tr>
+                      <tr><td>el animal</td><td>animal</td></tr>
+                      <tr><td>el mamífero</td><td>mammal</td></tr>
+                      <tr><td>macho</td><td>male</td></tr>
+                      <tr><td>hembra</td><td>female</td></tr>
+                      <tr><td>el zoológico</td><td>zoo</td></tr>
+                      <tr><td>el hábitat</td><td>habitat</td></tr>
+                      <tr><td>la especie</td><td>species</td></tr>
+                      <tr><td>extinto/a</td><td>extinct</td></tr>
+                      <tr><td>salvaje</td><td>wild (adj)</td></tr>
+                      <tr><td>domesticado/a</td><td>domesticated</td></tr>
+                      <tr><td>la cola</td><td>tail</td></tr>
+                      <tr><td>las alas</td><td>wings</td></tr>
+                      <tr><td>las plumas</td><td>feathers</td></tr>
+                      <tr><td>las escamas</td><td>scales</td></tr>
+                      <tr><td>las garras</td><td>claws</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

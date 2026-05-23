@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Environment(<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Nature & Geography</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el mundo</td><td>world</td></tr>
+                      <tr><td>la tierra</td><td>land / earth</td></tr>
+                      <tr><td>el medio ambiente</td><td>environment</td></tr>
+                      <tr><td>la naturaleza</td><td>nature</td></tr>
+                      <tr><td>el bosque</td><td>forest</td></tr>
+                      <tr><td>el bosque tropical</td><td>rainforest</td></tr>
+                      <tr><td>el desierto</td><td>desert</td></tr>
+                      <tr><td>la isla</td><td>island</td></tr>
+                      <tr><td>la montaña</td><td>mountain</td></tr>
+                      <tr><td>el parque</td><td>park</td></tr>
+                      <tr><td>la selva</td><td>jungle</td></tr>
+                      <tr><td>el lago</td><td>lake</td></tr>
+                      <tr><td>el mar</td><td>sea</td></tr>
+                      <tr><td>el océano</td><td>ocean</td></tr>
+                      <tr><td>la playa</td><td>beach</td></tr>
+                      <tr><td>el río</td><td>river</td></tr>
+                      <tr><td>las estrellas</td><td>stars</td></tr>
+                      <tr><td>la luna</td><td>moon</td></tr>
+                      <tr><td>el sol</td><td>sun</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Elements & Flora</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>el agua</td><td>water</td></tr>
+                      <tr><td>el aire</td><td>air</td></tr>
+                      <tr><td>la capa de ozono</td><td>ozone layer</td></tr>
+                      <tr><td>el cielo</td><td>sky</td></tr>
+                      <tr><td>el clima</td><td>climate</td></tr>
+                      <tr><td>el tiempo</td><td>weather</td></tr>
+                      <tr><td>el árbol</td><td>tree</td></tr>
+                      <tr><td>el cactus</td><td>cactus</td></tr>
+                      <tr><td>la flor</td><td>flower</td></tr>
+                      <tr><td>la hierba</td><td>grass</td></tr>
+                      <tr><td>la hoja</td><td>leaf</td></tr>
+                      <tr><td>el jardín</td><td>garden</td></tr>
+                      <tr><td>la planta</td><td>plant</td></tr>
+                      <tr><td>la raíz</td><td>root</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Threats & Disasters</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la basura</td><td>trash</td></tr>
+                      <tr><td>la contaminación</td><td>pollution</td></tr>
+                      <tr><td>el derrame de petróleo</td><td>oil spill</td></tr>
+                      <tr><td>los gases de efecto invernadero</td><td>greenhouse gases</td></tr>
+                      <tr><td>los plásticos</td><td>plastics</td></tr>
+                      <tr><td>los residuos</td><td>waste</td></tr>
+                      <tr><td>el calentamiento global</td><td>global warming</td></tr>
+                      <tr><td>el cambio climático</td><td>climate change</td></tr>
+                      <tr><td>la deforestación</td><td>deforestation</td></tr>
+                      <tr><td>la extinción</td><td>extinction</td></tr>
+                      <tr><td>el huracán</td><td>hurricane</td></tr>
+                      <tr><td>la inundación</td><td>flood</td></tr>
+                      <tr><td>la sequía</td><td>drought</td></tr>
+                      <tr><td>el terremoto</td><td>earthquake</td></tr>
+                      <tr><td>el tornado</td><td>tornado</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Solutions & Actions</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>la energía eólica</td><td>wind energy</td></tr>
+                      <tr><td>la energía renovable</td><td>renewable energy</td></tr>
+                      <tr><td>la energía solar</td><td>solar energy</td></tr>
+                      <tr><td>el reciclaje</td><td>recycling</td></tr>
+                      <tr><td>ahorrar</td><td>to save (energy/water)</td></tr>
+                      <tr><td>conservar</td><td>to conserve</td></tr>
+                      <tr><td>contaminar</td><td>to pollute</td></tr>
+                      <tr><td>cuidar</td><td>to care for</td></tr>
+                      <tr><td>derretirse</td><td>to melt</td></tr>
+                      <tr><td>desperdiciar</td><td>to waste</td></tr>
+                      <tr><td>extinguirse</td><td>to become extinct</td></tr>
+                      <tr><td>plantar</td><td>to plant</td></tr>
+                      <tr><td>proteger</td><td>to protect</td></tr>
+                      <tr><td>reciclar</td><td>to recycle</td></tr>
+                      <tr><td>reducir</td><td>to reduce</td></tr>
+                      <tr><td>respirar</td><td>to breathe</td></tr>
+                      <tr><td>reutilizar</td><td>to reuse</td></tr>
+                      <tr><td>Debemos proteger el medio ambiente</td><td>We must protect the environment</td></tr>
+                      <tr><td>El agua es un recurso valioso</td><td>Water is a valuable resource</td></tr>
+                      <tr><td>La energía renovable es el futuro</td><td>Renewable energy is the future</td></tr>
+                      <tr><td>Es importante reciclar</td><td>It is important to recycle</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

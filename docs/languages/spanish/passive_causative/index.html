@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passive Voice & Causative - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+  
+  <style>
+      /* --- LAYOUT STYLES --- */
+      .masonry-layout {
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+          width: 100%;
+          box-sizing: border-box;
+      }
+      
+      .masonry-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 20px; 
+          min-width: 300px; 
+          max-width: 100%;
+      }
+
+      /* TEXT WRAPPING FIX */
+      .vocab-table {
+          width: 100%;
+          table-layout: fixed; 
+      }
+      
+      .vocab-table td {
+          white-space: normal !important; 
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          vertical-align: top;
+          padding: 8px 12px;
+          text-align: left;
+      }
+      
+      .vocab-table th {
+          text-align: left;
+          padding-left: 12px;
+      }
+
+      /* --- DESCRIPTION BOX STYLES (Fixes the White Box Issue) --- */
+      .description-box {
+          padding: 12px;
+          font-size: 0.95em;
+          background-color: #fff;       /* Light Mode Background */
+          border: 1px solid #ddd;
+          border-bottom: none;          /* Connects visually to table */
+          color: #444;                  /* Light Mode Text */
+          line-height: 1.5;
+      }
+
+      /* Dark Mode Override */
+      body.dark-mode .description-box {
+          background-color: #1e1e1e;    /* Matches Dark Table Background */
+          border-color: #444;           /* Matches Dark Border */
+          color: #e0e0e0;               /* Light Text */
+      }
+
+      /* Responsive Rules */
+      @media (max-width: 900px) {
+          .masonry-layout { flex-wrap: wrap; }
+          .masonry-column { flex: 1 1 100%; } 
+      }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Passive Voice & Causative</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search sentences..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>Spanish <-> English</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">Translate / Identify... <span id="quizWord" style="border-bottom: 2px solid #555;"></span></h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="masonry-layout" id="columnsContainer">
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">1. Passive with Ser</div>
+                  <div class="description-box">
+                      <strong>Formula:</strong> Object + Ser + Participle + (por + Agent)<br>
+                      <em>*Ser is conjugated in the active tense.<br>
+                      *Participle agrees in gender/number with Object.</em>
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Tense</th><th>Example</th></tr></thead>
+                      <tbody>
+                          <tr><td>Presente</td><td>El libro es escrito por Juan.<br><em>(The book is written by Juan.)</em></td></tr>
+                          <tr><td>Pretérito</td><td>Los libros fueron escritos por Juan.<br><em>(The books were written by Juan.)</em></td></tr>
+                          <tr><td>Imperfecto</td><td>El libro era leído por los niños.<br><em>(The book was read by the children.)</em></td></tr>
+                          <tr><td>Futuro</td><td>El libro será escrito por Juan.<br><em>(The book will be written by Juan.)</em></td></tr>
+                          <tr><td>Condicional</td><td>El libro sería escrito por Juan.<br><em>(The book would be written by Juan.)</em></td></tr>
+                          <tr><td>Present Perfect</td><td>El libro ha sido escrito por Juan.<br><em>(The book has been written by Juan.)</em></td></tr>
+                          <tr><td>Past Perfect</td><td>El libro había sido escrito por Juan.<br><em>(The book had been written by Juan.)</em></td></tr>
+                          <tr><td>Future Perfect</td><td>El libro habrá sido escrito por Juan.<br><em>(The book will have been written by Juan.)</em></td></tr>
+                          <tr><td>Cond. Perfect</td><td>El libro habría sido escrito por Juan.<br><em>(The book would have been written by Juan.)</em></td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">2. Passive Reflexive</div>
+                  <div class="description-box">
+                      <strong>Usage:</strong> More common in spoken Spanish.<br>
+                      <strong>Formula:</strong> Se + Verb (3rd person) + Object
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                      <tbody>
+                          <tr><td>Se vende la casa.</td><td>The house is sold.</td></tr>
+                          <tr><td>Se venden libros aquí.</td><td>Books are sold here.</td></tr>
+                          <tr><td>Se alquilan apartamentos.</td><td>Apartments are rented.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">3. Impersonal Passive</div>
+                  <div class="description-box">
+                      <strong>Usage:</strong> Agent is irrelevant or general.<br>
+                      <strong>Formula:</strong> Se + Verb (3rd singular)
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                      <tbody>
+                          <tr><td>Se dice que lloverá.</td><td>It is said that it will rain.</td></tr>
+                          <tr><td>Se cree que es verdad.</td><td>It is believed to be true.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <div class="masonry-column">
+              
+              <div class="column-group">
+                  <div class="group-header-title">4. Causative (Hacer)</div>
+                  <div class="description-box">
+                      <strong>Definition:</strong> To make or have someone do something.<br>
+                      <strong>Common:</strong> Hacer + Infinitive
+                  </div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                      <tbody>
+                          <tr><td>Hice reparar el coche.</td><td>I had the car repaired.</td></tr>
+                          <tr><td>Te haré saber la respuesta.</td><td>I'll let you know the answer.</td></tr>
+                          <tr><td>Me hice cortar el pelo.</td><td>I had my hair cut.</td></tr>
+                          <tr><td>Se hizo construir una casa.</td><td>He had a house built.</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">5. Other Causative Verbs</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Verb</th><th>Example / Meaning</th></tr></thead>
+                      <tbody>
+                          <tr><td>Mandar / Enviar<br><em>(Order/Send)</em></td><td>Le mandé limpiar el garaje.<br><em>(I ordered him to clean the garage.)</em></td></tr>
+                          <tr><td>Dejar<br><em>(Let/Allow)</em></td><td>Me dejó usar su coche.<br><em>(He let me use his car.)</em></td></tr>
+                          <tr><td>Obligar a<br><em>(Force)</em></td><td>Lo obligaron a firmar.<br><em>(They forced him to sign.)</em></td></tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="column-group">
+                  <div class="group-header-title">6. Prepositions (A vs Por)</div>
+                  <table class="vocab-table no-links">
+                      <thead><tr><th>Preposition</th><th>Usage / Example</th></tr></thead>
+                      <tbody>
+                          <tr><td>A</td><td><strong>Receiver of the order:</strong><br>La profesora hizo estudiar <em>a</em> Juan.<br>(The teacher made Juan study.)</td></tr>
+                          <tr><td>Por</td><td><strong>Agent (By whom):</strong><br>Hice pintar la casa <em>por</em> un profesional.<br>(I had the house painted by a professional.)</td></tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>

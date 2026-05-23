@@ -2,11 +2,16 @@
   {"name": "Oslo", "lat": 59.9139, "lng": 10.7522},
   {"name": "Bergen", "lat": 60.3913, "lng": 5.3221},
   {"name": "Trondheim", "lat": 63.4305, "lng": 10.3951},
-  {"name": "Stavanger", "lat": 58.969, "lng": 5.7331},
+  {"name": "Stavanger", "lat": 58.9690, "lng": 5.7331},
+  {"name": "Kristiansand", "lat": 58.1467, "lng": 7.9956},
+  {"name": "Tromsø", "lat": 69.6492, "lng": 18.9553},
   {"name": "Drammen", "lat": 59.7441, "lng": 10.2045},
-  {"name": "Fredrikstad", "lat": 59.2205, "lng": 10.9347},
-  {"name": "Kristiansand", "lat": 58.1599, "lng": 8.0182},
-  {"name": "Sandnes", "lat": 58.8524, "lng": 5.7352},
-  {"name": "Tromso", "lat": 69.6492, "lng": 18.9553},
-  {"name": "Sarpsborg", "lat": 59.284, "lng": 11.1094}
+  {"name": "Hamar", "lat": 60.7945, "lng": 11.0680},
+  {"name": "Lillehammer", "lat": 61.1153, "lng": 10.4662},
+  {"name": "Dombås", "lat": 62.0730, "lng": 9.1215},
+  {"name": "Mo i Rana", "lat": 66.3128, "lng": 14.1428},
+  {"name": "Narvik", "lat": 68.4385, "lng": 17.4272},
+  {"name": "Alta", "lat": 69.9689, "lng": 23.2716},
+  {"name": "Hammerfest", "lat": 70.6625, "lng": 23.6821},
+  {"name": "Kirkenes", "lat": 69.7271, "lng": 30.0450}
 ]

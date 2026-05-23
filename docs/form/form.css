@@ -1,0 +1,160 @@
+/* ----------------- FORM PAGE SPECIFIC STYLES ----------------- */
+/* Save this file inside your 'form/' folder */
+
+#formContainer {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+#formContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#formContainer form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#formContainer form input[type="text"],
+#formContainer form input[type="email"],
+#formContainer form input[type="number"],
+#formContainer form textarea,
+#formContainer form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+#formContainer form textarea {
+  height: 80px;
+  resize: vertical; 
+}
+
+#formContainer form fieldset {
+  border: 1px solid #333;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#formContainer form legend {
+  font-weight: bold;
+}
+
+#formContainer form input[type="radio"],
+#formContainer form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#lastPlayed {
+  margin-bottom: 20px;
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.radioLabel input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* --- FIX: UPDATED BUTTON STYLING (MATCHING ACHIEVEMENTS) --- */
+/* Applies to both the Submit button inside the form AND the Back button */
+#formContainer form button,
+#backButton {
+  margin-top: 15px;
+  
+  /* Match the image: Light Grey + Thick Dark Border */
+  background-color: #f0f0f0;
+  color: black;
+  border: 2px solid #333; 
+  border-radius: 8px;
+  
+  /* Sizing */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  
+  /* Font matches the rest */
+  font-family: "Segoe Script", cursive;
+  font-weight: normal;
+  transition: background-color 0.2s;
+}
+
+/* Ensure Back Button (if outside form) is centered or behaves like a block if needed */
+#backButton {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: fit-content;
+}
+
+#formContainer form button:hover,
+#backButton:hover {
+  background-color: #ddd;
+}
+
+/* ----------------- DARK MODE OVERRIDES (FORM) ----------------- */
+
+/* 1. Form Inputs */
+body.dark-mode #formContainer input[type="text"],
+body.dark-mode #formContainer input[type="number"],
+body.dark-mode #formContainer input[type="email"],
+body.dark-mode #formContainer textarea,
+body.dark-mode #formContainer select {
+    background-color: #333;       
+    color: #fff;                  
+    border-color: #666;           
+}
+
+/* 2. Placeholder Text Color */
+body.dark-mode ::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+
+/* 3. Form Buttons (Submit & Back) - High Contrast Fix */
+body.dark-mode #formContainer form button,
+body.dark-mode #backButton {
+    background-color: #e0e0e0; /* Light Gray */
+    color: black;              /* Black Text */
+    border: 2px solid #999;    /* Visible Border */
+}
+
+body.dark-mode #formContainer form button:hover,
+body.dark-mode #backButton:hover {
+    background-color: #fff;    /* White on hover */
+}
+
+/* 4. Range Slider Fixes */
+body.dark-mode input[type=range] {
+    background-color: #333; 
+    border-radius: 5px;
+}
+
+/* 5. Fieldset */
+body.dark-mode #formContainer fieldset {
+    border-color: #666;
+}
+
+/* 6. Responsive */
+@media (max-width: 768px) {
+  #formContainer { width: 95%; }
+}

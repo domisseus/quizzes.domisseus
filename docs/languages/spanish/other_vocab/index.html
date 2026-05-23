@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Other Vocabulary - Spanish Course</title>
+
+  <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+  <link rel="stylesheet" href="../../../base.css" />
+  <link rel="stylesheet" href="../../../dark.css" />
+  <link rel="stylesheet" href="../../topic.css" /> 
+</head>
+<body>
+
+<main>
+
+  <div id="header-grid" style="text-align: center; position: relative; margin-bottom: 15px; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto;">
+    <div id="otherQuizzes" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+        <a href="../" class="back-link">&larr; Back</a>
+    </div>
+    <h1 style="margin: 0;">Other Vocabulary & Expressions (<span id="wordCount">0</span>)</h1>
+  </div>
+
+  <div id="topicContainer">
+      
+      <div class="controls-toolbar">
+          <input type="text" id="searchInput" class="search-box" placeholder="Search..." onkeyup="filterTable()">
+          
+          <label class="reverse-label">
+              <input type="checkbox" id="reverseToggle" onchange="toggleReverse()">
+              <span>English <-> Spanish</span>
+          </label>
+
+          <button onclick="togglePractice(0)" class="toolbar-btn">Flashcards</button>
+          <button onclick="togglePractice(1)" class="toolbar-btn">Quiz</button>
+          
+          <button id="lightBtn" class="toolbar-btn active" onclick="setTheme('light')">Light</button>
+          <button id="darkBtn" class="toolbar-btn" onclick="setTheme('dark')">Dark</button>
+          
+          <button id="fontToggle" class="toolbar-btn" onclick="toggleFont()">Font: Std</button>
+      </div>
+
+      <div id="practiceArea" style="display: none;">
+          <div id="flashcardMode">
+              <h2 style="margin-top:0; text-align:center;">Flashcards</h2>
+              <div class="flashcard" onclick="flipCard()">
+                  <div id="cardContent" class="card-word">Loading...</div>
+                  <div class="card-hint">(Click or Spacebar to flip)</div>
+              </div>
+              <div class="game-controls" style="text-align: center;">
+                  <button onclick="nextCard()">Next (Right Arrow)</button>
+              </div>
+          </div>
+          
+          <div id="quizMode" style="display: none;">
+              <h2 style="margin-top:0; text-align:center;">What is... <span id="quizWord" style="border-bottom: 2px solid #555;"></span>?</h2>
+              <div class="quiz-options">
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+                  <button onclick="checkAnswer(this)"></button>
+              </div>
+              <p id="quizFeedback" style="font-weight: bold; margin-top: 15px; text-align: center; min-height: 24px;"></p>
+              <div class="game-controls" style="text-align: center;">
+                   <button onclick="nextQuiz()">Next Question</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="verb-columns-container" id="columnsContainer">
+
+          <div class="column-group">
+              <div class="group-header-title">Location & Quantity</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>aquí</td><td>here</td></tr>
+                      <tr><td>ahí</td><td>there (closer)</td></tr>
+                      <tr><td>allí</td><td>there</td></tr>
+                      <tr><td>allá</td><td>over there (far)</td></tr>
+                      <tr><td>en ninguna parte</td><td>nowhere</td></tr>
+                      <tr><td>apenas</td><td>hardly / barely</td></tr>
+                      <tr><td>bastante</td><td>enough / quite</td></tr>
+                      <tr><td>casi</td><td>almost</td></tr>
+                      <tr><td>demasiado</td><td>too much</td></tr>
+                      <tr><td>más</td><td>more / most</td></tr>
+                      <tr><td>menos</td><td>less</td></tr>
+                      <tr><td>muy</td><td>very</td></tr>
+                      <tr><td>solamente</td><td>only</td></tr>
+                      <tr><td>suficiente</td><td>enough</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Connectors & Logic</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>mientras</td><td>while</td></tr>
+                      <tr><td>ni... ni</td><td>neither... nor</td></tr>
+                      <tr><td>o... o</td><td>either... or</td></tr>
+                      <tr><td>sino</td><td>but / otherwise / just</td></tr>
+                      <tr><td>no solo... sino también</td><td>not only... but also</td></tr>
+                      <tr><td>tal vez</td><td>maybe</td></tr>
+                      <tr><td>tampoco</td><td>neither</td></tr>
+                      <tr><td>ya no</td><td>no longer</td></tr>
+                      <tr><td>no en absoluto</td><td>absolutely not</td></tr>
+                      <tr><td>no más de</td><td>only (amount)</td></tr>
+                      <tr><td>no más que</td><td>only (action)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Common Expressions</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>¡Qué lástima!</td><td>What a pity!</td></tr>
+                      <tr><td>conviene que</td><td>it is advised that</td></tr>
+                      <tr><td>de ninguna manera</td><td>no way / by no means</td></tr>
+                      <tr><td>de ningún modo</td><td>no way</td></tr>
+                      <tr><td>es hora de que</td><td>it is time that</td></tr>
+                      <tr><td>más vale que</td><td>it is better that</td></tr>
+                      <tr><td>ni hablar</td><td>no way / don't mention it</td></tr>
+                      <tr><td>puede ser que</td><td>it may be that</td></tr>
+                      <tr><td>sin novedad</td><td>nothing new</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="column-group">
+              <div class="group-header-title">Grammar & Pronouns</div>
+              <table class="vocab-table">
+                  <thead><tr><th>Spanish</th><th>English</th></tr></thead>
+                  <tbody>
+                      <tr><td>conmigo</td><td>with me</td></tr>
+                      <tr><td>contigo</td><td>with you</td></tr>
+                      <tr><td>consigo</td><td>with him/her</td></tr>
+                      <tr><td>mismo</td><td>same</td></tr>
+                      <tr><td>primero/a</td><td>first</td></tr>
+                      <tr><td>tercero/a</td><td>third</td></tr>
+                      <tr><td>veces</td><td>times (occurrences)</td></tr>
+                      <tr><td>tan... como</td><td>as... as</td></tr>
+                      <tr><td>tanto... como</td><td>as many... as</td></tr>
+                      <tr><td>el más... de</td><td>the most... of (superlative)</td></tr>
+                      <tr><td>la tilde</td><td>tilde (ñ accent)</td></tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div> 
+  </div>
+
+</main>
+
+<script src="../../../theme.js"></script>
+<script src="../../topic.js"></script>
+    
+</body>
+</html>
